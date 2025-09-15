@@ -1,0 +1,123 @@
+@use '../soils' as *;
+
+// ========================================
+// SPROUTS — FIELD CONSTRUCTORS
+// ========================================
+// Mixins para construir campos de formulário e seus elementos.
+
+// ----------------------------------------
+// FIELD BASE
+// ----------------------------------------
+
+@mixin sprout-field-base(
+  $bg: var(--bg-secondary),
+  $color: var(--text-primary),
+  $border-color: var(--border-muted),
+  $radius: var(--border-radius-sm),
+  $padding-y: var(--padding-sm),
+  $padding-x: var(--padding-md),
+  $font: var(--font-base),
+  $font-size: var(--text-md),
+  $line-height: var(--leading-base),
+  $transition: var(--duration-base)
+) {
+  display: block;
+  width: 100%;
+  font-family: $font;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  background-color: $bg;
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  padding: $padding-y $padding-x;
+  box-shadow: none;
+  transition: border-color $transition var(--timing-smooth);
+  appearance: none;
+
+  &::placeholder {
+    color: var(--text-muted);
+    opacity: var(--opacity-6);
+  }
+
+  &:focus {
+    border-color: var(--focus-ring);
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: var(--bg-muted);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: var(--opacity-disabled);
+  }
+}
+
+// ----------------------------------------
+// FIELD SIZES
+// ----------------------------------------
+
+@mixin sprout-field-size($size: 'md') {
+  padding: var(--padding-#{$size});
+  font-size: var(--text-#{$size});
+}
+
+// ----------------------------------------
+// FIELD STATES
+// ----------------------------------------
+
+@mixin sprout-field-state($status) {
+  @if $status == error {
+    border-color: var(--border-error);
+    background-color: var(--bg-error);
+    color: var(--text-error);
+  } @else if $status == success {
+    border-color: var(--border-success);
+    background-color: var(--bg-success);
+    color: var(--text-success);
+  } @else if $status == disabled {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+}
+
+// ----------------------------------------
+// LABELS & HINTS
+// ----------------------------------------
+
+@mixin sprout-field-label($size: 'md') {
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  font-size: var(--text-#{$size}); // Simplificado
+}
+
+@mixin sprout-field-hint($muted: true) {
+  font-size: var(--text-xs);
+
+  @if $muted {
+    color: var(--text-muted);
+  } @else {
+    color: var(--text-error);
+  }
+}
+
+// ----------------------------------------
+// FIELD GROUPS
+// ----------------------------------------
+
+@mixin sprout-field-group($layout: 'stack') {
+  @if $layout == stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  } @else if $layout == inline {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-sm);
+    align-items: center;
+  } @else if $layout == grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-md);
+  }
+}

@@ -1,0 +1,51 @@
+// ========================================
+// LAYOUT SEEDS — Sementes para containers e breakpoints
+// ========================================
+
+:root {
+
+  // ========================================
+  // CONTAINER WIDTH — Largura máxima de containers
+  // ========================================
+  --container-1: var(--size-macro-1); // 8rem (128px)
+  --container-2: var(--size-macro-2); // 16rem (256px)
+  --container-3: var(--size-macro-3); // 24rem (384px)
+  --container-4: var(--size-macro-4); // 32rem (512px)
+  --container-5: var(--size-macro-6); // 48rem (768px)
+  --container-6: var(--size-macro-8); // 64rem (1024px)
+  --container-7: 100%;                // fluido
+
+  // ========================================
+  // BREAKPOINTS — Pontos de quebra para responsividade
+  // ========================================
+  --breakpoint-1: 320px;
+  --breakpoint-2: 480px;
+  --breakpoint-3: 768px;
+  --breakpoint-4: 1024px;
+  --breakpoint-5: 1280px;
+  --breakpoint-6: 1440px;
+
+}
+
+// ========================================
+// LAYOUT MAPS — Espelhos Sass para uso em lógica
+// ========================================
+
+$containers: (
+  1: var(--container-1),
+  2: var(--container-2),
+  3: var(--container-3),
+  4: var(--container-4),
+  5: var(--container-5),
+  6: var(--container-6),
+  7: var(--container-7)
+);
+
+$breakpoints: (
+  1: var(--breakpoint-1), // 320px
+  2: var(--breakpoint-2), // 480px
+  3: var(--breakpoint-3), // 768px
+  4: var(--breakpoint-4), // 1024px
+  5: var(--breakpoint-5), // 1280px
+  6: var(--breakpoint-6)  // 1440px
+);

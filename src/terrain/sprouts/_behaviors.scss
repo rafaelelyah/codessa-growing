@@ -1,0 +1,100 @@
+@use '../soils' as *;
+
+// ========================================
+// SPROUTS — BEHAVIORAL CONSTRUCTORS
+// ========================================
+// Mixins para aplicar transições, animações e efeitos.
+
+// ----------------------------------------
+// POSITION BEHAVIORS
+// ----------------------------------------
+
+@mixin sprout-sticky($position: 'top') {
+  position: sticky;
+  
+  @if $position == 'top' {
+    top: 0;
+  } @else if $position == 'bottom' {
+    bottom: 0;
+  } @else if $position == 'left' {
+    left: 0;
+  } @else if $position == 'right' {
+    right: 0;
+  }
+  
+  z-index: var(--z-index-sticky);
+}
+
+@mixin sprout-fixed($position: 'top') {
+  position: fixed;
+  
+  @if $position == 'top' {
+    top: 0;
+  } @else if $position == 'bottom' {
+    bottom: 0;
+  } @else if $position == 'left' {
+    left: 0;
+  } @else if $position == 'right' {
+    right: 0;
+  }
+  
+  z-index: var(--z-index-fixed);
+}
+
+// ----------------------------------------
+// TRANSITIONS
+// ----------------------------------------
+
+@mixin sprout-transition(
+  $props: all,
+  $duration: var(--duration-base),
+  $timing: var(--timing-smooth)
+) {
+  transition: $props $duration $timing;
+}
+
+// ----------------------------------------
+// ANIMATIONS
+// ----------------------------------------
+
+@mixin sprout-animation-fade-in($duration: var(--duration-base)) {
+  animation: sprout-fade-in $duration var(--timing-smooth) forwards;
+}
+
+@mixin sprout-animation-fade-out($duration: var(--duration-base)) {
+  animation: sprout-fade-out $duration var(--timing-smooth) forwards;
+}
+
+@keyframes sprout-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sprout-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// ----------------------------------------
+// EFFECTS
+// ----------------------------------------
+
+@mixin sprout-effect-scale($scale: 1.05) {
+  transform: scale($scale);
+}
+
+@mixin sprout-effect-muted($opacity: var(--opacity-6)) {
+  opacity: $opacity;
+}
+
+@mixin sprout-effect-blur($amount: 4px) {
+  filter: blur($amount);
+}

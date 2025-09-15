@@ -1,0 +1,49 @@
+@use '../sprouts' as *;
+
+// ========================================
+// LEAF — BORDERS & RADIUS
+// ========================================
+
+// Largura da borda (usa seeds outline)
+.leaf-border-w {
+  &--0 { border-width: var(--border-width-0); }
+  &--1 { border-width: var(--border-width-1); }
+  &--2 { border-width: var(--border-width-2); }
+  &--3 { border-width: var(--border-width-3); }
+  &--4 { border-width: var(--border-width-4); }
+}
+
+// Estilo da borda
+.leaf-border-style {
+  &--none { border-style: var(--border-style-0); }
+  &--solid { border-style: var(--border-style-1); }
+  &--dashed { border-style: var(--border-style-2); }
+  &--dotted { border-style: var(--border-style-3); }
+  &--double { border-style: var(--border-style-4); }
+}
+
+// Raio
+.leaf-radius {
+  &--0 { border-radius: var(--radius-0); }
+  &--sm { border-radius: var(--border-radius-sm); }
+  &--md { border-radius: var(--border-radius-md); }
+  &--lg { border-radius: var(--border-radius-lg); }
+  &--pill { border-radius: var(--border-radius-pill); }
+  &--circle { border-radius: var(--border-radius-circle); }
+}
+
+// Borda por lado
+.leaf-border {
+  &-top { border-top-width: var(--border-width-1); border-top-style: var(--border-style-1); }
+  &-right { border-right-width: var(--border-width-1); border-right-style: var(--border-style-1); }
+  &-bottom { border-bottom-width: var(--border-width-1); border-bottom-style: var(--border-style-1); }
+  &-left { border-left-width: var(--border-width-1); border-left-style: var(--border-style-1); }
+}
+
+// Focus ring utilitário
+.leaf-focus-ring {
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+}

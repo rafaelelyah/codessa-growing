@@ -1,0 +1,9 @@
+// ========================================
+// TRUNKS INDEX — Ponto de entrada para todos os Trunks
+// ========================================
+
+// --- Base & Globais ---
+@forward 'base';      // Estilos padrão para tags HTML
+
+// --- Componentes Globais (TREE) ---
+@forward 'tree'; // Estilos padrão unificados (baseline)

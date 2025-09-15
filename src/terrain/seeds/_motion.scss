@@ -1,0 +1,89 @@
+// ========================================
+// MOTION SEEDS — Sementes para animação e transição
+// ========================================
+
+:root {
+
+  // ========================================
+  // DURATION — Tempo de execução da animação
+  // ========================================
+  --motion-duration-1: var(--duration-1); // 100ms
+  --motion-duration-2: var(--duration-2); // 200ms
+  --motion-duration-3: var(--duration-3); // 300ms
+  --motion-duration-4: var(--duration-4); // 400ms
+  --motion-duration-5: var(--duration-5); // 500ms
+
+  // ========================================
+  // DELAY — Tempo de espera para início da animação
+  // ========================================
+  --motion-delay-1: var(--duration-1); // 100ms
+  --motion-delay-2: var(--duration-2); // 200ms
+  --motion-delay-3: var(--duration-3); // 300ms
+  --motion-delay-4: var(--duration-4); // 400ms
+  --motion-delay-5: var(--duration-5); // 500ms
+
+  // ========================================
+  // TIMING FUNCTIONS — Curvas de aceleração
+  // ========================================
+  --motion-timing-1: ease-in;
+  --motion-timing-2: ease-out;
+  --motion-timing-3: ease-in-out;
+  --motion-timing-4: linear;
+  --motion-timing-5: cubic-bezier(0.4, 0, 0.2, 1); // smooth
+
+  // Aliases semânticos para TREE
+  --duration-fast: var(--motion-duration-2);
+  --duration-base: var(--motion-duration-3);
+  --duration-slow: var(--motion-duration-4);
+  --timing-smooth: var(--motion-timing-5);
+  --timing-linear: var(--motion-timing-4);
+
+  // Opacidade para overlays
+  --opacity-overlay: 0.5;
+
+  // ========================================
+  // DISTANCE — Deslocamento em animações
+  // ========================================
+  --motion-distance-1: var(--size-micro-2); // 0.5rem  (8px)
+  --motion-distance-2: var(--size-micro-3); // 0.75rem (12px)
+  --motion-distance-3: var(--size-micro-4); // 1rem    (16px)
+  --motion-distance-4: var(--size-micro-6); // 1.5rem  (24px)
+  --motion-distance-5: var(--size-micro-8); // 2rem    (32px)
+
+}
+
+// ========================================
+// MOTION MAPS — Espelhos Sass para uso em lógica
+// ========================================
+
+$motion-durations: (
+  1: var(--motion-duration-1), // 100ms
+  2: var(--motion-duration-2), // 200ms
+  3: var(--motion-duration-3), // 300ms
+  4: var(--motion-duration-4), // 400ms
+  5: var(--motion-duration-5)  // 500ms
+);
+
+$motion-delays: (
+  1: var(--motion-delay-1), // 100ms
+  2: var(--motion-delay-2), // 200ms
+  3: var(--motion-delay-3), // 300ms
+  4: var(--motion-delay-4), // 400ms
+  5: var(--motion-delay-5)  // 500ms
+);
+
+$motion-timings: (
+  1: var(--motion-timing-1), // ease-in
+  2: var(--motion-timing-2), // ease-out
+  3: var(--motion-timing-3), // ease-in-out
+  4: var(--motion-timing-4), // linear
+  5: var(--motion-timing-5)  // smooth
+);
+
+$motion-distances: (
+  1: var(--motion-distance-1), // 0.5rem  (8px)
+  2: var(--motion-distance-2), // 0.75rem (12px)
+  3: var(--motion-distance-3), // 1rem    (16px)
+  4: var(--motion-distance-4), // 1.5rem  (24px)
+  5: var(--motion-distance-5)  // 2rem    (32px)
+);

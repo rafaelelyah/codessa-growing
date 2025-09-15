@@ -1,0 +1,49 @@
+// ========================================
+// TYPE SEEDS — Sementes para tipografia
+// ========================================
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+  // ========================================
+  // FONT FAMILY — Famílias de fontes
+  // ========================================
+  --type-base: 'Jost', sans-serif;    // Marca e títulos
+  --type-aux:  'Barlow', sans-serif;  // Texto corrido
+  --type-mono: 'Fira Code', monospace; // Código e tabelas
+
+  // ========================================
+  // FONT SIZE — Escala de tamanho de fonte
+  // ========================================
+  --text-size-1: var(--size-micro-1);  // 0.25rem (4px)
+  --text-size-2: var(--size-micro-2);  // 0.5rem  (8px)
+  --text-size-3: var(--size-micro-3);  // 0.75rem (12px)
+  --text-size-4: var(--size-micro-4);  // 1rem    (16px)
+  --text-size-5: var(--size-micro-6);  // 1.5rem  (24px)
+  --text-size-6: var(--size-micro-8);  // 2rem    (32px)
+  --text-size-7: var(--size-medium-2); // 4rem    (64px)
+
+  // ========================================
+  // LINE HEIGHT — Escala de altura de linha
+  // ========================================
+  --line-height-1: 1.2; // tight
+  --line-height-2: 1.4;
+  --line-height-3: 1.6; // base
+  --line-height-4: 1.8; // loose
+  --line-height-5: 2;
+  --line-height-6: 2.4;
+  --line-height-7: 3;
+
+  // ========================================
+  // FONT WEIGHT — Escala de peso da fonte
+  // ========================================
+  --font-weight-1: 300; // light
+  --font-weight-2: 400; // regular
+  --font-weight-3: 500; // medium
+  --font-weight-4: 600;
+  --font-weight-5: 700; // bold
+  --font-weight-6: 800;
+  --font-weight-7: 900;
+
+}

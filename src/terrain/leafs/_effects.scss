@@ -1,0 +1,38 @@
+@use '../sprouts' as *;
+
+// ========================================
+// LEAF — EFFECTS (shadow, transition, opacity)
+// ========================================
+
+// Shadows / Elevation (0..6)
+.leaf-shadow {
+  &--0 { box-shadow: var(--elevation-0); }
+  &--1 { box-shadow: var(--elevation-1); }
+  &--2 { box-shadow: var(--elevation-2); }
+  &--3 { box-shadow: var(--elevation-3); }
+  &--4 { box-shadow: var(--elevation-4); }
+  &--5 { box-shadow: var(--elevation-5); }
+  &--6 { box-shadow: var(--elevation-6); }
+}
+
+// Transitions presets
+.leaf-transition {
+  &--fast { transition: all var(--duration-fast) var(--timing-smooth); }
+  &--base { transition: all var(--duration-base) var(--timing-smooth); }
+  &--slow { transition: all var(--duration-slow) var(--timing-smooth); }
+}
+
+// Opacity (0..10)
+.leaf-opacity {
+  &--0  { opacity: var(--opacity-0); }
+  &--1  { opacity: var(--opacity-1); }
+  &--2  { opacity: var(--opacity-2); }
+  &--3  { opacity: var(--opacity-3); }
+  &--4  { opacity: var(--opacity-4); }
+  &--5  { opacity: var(--opacity-5); }
+  &--6  { opacity: var(--opacity-6); }
+  &--7  { opacity: var(--opacity-7); }
+  &--8  { opacity: var(--opacity-8); }
+  &--9  { opacity: var(--opacity-9); }
+  &--10 { opacity: var(--opacity-10); }
+}

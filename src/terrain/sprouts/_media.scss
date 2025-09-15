@@ -1,0 +1,50 @@
+@use '../soils' as *;
+@use 'sass:math'; // Importar o módulo math
+
+// ========================================
+// SPROUTS — MEDIA CONSTRUCTORS
+// ========================================
+// Mixins para lidar com media queries e elementos de mídia.
+
+// ----------------------------------------
+// BREAKPOINTS
+// ----------------------------------------
+
+@mixin sprout-media-up($breakpoint) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-down($breakpoint) {
+  @media (max-width: var(--breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-between($min, $max) {
+  @media (min-width: var(--breakpoint-#{$min})) and (max-width: var(--breakpoint-#{$max})) {
+    @content;
+  }
+}
+
+// ----------------------------------------
+// MEDIA CONTAINERS
+// ----------------------------------------
+
+@mixin sprout-media-container($size: 'lg') {
+  max-width: var(--container-#{$size});
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+// ----------------------------------------
+// ASPECT RATIOS
+// ----------------------------------------
+
+@mixin sprout-aspect-ratio($ratio) { // Removed default value
+  aspect-ratio: #{$ratio}; // Manter interpolação, pois o valor já será calculado
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}

@@ -1,0 +1,88 @@
+// ========================================
+// FOUNDATION — Normalização e Reset
+// ========================================
+// Define o box-sizing, reseta margens e garante comportamentos
+// consistentes entre browsers, sem aplicar estilos visuais.
+
+// ----------------------------------------
+// BOX SIZING & BEHAVIOR
+// ----------------------------------------
+
+html {
+  font-size: 100%; // Garante que 1rem seja consistente.
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+// ----------------------------------------
+// MARGIN RESET
+// ----------------------------------------
+// Remove margens padrão para um controle mais preciso nos componentes.
+
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, ul, ol, fieldset {
+  margin: 0;
+}
+
+// ----------------------------------------
+// MEDIA NORMALIZATION
+// ----------------------------------------
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ----------------------------------------
+// FORM ELEMENT RESET
+// ----------------------------------------
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+fieldset, legend {
+  border: none;
+  padding: 0;
+}
+
+// ----------------------------------------
+// ACCESSIBILITY & BASE HELPERS
+// ----------------------------------------
+
+:focus-visible {
+  // A estilização do foco (outline) será definida no trunk base,
+  // aqui apenas garantimos que ele seja visível.
+  outline: 2px solid blue; // Placeholder, será sobrescrito.
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,25 @@
+@use '../sprouts' as *;
+
+// ========================================
+// LEAF — DISPLAY & VISIBILITY
+// ========================================
+
+.leaf-d { // display
+  &--block { display: block; }
+  &--inline { display: inline; }
+  &--inline-block { display: inline-block; }
+  &--grid { display: grid; }
+  &--flex { display: flex; }
+  &--none { display: none; }
+}
+
+.leaf-overflow {
+  &--hidden { overflow: hidden; }
+  &--auto { overflow: auto; }
+  &--scroll { overflow: scroll; }
+}
+
+.leaf-visibility {
+  &--visible { visibility: visible; }
+  &--hidden { visibility: hidden; }
+}

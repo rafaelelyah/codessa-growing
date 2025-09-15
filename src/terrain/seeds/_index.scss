@@ -1,0 +1,11 @@
+// ========================================
+// SEEDS INDEX — Ponto de entrada para todas as sementes
+// ========================================
+
+@forward 'layout';   // Sementes para containers e breakpoints
+@forward 'motion';   // Sementes para animação e transição
+@forward 'outline';  // Sementes para bordas e contornos
+@forward 'palette';  // Sementes para cores, elevação e opacidade
+@forward 'scale';    // Sementes para escalas e proporções
+@forward 'spacing';  // Sementes para espaçamento e grids
+@forward 'type';     // Sementes para tipografia

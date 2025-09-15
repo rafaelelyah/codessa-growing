@@ -1,0 +1,25 @@
+ehthumbs.db
+
+# Node.js
+node_modules/
+dist/
+
+# Ambiente
+.env
+.env.*
+
+# Logs
+*.log
+
+# IDE/config
+.idea/
+
+
+# Sistema
+.DS_Store
+Thumbs.db
+ehthumbs.db
+# Previews e imagens geradas
+
+# Documentação interna
+ROADMAP-interno.md

@@ -1,0 +1,92 @@
+@use '../soils' as *;
+
+// ========================================
+// SPROUTS — INTERACTION CONSTRUCTORS
+// ========================================
+// Mixins para construir elementos interativos como botões e campos.
+
+// ----------------------------------------
+// BUTTONS
+// ----------------------------------------
+
+@mixin sprout-button(
+  $bg: var(--interactive-primary),
+  $color: var(--text-inverse),
+  $radius: var(--border-radius-sm),
+  $padding-y: var(--padding-sm),
+  $padding-x: var(--padding-md),
+  $font-size: var(--text-md),
+  $transition: var(--duration-fast)
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size;
+  font-weight: var(--font-medium);
+  color: $color;
+  background-color: $bg;
+  border: var(--border-width-0); // Usar variável para consistência
+  border-radius: $radius;
+  padding: $padding-y $padding-x;
+  cursor: pointer;
+  transition: background-color $transition var(--timing-smooth), transform $transition var(--timing-smooth);
+
+  &:hover {
+    background-color: var(--interactive-hover);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    background-color: var(--interactive-active);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  &:disabled {
+    background-color: var(--bg-muted);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: var(--opacity-disabled);
+  }
+}
+
+// ----------------------------------------
+// INTERACTIVE FIELDS
+// ----------------------------------------
+
+@mixin sprout-field-interactive {
+  transition: border-color var(--duration-fast) var(--timing-smooth);
+
+  &:hover {
+    border-color: var(--border-primary);
+  }
+
+  &:focus {
+    border-color: var(--focus-ring);
+    box-shadow: 0 0 0 var(--border-width) var(--focus-ring); // Usar var(--border-width)
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+  }
+}
+
+// ----------------------------------------
+// NAVIGATION STATES
+// ----------------------------------------
+
+@mixin sprout-nav-active($color: var(--interactive-primary)) {
+  color: $color;
+  font-weight: var(--font-bold);
+  border-bottom: var(--border-width-2) solid $color; // Usar variável para espessura
+}
+
+@mixin sprout-nav-hover($color: var(--interactive-hover)) {
+  color: $color;
+  text-decoration: underline;
+}

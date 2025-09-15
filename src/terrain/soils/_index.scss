@@ -1,0 +1,14 @@
+// ========================================
+// SOILS INDEX — Encaminha todas as variações de Soil
+// ========================================
+
+// Cena principal
+@forward './soil';
+
+// Temas visuais
+@forward './soil.dark';
+
+
+// Densidades visuais
+@forward './soil.compact';
+@forward './soil.spacious';

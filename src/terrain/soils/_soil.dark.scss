@@ -1,0 +1,38 @@
+// ========================================
+// SOIL DARK
+// ========================================
+
+@use 'soil' as *;
+
+[data-theme="dark"] {
+
+  // Fundo escuro, texto claro
+  --bg-primary: var(--color-neutral-1);
+  --bg-secondary: var(--color-neutral-2);
+  --bg-muted: var(--color-neutral-3);
+  --bg-subtle: var(--color-neutral-4);
+
+  --text-primary: var(--color-neutral-7);
+  --text-secondary: var(--color-neutral-6);
+  --text-muted: var(--color-neutral-5);
+  --text-subtle: var(--color-neutral-4);
+  --text-inverse: var(--color-neutral-1);
+
+  // Bordas mais visíveis
+  --border-primary: var(--color-neutral-4);
+  --border-secondary: var(--color-neutral-3);
+
+  // Interações com contraste
+  --interactive-primary: var(--color-standard-2);
+  --interactive-hover: var(--color-standard-3);
+  --interactive-active: var(--color-standard-4);
+
+  // Gradientes adaptados
+  --gradient-primary: var(--gradient-brand-3);
+  --gradient-secondary: var(--gradient-brand-5);
+  --gradient-accent: var(--gradient-brand-7);
+
+  // Foco com destaque
+  --focus-ring: var(--color-standard-2);
+
+}

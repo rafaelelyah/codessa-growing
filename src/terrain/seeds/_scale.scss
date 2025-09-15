@@ -1,0 +1,91 @@
+// ========================================
+// SCALE SEEDS — Sementes para escalas e proporções
+// ========================================
+
+:root {
+
+  // ========================================
+  // BASE UNITS — Unidades fundamentais
+  // ========================================
+  --scale-granular: 1px;
+  --scale-micro:    0.25rem; // 4px
+  --scale-medium:   2rem;    // 32px
+  --scale-macro:    8rem;    // 128px
+  --duration-base:  100ms;
+
+  // ========================================
+  // LETTER SPACING — Espaçamento entre letras
+  // ========================================
+  --letter-tight: -0.05em;
+  --letter-base:  0em;
+  --letter-wide:  0.05em;
+
+  // ========================================
+  // SIZE SCALE — Escala de tamanhos visuais
+  // ========================================
+
+  // --- Micro Sizes (0.25rem – 2rem) ---
+  --size-micro-1: calc(var(--scale-micro) * 1); // 0.25rem (4px)
+  --size-micro-2: calc(var(--scale-micro) * 2); // 0.5rem  (8px)
+  --size-micro-3: calc(var(--scale-micro) * 3); // 0.75rem (12px)
+  --size-micro-4: calc(var(--scale-micro) * 4); // 1rem    (16px)
+  --size-micro-6: calc(var(--scale-micro) * 6); // 1.5rem  (24px)
+  --size-micro-8: calc(var(--scale-micro) * 8); // 2rem    (32px)
+
+  // --- Medium Sizes (2rem – 16rem) ---
+  --size-medium-1: calc(var(--scale-medium) * 1); // 2rem   (32px)
+  --size-medium-2: calc(var(--scale-medium) * 2); // 4rem   (64px)
+  --size-medium-3: calc(var(--scale-medium) * 3); // 6rem   (96px)
+  --size-medium-4: calc(var(--scale-medium) * 4); // 8rem   (128px)
+  --size-medium-6: calc(var(--scale-medium) * 6); // 12rem  (192px)
+  --size-medium-8: calc(var(--scale-medium) * 8); // 16rem  (256px)
+
+  // --- Macro Sizes (8rem – 64rem) ---
+  --size-macro-1: calc(var(--scale-macro) * 1); // 8rem   (128px)
+  --size-macro-2: calc(var(--scale-macro) * 2); // 16rem  (256px)
+  --size-macro-3: calc(var(--scale-macro) * 3); // 24rem  (384px)
+  --size-macro-4: calc(var(--scale-macro) * 4); // 32rem  (512px)
+  --size-macro-6: calc(var(--scale-macro) * 6); // 48rem  (768px)
+  --size-macro-8: calc(var(--scale-macro) * 8); // 64rem  (1024px)
+
+  // ========================================
+  // DURATION SCALE — Escala de tempo
+  // ========================================
+  --duration-1: calc(var(--duration-base) * 1); // 100ms
+  --duration-2: calc(var(--duration-base) * 2); // 200ms
+  --duration-3: calc(var(--duration-base) * 3); // 300ms
+  --duration-4: calc(var(--duration-base) * 4); // 400ms
+  --duration-5: calc(var(--duration-base) * 5); // 500ms
+  --duration-6: calc(var(--duration-base) * 6); // 600ms
+  --duration-7: calc(var(--duration-base) * 7); // 700ms
+
+  // ========================================
+  // Z-INDEX SCALE — Hierarquia de camadas
+  // ========================================
+  --z-index-negative: -1;
+  --z-index-0:        0;
+  --z-index-1:        10;   // Elementos básicos
+  --z-index-2:        100;  // Default
+  --z-index-3:        200;  // Dropdowns
+  --z-index-4:        300;  // Sticky
+  --z-index-5:        400;  // Fixed
+  --z-index-6:        500;  // Modais
+  --z-index-7:        600;  // Popovers
+  --z-index-8:        700;  // Toasts
+  --z-index-9:        800;  // Overlays
+  --z-index-max:      9999; // Emergencial / forçado
+
+  // Aliases semânticos para z-index
+  --z-base: var(--z-index-1);
+  --z-low: var(--z-index-1);
+  --z-default: var(--z-index-2);
+  --z-dropdown: var(--z-index-3);
+  --z-sticky: var(--z-index-4);
+  --z-fixed: var(--z-index-5);
+  --z-modal: var(--z-index-6);
+  --z-popover: var(--z-index-7);
+  --z-toast: var(--z-index-8);
+  --z-overlay: var(--z-index-9);
+  --z-max: var(--z-index-max);
+
+}
