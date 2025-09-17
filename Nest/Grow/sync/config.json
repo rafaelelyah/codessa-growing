@@ -1,0 +1,16 @@
+{
+  "repositories": [
+    {
+      "name": "codessa-registry",
+      "url": "https://api.github.com/repos/codessa/growing-registry",
+      "type": "github"
+    },
+    {
+      "name": "codessa-seeds",
+      "url": "https://github.com/codessa/growing-seeds",
+      "type": "github"
+    }
+  ],
+  "localSyncDir": "registry",
+  "cacheDir": "cache"
+}

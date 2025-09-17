@@ -31,16 +31,6 @@
   --motion-timing-4: linear;
   --motion-timing-5: cubic-bezier(0.4, 0, 0.2, 1); // smooth
 
-  // Aliases semânticos para TREE
-  --duration-fast: var(--motion-duration-2);
-  --duration-base: var(--motion-duration-3);
-  --duration-slow: var(--motion-duration-4);
-  --timing-smooth: var(--motion-timing-5);
-  --timing-linear: var(--motion-timing-4);
-
-  // Opacidade para overlays
-  --opacity-overlay: 0.5;
-
   // ========================================
   // DISTANCE — Deslocamento em animações
   // ========================================

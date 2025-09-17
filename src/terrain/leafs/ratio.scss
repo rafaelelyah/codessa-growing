@@ -1,0 +1,13 @@
+@use 'sass:math';
+@use '../sprouts' as *;
+
+// ========================================
+// LEAF — ASPECT RATIO
+// ========================================
+
+.leaf-aspect {
+  &--1x1 { @include sprout-aspect-ratio(math.div(1, 1)); }
+  &--4x3 { @include sprout-aspect-ratio(math.div(4, 3)); }
+  &--16x9 { @include sprout-aspect-ratio(math.div(16, 9)); }
+  &--21x9 { @include sprout-aspect-ratio(math.div(21, 9)); }
+}

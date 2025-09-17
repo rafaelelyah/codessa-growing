@@ -1,0 +1,99 @@
+@use '../seeds/outline';
+@use '../seeds/scale';
+
+// ========================================
+// SPROUTS — UTILITY CONSTRUCTORS
+// ========================================
+// Mixins para funcionalidades utilitárias e helpers.
+
+// ----------------------------------------
+// RESET UTILITIES
+// ----------------------------------------
+
+@mixin sprout-list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sprout-button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin sprout-link-reset {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// ----------------------------------------
+// VISIBILITY UTILITIES
+// ----------------------------------------
+
+@mixin sprout-hidden {
+  display: none !important;
+}
+
+@mixin sprout-visible {
+  display: block !important;
+}
+
+@mixin sprout-invisible {
+  visibility: hidden !important;
+}
+
+@mixin sprout-visible-all {
+  visibility: visible !important;
+}
+
+// ----------------------------------------
+// POSITION UTILITIES
+// ----------------------------------------
+
+@mixin sprout-relative {
+  position: relative !important;
+}
+
+@mixin sprout-absolute {
+  position: absolute !important;
+}
+
+// ----------------------------------------
+// DISPLAY UTILITIES
+// ----------------------------------------
+
+@mixin sprout-block {
+  display: block !important;
+}
+
+@mixin sprout-inline {
+  display: inline !important;
+}
+
+@mixin sprout-inline-block {
+  display: inline-block !important;
+}
+
+// ----------------------------------------
+// DEBUG HELPERS
+// ----------------------------------------
+
+@mixin sprout-debug-outline($color: 'red') {
+  outline: var(--border-width-1) solid #{$color};
+}
+
+@mixin sprout-debug-bg($color: 'red') {
+  background-color: #{$color} !important;
+}

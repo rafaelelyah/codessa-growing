@@ -3,6 +3,7 @@ ehthumbs.db
 # Node.js
 node_modules/
 dist/
+public/
 
 # Ambiente
 .env
@@ -22,4 +23,5 @@ ehthumbs.db
 # Previews e imagens geradas
 
 # Documentação interna
-ROADMAP-interno.md
+project-docs/WORK-LOG/
+project-docs/ROADMAP-interno.md

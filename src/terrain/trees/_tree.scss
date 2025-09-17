@@ -1,0 +1,26 @@
+@use '../soils' as *;
+
+// ========================================
+// TREE — DEVELOPMENT COMPONENTS
+// ========================================
+// Components organized by type for better maintainability
+
+// ========================================
+// 🌱 SPROUTS SECTION (Dependencies & Behaviors)
+// ========================================
+// Sprouts are placed at the top so they can be used by any trunk below
+// This section contains mixins, functions, and utility behaviors
+
+// ========================================
+// 🌳 TRUNKS SECTION (Main Components)
+// ========================================
+// Trunks are the main structural components of your design system
+// They can use any sprout from above
+
+
+// ========================================
+// 🍃 LEAFS SECTION (Utilities & Overrides)
+// ========================================
+// Leafs are placed at the bottom for final styling adjustments
+// They can override any trunk or sprout above
+

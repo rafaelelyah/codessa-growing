@@ -39,11 +39,4 @@
   // ========================================
   --radius-circle: 50%; // circle
 
-  // Aliases de radius para uso semântico nos componentes/leafs
-  --border-radius-sm: var(--radius-1);
-  --border-radius-md: var(--radius-3);
-  --border-radius-lg: var(--radius-5);
-  --border-radius-pill: var(--radius-7);
-  --border-radius-circle: var(--radius-circle);
-
 }

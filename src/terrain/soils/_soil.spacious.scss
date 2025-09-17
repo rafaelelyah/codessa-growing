@@ -30,7 +30,14 @@
   --gap-lg: var(--gap-6);
 
   // Containers mais largos
-  --container-md: var(--container-5);
-  --container-lg: var(--container-6);
+  --container-xs: var(--container-3);
+  --container-sm: var(--container-4);
+  --container-md: var(--container-6);
+  --container-lg: var(--container-7);
+
+  // Bordas maiores para amplitude
+  --border-radius-sm: var(--radius-3);
+  --border-radius-md: var(--radius-4);
+  --border-radius-lg: var(--radius-5);
 
 }

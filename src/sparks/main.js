@@ -1,1 +1,1 @@
-import '../terrain/main.scss';
+import '../main.scss';

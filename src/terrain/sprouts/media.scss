@@ -1,0 +1,113 @@
+@use '../soils' as *;
+@use 'sass:math'; // Importar o módulo math
+
+// ========================================
+// SPROUTS — MEDIA CONSTRUCTORS
+// ========================================
+// Mixins para lidar com media queries e elementos de mídia.
+
+// ----------------------------------------
+// BREAKPOINTS
+// ----------------------------------------
+
+@mixin sprout-media-up($breakpoint) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-down($breakpoint) {
+  @media (max-width: var(--breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-between($min, $max) {
+  @media (min-width: var(--breakpoint-#{$min})) and (max-width: var(--breakpoint-#{$max})) {
+    @content;
+  }
+}
+
+// ----------------------------------------
+// MEDIA CONTAINERS
+// ----------------------------------------
+
+// REMOVIDO: sprout-media-container consolidado em _structures.scss
+
+// ----------------------------------------
+// BREAKPOINT VARIANTS (Pré-configurados)
+// ----------------------------------------
+
+@mixin sprout-mobile-only {
+  @include sprout-media-down('sm');
+}
+
+@mixin sprout-tablet-up {
+  @include sprout-media-up('sm');
+}
+
+@mixin sprout-tablet-only {
+  @include sprout-media-between('sm', 'lg');
+}
+
+@mixin sprout-desktop-up {
+  @include sprout-media-up('lg');
+}
+
+@mixin sprout-desktop-only {
+  @include sprout-media-between('lg', 'xl');
+}
+
+@mixin sprout-large-up {
+  @include sprout-media-up('xl');
+}
+
+// ----------------------------------------
+// COMMON MEDIA PATTERNS
+// ----------------------------------------
+
+@mixin sprout-hide-mobile {
+  @include sprout-mobile-only {
+    display: none !important;
+  }
+}
+
+@mixin sprout-hide-tablet {
+  @include sprout-tablet-only {
+    display: none !important;
+  }
+}
+
+@mixin sprout-hide-desktop {
+  @include sprout-desktop-up {
+    display: none !important;
+  }
+}
+
+// ----------------------------------------
+// ASPECT RATIO
+// ----------------------------------------
+
+@mixin sprout-aspect-ratio($ratio) {
+  aspect-ratio: #{$ratio};
+}
+
+// ----------------------------------------
+// ASPECT RATIO VARIANTS (Pré-configurados)
+// ----------------------------------------
+
+@mixin sprout-aspect-square {
+  @include sprout-aspect-ratio(1);
+}
+
+@mixin sprout-aspect-video {
+  @include sprout-aspect-ratio(16/9);
+}
+
+@mixin sprout-aspect-photo {
+  @include sprout-aspect-ratio(4/3);
+}
+
+@mixin sprout-aspect-card {
+  @include sprout-aspect-ratio(3/4);
+}

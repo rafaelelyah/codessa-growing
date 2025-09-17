@@ -1,0 +1,405 @@
+// ========================================
+// BARK — Configurações globais padrão do sistema
+// ========================================
+// Define as configurações padrão de fonte, tipografia, layout e cores
+// que serão herdadas por todos os componentes do sistema.
+// Isso evita repetição e garante consistência global.
+
+@use '../soils' as *;
+
+// ========================================
+// CONFIGURAÇÕES GLOBAIS DE FONTE E TEXTO
+// ========================================
+
+html {
+  font-size: 100%; // 16px por padrão
+  line-height: var(--leading-base);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-base);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Headings
+// ========================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+  margin: 0 0 var(--margin-md) 0;
+}
+
+h1 {
+  font-size: var(--text-xxl);
+  margin-bottom: var(--margin-lg);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--margin-lg);
+}
+
+h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--margin-md);
+}
+
+h4 {
+  font-size: var(--text-md);
+  margin-bottom: var(--margin-md);
+}
+
+h5 {
+  font-size: var(--text-md);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--margin-sm);
+}
+
+h6 {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--margin-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Texto comum
+// ========================================
+
+p {
+  margin: 0 0 var(--margin-md) 0;
+  color: var(--text-primary);
+  line-height: var(--leading-base);
+}
+
+strong, b {
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+em, i {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+small {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+mark {
+  background-color: var(--bg-warning);
+  color: var(--text-warning);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--border-radius-sm);
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Listas
+// ========================================
+
+ul, ol {
+  margin: 0 0 var(--margin-md) 0;
+  padding-left: var(--padding-lg);
+  color: var(--text-primary);
+  line-height: var(--leading-base);
+}
+
+li {
+  margin-bottom: var(--margin-xs);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Links
+// ========================================
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-color: var(--link-color);
+  text-underline-offset: 0.125rem;
+  transition: color var(--duration-fast) var(--timing-smooth);
+
+  &:hover {
+    color: var(--link-hover);
+    text-decoration-color: var(--link-hover);
+  }
+
+  &:focus {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+    color: var(--link-hover);
+  }
+
+  &:visited {
+    color: var(--link-visited);
+    text-decoration-color: var(--link-visited);
+  }
+
+  &:active {
+    color: var(--link-active);
+    text-decoration-color: var(--link-active);
+  }
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Códigos
+// ========================================
+
+code {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background-color: var(--bg-muted);
+  color: var(--text-primary);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--border-radius-sm);
+  word-wrap: break-word;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--leading-tight);
+  background-color: var(--bg-muted);
+  color: var(--text-primary);
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  margin: 0 0 var(--margin-md) 0;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Citações
+// ========================================
+
+blockquote {
+  margin: 0 0 var(--margin-md) 0;
+  padding: var(--padding-md) var(--padding-lg);
+  border-left: 4px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: var(--leading-loose);
+}
+
+cite {
+  font-style: normal;
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+// ========================================
+// TIPOGRAFIA GLOBAL — Tabelas
+// ========================================
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 var(--margin-md) 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-base);
+}
+
+th, td {
+  padding: var(--padding-sm) var(--padding-md);
+  text-align: left;
+  border-bottom: var(--border-width) solid var(--border-primary);
+}
+
+th {
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+td {
+  color: var(--text-primary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+// ========================================
+// LAYOUT GLOBAL — Containers e seções
+// ========================================
+
+main {
+  min-height: calc(100vh - 200px);
+  background-color: var(--bg-primary);
+}
+
+section {
+  padding: var(--padding-lg) 0;
+
+  &:not(:last-child) {
+    margin-bottom: var(--padding-lg);
+  }
+}
+
+article {
+  margin-bottom: var(--margin-lg);
+}
+
+aside {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  padding: var(--padding-md);
+}
+
+// ========================================
+// LAYOUT GLOBAL — Formulários
+// ========================================
+
+form {
+  margin-bottom: var(--margin-lg);
+}
+
+fieldset {
+  border: var(--border-width) solid var(--border-primary);
+  border-radius: var(--border-radius-md);
+  padding: var(--padding-lg);
+  margin: 0 0 var(--margin-md) 0;
+}
+
+legend {
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  padding: 0 var(--padding-sm);
+  margin-bottom: var(--margin-sm);
+}
+
+label {
+  display: block;
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--margin-xs);
+}
+
+// ========================================
+// INTERATIVIDADE GLOBAL — Foco e seleção
+// ========================================
+
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+::selection {
+  background-color: var(--interactive-primary);
+  color: var(--text-inverse);
+}
+
+// ========================================
+// INTERATIVIDADE GLOBAL — Botões globais
+// ========================================
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--font-medium);
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--timing-smooth);
+
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// ========================================
+// RESPONSIVIDADE GLOBAL — Media queries base
+// ========================================
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--text-sm);
+  }
+
+  h1 {
+    font-size: var(--text-xl);
+  }
+
+  h2 {
+    font-size: var(--text-lg);
+  }
+
+  h3 {
+    font-size: var(--text-md);
+  }
+
+  main {
+    min-height: calc(100vh - 150px);
+  }
+
+  section {
+    padding: var(--padding-md) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: var(--text-sm);
+  }
+
+  h1 {
+    font-size: var(--text-lg);
+  }
+
+  h2 {
+    font-size: var(--text-md);
+  }
+
+  h3 {
+    font-size: var(--text-sm);
+  }
+
+  main {
+    min-height: calc(100vh - 120px);
+  }
+
+  section {
+    padding: var(--padding-sm) 0;
+  }
+}

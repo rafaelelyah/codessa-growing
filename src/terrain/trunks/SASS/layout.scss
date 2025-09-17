@@ -1,0 +1,38 @@
+@use '../sprouts' as *;
+@use '../soils' as *;
+
+// ========================================
+// TRUNKS — LAYOUT COMPONENTS
+// ========================================
+// Componentes funcionais para estrutura e layout
+
+// Container - Container genérico
+.trunk-container {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  @include sprout-padding-inline('md');
+}
+
+// Section - Seção genérica
+.trunk-section {
+  @include sprout-padding-block('lg');
+}
+
+// Grid - Sistema de grid flexível
+.trunk-grid {
+  @include sprout-flex-row($gap: 'lg');
+
+  &.trunk-grid--cols-2,
+  &.trunk-grid--cols-3,
+  &.trunk-grid--cols-4 {
+    > * {
+      flex: 1;
+    }
+  }
+
+  &.trunk-grid--cols-auto {
+    > * {
+      flex: 0 0 auto;
+    }
+  }
+}

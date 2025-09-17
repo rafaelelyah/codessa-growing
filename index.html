@@ -1,118 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-density="spacious">
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codessa Growing - Design System</title>
     <link rel="stylesheet" href="/main.scss">
+    <script type="module" src="/src/sparks/main.js"></script>
+
 </head>
 <body>
-    <!-- Header usando leafs de spacing -->
-    <header class="trunk-header trunk-header--default-layout trunk-header--justify-between trunk-header--height-10vh trunk-header--sticky-top leaf-pad-y--6">
-                <a href="#" class="trunk-logo trunk-logo--size-xl">Codessa</a><p>Growing</p>
 
-                <nav class="trunk-nav trunk-nav--horizontal trunk-nav--right">
-                    <ul class="trunk-list trunk-list--inline leaf-gap--4">
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Documentação</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li>
-                            <div class="trunk-search">
-                                <input type="search" class="trunk-search-input" placeholder="Buscar...">
-                                <button class="trunk-button trunk-button--md">Buscar</button>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-    </header>
 
-    <!-- Main com container centralizado e padding adequado -->
-    <main class="trunk-main--container-full trunk-grid trunk-grid--cols-4 trunk-grid--gap-lg trunk-grid--align-items-start">
-                <!-- Aside com tamanho menor (1 coluna de 4) -->
-                <aside class="trunk-aside trunk-grid--span-1">
-                    <nav class="trunk-nav trunk-nav--vertical">
-                        <h3>Seeds</h3>
-                        <ul>
-                            <li><a href="#seed-scale"><span class="trunk-icon">📏</span> Scale</a></li>
-                            <li><a href="#seed-palette"><span class="trunk-icon">🎨</span> Palette</a></li>
-                            <li><a href="#seed-type"><span class="trunk-icon">🅰️</span> Type</a></li>
-                        </ul>
-                        <h3>Sprouts</h3>
-                        <ul>
-                            <li><a href="#sprout-structures"><span class="trunk-icon">🏗️</span> Structures</a></li>
-                            <li><a href="#sprout-textual"><span class="trunk-icon">✍️</span> Textual</a></li>
-                            <li><a href="#sprout-interactions"><span class="trunk-icon">👆</span> Interactions</a></li>
-                        </ul>
-                        <h3>Trunks</h3>
-                        <ul>
-                            <li><a href="#trunk-card"><span class="trunk-icon">💳</span> Card</a></li>
-                            <li><a href="#trunk-button"><span class="trunk-icon">🔘</span> Button</a></li>
-                            <li><a href="#trunk-modal"><span class="trunk-icon">🖼️</span> Modal</a></li>
-                        </ul>
-                    </nav>
-                </aside>
-                
-                <!-- Conteúdo principal com tamanho maior (3 colunas de 4) e espaçamento adequado -->
-                <div class="trunk-container--full trunk-grid--span-3">
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Seed: Scale</h2>
-                        <p class="trunk-paragraph">O Seed `Scale` define a base matemática do sistema de design do Codessa Growing. Ele estabelece proporções modulares que servem como referência para todas as outras variáveis — como tamanhos, espaçamentos, containers, tipografia e animações.</p>
-                    
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Seed: Palette</h2>
-                        <p class="trunk-paragraph">O Seed `Palette` define o sistema cromático do Codessa Growing. Ele organiza cores em grupos semânticos que orientam o uso visual em componentes, temas e estados de interface. Além das cores base, também define níveis de opacidade, elevação e gradientes, que contribuem para a construção de profundidade, transparência e variações temáticas.</p>
-                    
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Seed: Type</h2>
-                        <p class="trunk-paragraph">O Seed `Type` define os parâmetros tipográficos do Codessa Growing. Ele organiza valores semânticos para família de fonte, tamanho, altura de linha e espessura, permitindo consistência visual e hierarquia textual em todos os níveis da interface.</p>
+<!-- 🌳 TRUNKS SECTION -->
+<!-- Trunks are the main structural components -->
 
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Sprout: Structures</h2>
-                        <p class="trunk-paragraph">Construtores voltados para composição estrutural da interface. Definem containers, seções, grids, alinhamentos flexbox, colunas e espaçamentos.</p>
-                    
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Sprout: Textual</h2>
-                        <p class="trunk-paragraph">Construtores voltados para composição tipográfica da interface. Definem estilos para headings, parágrafos, links, truncamento, tipografia fluida e blocos de código.</p>
-                    
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Sprout: Interactions</h2>
-                        <p class="trunk-paragraph">Construtores voltados para elementos interativos da interface. Definem estilos para botões, campos com feedback visual e estados de navegação.</p>
 
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Trunk: Card</h2>
-                        <p class="trunk-paragraph">O `trunk-card` define a estilização padrão para um componente de card, ideal para exibir blocos de conteúdo de forma organizada.</p>
-                    
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Trunk: Button</h2>
-                        <p class="trunk-paragraph">O `trunk-button` define a estilização padrão para um componente de botão interativo.</p>
-                    
-                        <h2 class="trunk-heading trunk-heading--margin-bottom-md">Trunk: Modal</h2>
-                        <p class="trunk-paragraph">O `trunk-modal` define a estilização padrão para um componente de modal/diálogo, usado para exibir conteúdo em uma sobreposição que exige a atenção do usuário.</p>
-                </div>
-    </main>
 
-    <!-- Footer usando leafs de padding -->
-    <footer class="trunk-footer trunk-grid trunk-grid--cols-4 trunk-grid--gap-lg leaf-pad--6">
-                    <a href="#" class="trunk-logo--size-xl trunk-logo--weight-light">Codessa</a>
-                    <nav class="trunk-nav">
-                        <ul>
-                            <li><h4>Legal</h4></li>
-                            <li><a href="#">Privacidade</a></li>
-                            <li><a href="#">Termos</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="trunk-nav">
-                        <ul>
-                            <li><h4>Recursos</h4></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Suporte</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="trunk-nav trunk-nav--horizontal trunk-nav--social">
-                        <ul>
-                            <li><a href="#"><span class="trunk-icon">📘</span></a></li>
-                            <li><a href="#"><span class="trunk-icon">🐦</span></a></li>
-                            <li><a href="#"><span class="trunk-icon">💼</span></a></li>
-                        </ul>
-                    </nav>
-            <div class="footer-bottom-row trunk-container--margin-top-lg">
-                <p class="trunk-paragraph trunk-paragraph--small trunk-paragraph--text-center">&copy; 2025 Codessa Growing. Todos os direitos reservados.</p>
-            </div>
-    </footer>
 
-    <script type="module" src="/src/sparks/main.js"></script>
+<!-- nav-sidebar -->
+<nav class="nav-sidebar">
+  <ul class="ul-sidebar">
+    <li class="li-sidebar">li-sidebar content</li>
+  </ul>
+</nav>
+<!-- End nav-sidebar -->
 </body>
 </html>

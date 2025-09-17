@@ -1,0 +1,214 @@
+@use '../seeds/layout';
+@use '../seeds/spacing';
+@use 'behaviors' as *;
+
+// ========================================
+// SPROUTS — LAYOUT CONSTRUCTORS
+// ========================================
+// Mixins consolidados para construir layouts e estruturas.
+
+// ----------------------------------------
+// CONTAINERS
+// ----------------------------------------
+
+@mixin sprout-container(
+  $size: 'full',
+  $padding: true,
+  $center: true
+) {
+  width: 100%;
+
+  @if $size != 'fluid' {
+    max-width: var(--container-#{$size});
+  }
+
+  @if $center {
+    margin-inline: auto;
+  }
+
+  @if $padding {
+    padding-inline: var(--container-padding-inline);
+  }
+}
+
+@mixin sprout-container-fluid {
+  @include sprout-container($size: 'fluid', $padding: true, $center: true);
+}
+
+// ----------------------------------------
+// SECTIONS
+// ----------------------------------------
+
+@mixin sprout-section($min-height-size: 'full') {
+  @include sprout-element($height: 100vh);
+  width: 100%;
+}
+
+@mixin sprout-section-center {
+  @include sprout-flex($justify: center, $align: center, $direction: column);
+}
+
+@mixin sprout-section-padding($space: 'md') {
+  @include sprout-padding-block($space);
+  @include sprout-padding-inline($space);
+}
+
+// ----------------------------------------
+// GRIDS
+// ----------------------------------------
+
+@mixin sprout-grid($cols: 12, $gap: 'md') {
+  display: grid;
+  grid-template-columns: repeat(#{$cols}, 1fr);
+  gap: var(--gap-#{$gap});
+  width: 100%;
+  max-width: var(--container-lg);
+}
+
+@mixin sprout-grid-center {
+  @include sprout-flex($justify: center, $align: center, $direction: column);
+}
+
+// ----------------------------------------
+// FLEX ALIGNMENTS
+// ----------------------------------------
+
+@mixin sprout-flex(
+  $justify: 'center',
+  $align: 'center',
+  $direction: 'row',
+  $wrap: 'nowrap',
+  $gap: null
+) {
+  display: flex;
+  flex-direction: #{$direction};
+  flex-wrap: #{$wrap};
+
+  @if $gap != null {
+    gap: var(--gap-#{$gap});
+  }
+
+  @if $justify == 'start' {
+    justify-content: flex-start;
+  } @else if $justify == 'end' {
+    justify-content: flex-end;
+  } @else if $justify == 'between' {
+    justify-content: space-between;
+  } @else if $justify == 'around' {
+    justify-content: space-around;
+  } @else {
+    justify-content: #{$justify};
+  }
+
+  @if $align == 'start' {
+    align-items: flex-start;
+  } @else if $align == 'end' {
+    align-items: flex-end;
+  } @else {
+    align-items: #{$align};
+  }
+}
+
+@mixin sprout-flex-row($gap: null, $align: 'center', $justify: 'start') {
+  @include sprout-flex($justify: $justify, $align: $align, $direction: 'row', $gap: $gap);
+}
+
+@mixin sprout-flex-column($gap: null, $align: 'start', $justify: 'start') {
+  @include sprout-flex($justify: $justify, $align: $align, $direction: 'column', $gap: $gap);
+}
+
+// ----------------------------------------
+// COLUMNS
+// ----------------------------------------
+
+@mixin sprout-column-flex($grow: 1, $basis: 0) {
+  flex-grow: #{$grow};
+  flex-basis: #{$basis};
+  min-width: 0;
+}
+
+@mixin sprout-column-fixed($size: 'md') {
+  @include sprout-element($width: var(--container-#{$size}));
+  flex: 0 0 var(--container-#{$size});
+}
+
+// ----------------------------------------
+// SPACINGS
+// ----------------------------------------
+
+@mixin sprout-spacing-block($space: 'md') {
+  margin-block: var(--gap-#{$space});
+}
+
+@mixin sprout-spacing-inline($space: 'md') {
+  margin-inline: var(--gap-#{$space});
+}
+
+@mixin sprout-spacing-top($space: 'md') {
+  margin-block-start: var(--gap-#{$space});
+}
+
+@mixin sprout-spacing-bottom($space: 'md') {
+  margin-block-end: var(--gap-#{$space});
+}
+
+@mixin sprout-spacing-left($space: 'md') {
+  margin-inline-start: var(--gap-#{$space});
+}
+
+@mixin sprout-spacing-right($space: 'md') {
+  margin-inline-end: var(--gap-#{$space});
+}
+
+@mixin sprout-padding-block($space: 'md') {
+  padding-block: var(--gap-#{$space});
+}
+
+@mixin sprout-padding-inline($space: 'md') {
+  padding-inline: var(--gap-#{$space});
+}
+
+@mixin sprout-padding($space: 'md') {
+  @include sprout-padding-block($space);
+  @include sprout-padding-inline($space);
+}
+
+// ----------------------------------------
+// DIMENSIONS
+// ----------------------------------------
+
+@mixin sprout-full-width {
+  @include sprout-element($width: 100%);
+}
+
+@mixin sprout-full-height {
+  @include sprout-element($height: 100%);
+}
+
+@mixin sprout-viewport-height($percentage: 100) {
+  @include sprout-element($height: #{$percentage}vh);
+}
+
+@mixin sprout-viewport-width($percentage: 100) {
+  @include sprout-element($width: #{$percentage}vw);
+}
+
+// ----------------------------------------
+// HELPERS
+// ----------------------------------------
+
+@mixin sprout-clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin sprout-overflow-hidden {
+  overflow: hidden;
+}
+
+@mixin sprout-overflow($type: 'auto') {
+  overflow: #{$type};
+}

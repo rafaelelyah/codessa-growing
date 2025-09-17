@@ -1,0 +1,129 @@
+// ========================================
+// TRUNKS — HEADER COMPONENTS
+// ========================================
+// Componentes funcionais para cabeçalhos
+
+// Header - Container principal do cabeçalho
+
+.header-1{
+  background-color: var(--bg-secondary);
+}
+.header-2{
+  background-color: var(--bg-secondary);
+}
+
+/*
+.header-with-navbar-fixed {
+    
+  .hwnf-container{
+      &--top{
+        .hwnf-navbar{
+          &--top{
+                background-color: var(--bg-secondary);
+
+            .hwnf-ul{
+              &--top{
+                .hwnf-li{
+                  &--top{
+                    a{
+
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+
+  }
+}
+  &--bottom{
+          .hwnf-navbar{
+          &--bottom{
+            .hwnf-ul{
+              &--bottom{
+                .hwnf-li{
+                  &--bottom{
+                    a{
+
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+
+  }
+  &--right{
+          .hwnf-navbar{
+          &--right{
+            .hwnf-ul{
+              &--right{
+                .hwnf-li{
+                  &--right{
+                    a{
+
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+
+  }
+  &--left{
+          .hwnf-navbar{
+          &--left{
+            .hwnf-ul{
+              &--left{
+                .hwnf-li{
+                  &--left{
+                    a{
+
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+    
+  }
+  &--top{
+    @extend .header-with-navbar-fixed;
+    @include sprout-fixed('top');
+    @include sprout-height-vh(20);
+    @include sprout-full-width;
+    
+  }
+  &--bottom{
+    @include sprout-fixed('bottom');
+    @extend .header-with-navbar-fixed;
+    @include sprout-height-vh(20);
+    @include sprout-full-width;
+  }
+  &--right{
+    @include sprout-fixed('right');
+    @extend .header-with-navbar-fixed;
+    @include sprout-height-vh(100);
+  }
+  &--left{
+    @include sprout-fixed('left');
+    @extend .header-with-navbar-fixed;
+    @include sprout-height-vh(100);
+  }
+}
+
+.top{
+
+}*/

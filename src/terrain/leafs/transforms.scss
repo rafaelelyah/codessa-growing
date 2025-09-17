@@ -1,0 +1,95 @@
+@use '../sprouts' as *;
+
+// ========================================
+// LEAF — TRANSFORMS
+// ========================================
+// Utilitários para transformações CSS (rotate, scale, translate, skew)
+
+.leaf-rotate {
+  &--0 { transform: rotate(0deg); }
+  &--45 { transform: rotate(45deg); }
+  &--90 { transform: rotate(90deg); }
+  &--180 { transform: rotate(180deg); }
+  &--270 { transform: rotate(270deg); }
+  &--n45 { transform: rotate(-45deg); }
+  &--n90 { transform: rotate(-90deg); }
+  &--n180 { transform: rotate(-180deg); }
+}
+
+.leaf-scale {
+  &--50 { transform: scale(0.5); }
+  &--75 { transform: scale(0.75); }
+  &--90 { transform: scale(0.9); }
+  &--95 { transform: scale(0.95); }
+  &--100 { transform: scale(1); }
+  &--105 { transform: scale(1.05); }
+  &--110 { transform: scale(1.1); }
+  &--125 { transform: scale(1.25); }
+  &--150 { transform: scale(1.5); }
+}
+
+.leaf-translate {
+  &-x {
+    &--0 { transform: translateX(0); }
+    &--25 { transform: translateX(25%); }
+    &--50 { transform: translateX(50%); }
+    &--75 { transform: translateX(75%); }
+    &--100 { transform: translateX(100%); }
+    &--n25 { transform: translateX(-25%); }
+    &--n50 { transform: translateX(-50%); }
+    &--n75 { transform: translateX(-75%); }
+    &--n100 { transform: translateX(-100%); }
+  }
+  &-y {
+    &--0 { transform: translateY(0); }
+    &--25 { transform: translateY(25%); }
+    &--50 { transform: translateY(50%); }
+    &--75 { transform: translateY(75%); }
+    &--100 { transform: translateY(100%); }
+    &--n25 { transform: translateY(-25%); }
+    &--n50 { transform: translateY(-50%); }
+    &--n75 { transform: translateY(-75%); }
+    &--n100 { transform: translateY(-100%); }
+  }
+}
+
+.leaf-skew {
+  &-x {
+    &--0 { transform: skewX(0deg); }
+    &--3 { transform: skewX(3deg); }
+    &--6 { transform: skewX(6deg); }
+    &--12 { transform: skewX(12deg); }
+    &--n3 { transform: skewX(-3deg); }
+    &--n6 { transform: skewX(-6deg); }
+    &--n12 { transform: skewX(-12deg); }
+  }
+  &-y {
+    &--0 { transform: skewY(0deg); }
+    &--3 { transform: skewY(3deg); }
+    &--6 { transform: skewY(6deg); }
+    &--12 { transform: skewY(12deg); }
+    &--n3 { transform: skewY(-3deg); }
+    &--n6 { transform: skewY(-6deg); }
+    &--n12 { transform: skewY(-12deg); }
+  }
+}
+
+// Transform origin
+.leaf-origin {
+  &--center { transform-origin: center; }
+  &--top { transform-origin: top; }
+  &--bottom { transform-origin: bottom; }
+  &--left { transform-origin: left; }
+  &--right { transform-origin: right; }
+  &--top-left { transform-origin: top left; }
+  &--top-right { transform-origin: top right; }
+  &--bottom-left { transform-origin: bottom left; }
+  &--bottom-right { transform-origin: bottom right; }
+}
+
+// Hover transforms (combinados com transitions)
+// .leaf-hover {
+//   &-scale { @include sprout-hover-scale; }
+//   &-rotate { @include sprout-hover-rotate; }
+//   &-lift { @include sprout-hover-lift; }
+// }

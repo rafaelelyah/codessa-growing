@@ -1,0 +1,32 @@
+@use '../sprouts' as *;
+
+// ========================================
+// LEAF — SIZES (larguras, alturas, containers)
+// ========================================
+
+// Widths (percentuais e container-based)
+.leaf-w {
+  &--auto { width: auto; }
+  &--full { width: var(--container-full); }
+  &--25 { width: 25%; }
+  &--33 { width: 33.333%; }
+  &--50 { width: 50%; }
+  &--66 { width: 66.666%; }
+  &--75 { width: 75%; }
+}
+
+// Heights (viewport helpers)
+.leaf-h {
+  &--auto { height: auto; }
+  &--25vh { height: 25vh; }
+  &--50vh { height: 50vh; }
+  &--75vh { height: 75vh; }
+  &--100vh { height: 100vh; }
+  &--min-25vh { min-height: 25vh; }
+  &--min-50vh { min-height: 50vh; }
+  &--min-75vh { min-height: 75vh; }
+  &--min-100vh { min-height: 100vh; }
+}
+
+// Max-width containers via seeds/soils
+.leaf-container { @each $k in (1,2,3,4,5,6,7) { &--#{$k} { max-width: var(--container-#{$k}); margin-inline: auto; } } }

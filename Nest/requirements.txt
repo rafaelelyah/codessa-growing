@@ -1,0 +1,18 @@
+# Codessa Nest - Requirements
+# Hub de Assets e Integrações
+
+# CLI Framework
+click>=8.0.0
+
+# HTTP e APIs
+requests>=2.25.0
+
+# Utilitários
+pathlib2>=2.3.0  # Para compatibilidade
+typing>=3.7.4    # Para type hints
+
+# Futuras expansões
+# rich>=10.0.0        # CLI rica
+# pyfiglet>=0.8.0     # ASCII art
+# questionary>=1.10.0 # Interativos
+# pillow>=8.0.0       # Processamento de imagens

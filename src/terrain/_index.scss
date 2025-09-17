@@ -1,5 +1,10 @@
-@forward 'seeds/index';
-@forward 'foundation/index';
-@forward 'soils/index';
-@forward 'sprouts/index';
-@forward 'trunks/index';
+// ========================================
+// Codessa Growing - Main Styles
+// ========================================
+
+// Ordem correta: Seeds → Soils → Foundation → Trunks → Trees
+
+@forward 'seeds/index.scss';      // Valores base
+@forward 'soils/index.scss';      // Variáveis semânticas
+@forward 'foundation/index.scss'; // Resets + bark + tree// Componentes funcionais
+@forward 'trees/index.scss';       // Componentes funcionais

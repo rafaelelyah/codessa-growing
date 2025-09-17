@@ -1,0 +1,38 @@
+@use '../sprouts' as *;
+@use '../soils' as *;
+
+// ========================================
+// TRUNKS — MEDIA COMPONENTS
+// ========================================
+// Componentes funcionais para cards, modais e mídia
+
+// Card (baseline minimal)
+.trunk-card {
+  @include sprout-padding('md');
+}
+
+// Modal (baseline minimal)
+.trunk-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include sprout-flex($justify: 'center', $align: 'center');
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+
+  &.trunk-modal--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .trunk-modal-content {
+    @include sprout-padding('lg');
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
