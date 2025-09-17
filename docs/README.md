@@ -52,8 +52,8 @@ O Growing é um sistema de design e desenvolvimento que utiliza uma arquitetura 
 ### Instalação e Configuração
 ```bash
 # Clone o repositório
-git clone https://github.com/rafaelelyah/codessa.git
-cd codessa/Apps/Growing
+git clone https://github.com/rafaelelyah/codessa-growing.git
+cd codessa-growing
 
 # Instale as dependências
 npm install
