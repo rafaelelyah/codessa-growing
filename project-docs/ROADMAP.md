@@ -4,24 +4,24 @@
 **Status:** Arquitetura base completa
 **Versão:** 0.0.1-alpha
 
-## 🌱 Visão Geral
+## Visão Geral
 
 O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trunk-first + Sprout-driven com filosofias Extend Cascade e Leaf Touch para desenvolvimento de interfaces modernas e escaláveis.
 
-## 📊 Estado Atual
+## Estado Atual
 
-### ✅ Implementação Base Completa
+### Implementação Base Completa
 - **Arquitetura completa:** Seeds → Soils → Sprouts → Trunks → Leafs
 - **Sistema de navegação:** 4 variants funcionais
 - **Documentação abrangente:** 6 camadas documentadas
 - **Filosofias nomeadas:** Extend Cascade, Leaf Touch
 
-### 🚧 Em Desenvolvimento
+### Em Desenvolvimento
 - **Exemplos práticos:** Guias de uso detalhados
 - **Expansão de componentes:** Modal, tabs, cards
 - **Sistema de temas:** Dark/light mode
 
-## 🗺️ Roadmap Detalhado
+## Roadmap Detalhado
 
 ### Fase 1: Foundation & Core (Q4 2025)
 - [x] **Arquitetura Sass e Sistema Modular**
@@ -102,14 +102,14 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
   - [ ] Service worker integration
   - [ ] Critical CSS extraction
 
-## 📈 Métricas de Progresso
+## Métricas de Progresso
 
 - **Arquitetura:** 100% completa
 - **Componentes base:** 90% completos
 - **Documentação:** 85% completa
 - **Testes:** 30% cobertura
 
-## ⚡ Características Técnicas
+## Características Técnicas
 
 ### Qualidade e Performance
 - [x] **Compatibilidade:** Funciona com stacks modernas (Vite, React, Vue, Svelte)
@@ -119,14 +119,14 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
 - [ ] **Atualização:** Sistema preparado para updates sem breaking changes
 - [ ] **Extensibilidade:** Arquitetura modular permite novos componentes
 
-## 🎯 Próximos Marcos
+## Próximos Marcos
 
 1. **Outubro 2025:** Exemplos práticos completos
 2. **Novembro 2025:** Expansão da biblioteca de componentes
 3. **Dezembro 2025:** Sistema de temas funcional
 4. **Janeiro 2026:** Testes automatizados
 
-## 🤝 Como Contribuir
+## Como Contribuir
 
 O desenvolvimento do Growing é colaborativo e aberto a contribuições. Veja como participar:
 
@@ -146,7 +146,7 @@ O desenvolvimento do Growing é colaborativo e aberto a contribuições. Veja co
 - Compartilhe casos de uso
 - Participe do desenvolvimento colaborativo
 
-## 📞 Suporte e Comunidade
+## Suporte e Comunidade
 
 - **GitHub Issues:** Para bugs e solicitações de features
 - **Documentação:** [docs.growing.dev](https://docs.growing.dev)
