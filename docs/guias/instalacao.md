@@ -30,10 +30,10 @@ git --version
 
 ```bash
 # Clone o repositório principal
-git clone https://github.com/rafaelelyah/codessa.git
+git clone https://github.com/rafaelelyah/codessa-growing.git
 
 # Entre no diretório do Growing
-cd codessa/Apps/Growing
+cd codessa-growing
 ```
 
 ### Instalando Dependências
@@ -62,12 +62,23 @@ Após a instalação, você terá esta estrutura de arquivos:
 
 ```
 Growing/
-├── src/
-│   ├── main.scss          # Arquivo principal SCSS
+├── Wood/
+│   ├── main.scss          # Arquivo principal SCSS (core compartilhado)
 │   ├── groves/            # Componentes estruturais
 │   ├── harvest/           # Sistema de colheita
 │   ├── sparks/            # Utilitários e mixins
 │   └── terrain/           # Layout e grids
+├── My Groves/             # 🆕 Sistema de projetos independentes
+│   ├── example-project/   # Projeto exemplo (porta 3001)
+│   │   ├── tree.scss      # Ponto de entrada personalizado
+│   │   ├── foundation/    # Paleta azul/roxo
+│   │   ├── index.html     # Página do projeto
+│   │   └── vite.config.js # Configuração Vite
+│   └── test-project/      # Projeto teste (porta 3002)
+│       ├── tree.scss      # Ponto de entrada personalizado
+│       ├── foundation/    # Paleta verde/teal
+│       ├── index.html     # Página do projeto
+│       └── vite.config.js # Configuração Vite
 ├── Nest/
 │   ├── cli.py            # Sistema de gerenciamento Python
 │   ├── Grow/
@@ -194,6 +205,51 @@ O arquivo principal `src/main.scss` já importa todas as camadas:
    ```
 
 3. **As mudanças aparecem automaticamente** no navegador devido ao hot reload
+
+### Trabalhando com My Groves
+
+O sistema My Groves permite criar projetos independentes com builds simultâneos:
+
+```bash
+# Executar projeto exemplo (porta 3001)
+cd My\ Groves/example-project
+npm run dev
+
+# Em outro terminal, executar projeto teste (porta 3002)
+cd My\ Groves/test-project
+npm run dev
+```
+
+**Resultado:** Dois projetos rodando simultaneamente sem conflitos!
+
+#### Estrutura de um Projeto My Groves
+
+```
+my-project/
+├── tree.scss          # Ponto de entrada SCSS personalizado
+├── foundation/
+│   └── palette.scss   # Paleta de cores própria
+├── index.html         # Página HTML do projeto
+└── vite.config.js     # Configuração Vite específica
+```
+
+#### Criando um Novo Projeto
+
+```bash
+# Criar novo projeto independente
+mkdir -p My\ Groves/meu-projeto
+cd My\ Groves/meu-projeto
+
+# Copiar estrutura base de um projeto existente
+cp -r ../example-project/* ./
+
+# Personalizar paleta de cores em foundation/palette.scss
+# Editar tree.scss para seu estilo personalizado
+# Modificar index.html conforme necessário
+
+# Executar o projeto
+npm run dev
+```
 
 ### Usando o Sistema Nest
 

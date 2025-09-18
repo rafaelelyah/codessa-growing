@@ -50,6 +50,11 @@ Brutos Semântico    Trunks    Finais     Direto
 **Conteúdo:** Componentes adaptados para o projeto
 **Propósito:** Desenvolvimento direto e personalizado
 
+### 8. My Groves 🏗️
+**Responsabilidade:** Sistema de projetos independentes
+**Conteúdo:** Projetos isolados com builds simultâneos
+**Propósito:** Desenvolvimento paralelo e escalável
+
 ## Fluxo de Desenvolvimento
 
 ### Processo Básico
@@ -115,6 +120,25 @@ Foundation ← Seeds ← Soils ← Sprouts ← Trunks ← Tree
      ↑         ↑        ↑         ↑        ↑       ↑
   Base     Valores  Contexto  Ferramentas Componentes Adaptação
 ```
+
+### Sistema My Groves
+
+O My Groves adiciona uma dimensão paralela à arquitetura:
+
+```
+Core Compartilhado (src/)
+├── Seeds → Soils → Sprouts → Trunks → Foundation
+└── My Groves/
+    ├── Projeto A (Tree personalizado)
+    ├── Projeto B (Tree personalizado)
+    └── Projeto C (Tree personalizado)
+```
+
+Cada projeto My Groves:
+- **Compartilha o core** (Seeds, Soils, Sprouts, Trunks)
+- **Tem foundation própria** (identidade visual)
+- **Customiza no tree** (adaptações específicas)
+- **Roda independentemente** (builds isolados)
 
 ## Benefícios da Arquitetura
 
@@ -182,6 +206,13 @@ Foundation ← Seeds ← Soils ← Sprouts ← Trunks ← Tree
 - Tree: Implementação específica
 - Leafs: Customizações por projeto
 
+### Sistema My Groves
+- **Core Compartilhado**: Seeds, Soils, Sprouts, Trunks comuns
+- **Projetos Independentes**: Cada um com Tree e Foundation próprias
+- **Builds Simultâneos**: Múltiplos projetos rodando paralelamente
+- **Escalabilidade**: Fácil adicionar novos projetos
+- **Isolamento**: Sem conflitos entre projetos
+
 ## Próximos Passos
 
 Para aprofundar seu conhecimento:
@@ -190,5 +221,6 @@ Para aprofundar seu conhecimento:
 2. **Veja exemplos práticos** nos guias de uso
 3. **Experimente ferramentas** como o Grow Manager
 4. **Consulte referências** para detalhes técnicos
+5. **Descubra My Groves** para projetos independentes
 
 A arquitetura do Growing foi projetada para ser intuitiva e escalável, permitindo que você comece pequeno e expanda conforme suas necessidades crescem.

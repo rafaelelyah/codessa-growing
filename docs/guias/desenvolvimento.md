@@ -18,6 +18,17 @@ graph TD
     F --> G[Deploy]
 ```
 
+### Fluxo com My Groves
+
+```mermaid
+graph TD
+    A[Escolher Projeto] --> B[Desenvolver no Tree]
+    B --> C[Customizar Foundation]
+    C --> D[Executar Build Local]
+    D --> E[Testar Simultaneamente]
+    E --> F[Deploy Independente]
+```
+
 ## Configuração do Ambiente
 
 ### Estrutura de Diretórios Recomendada
@@ -35,6 +46,24 @@ project/
 ├── tests/              # Testes
 ├── growing.config.js   # Configuração
 └── package.json
+```
+
+### Estrutura My Groves
+
+```
+My Groves/
+├── project-alpha/
+│   ├── tree.scss       # Desenvolvimento principal
+│   ├── foundation/     # Identidade visual
+│   │   └── palette.scss
+│   ├── index.html      # Interface
+│   └── vite.config.js  # Configuração específica
+├── project-beta/
+│   ├── tree.scss
+│   ├── foundation/
+│   ├── index.html
+│   └── vite.config.js
+└── shared/            # Recursos compartilhados
 ```
 
 ### Configuração do VS Code
@@ -111,39 +140,171 @@ $sprout-card-product: (
 }
 ```
 
-## Desenvolvimento no Tree
+## Desenvolvimento com My Groves
 
-### Criando Arquivo Tree
+### Iniciando um Novo Projeto
+
+```bash
+# 1. Copiar projeto base
+cp -r My\ Groves/example-project My\ Groves/meu-novo-projeto
+cd My\ Groves/meu-novo-projeto
+
+# 2. Personalizar identidade visual
+edit foundation/palette.scss
+
+# 3. Desenvolver componentes
+edit tree.scss
+
+# 4. Executar projeto
+npm run dev
+```
+
+### Trabalhando com Múltiplos Projetos
+
+```bash
+# Terminal 1: Projeto A
+cd My\ Groves/project-alpha && npm run dev
+
+# Terminal 2: Projeto B
+cd My\ Groves/project-beta && npm run dev
+
+# Terminal 3: Projeto C
+cd My\ Groves/project-gamma && npm run dev
+```
+
+### Desenvolvimento no Tree (My Groves)
 
 ```scss
-// trees/_main.scss
-@use '../core/trees' as *;
+// My Groves/meu-projeto/tree.scss
+@use '../../src/soils' as soils;
+@use '../../src/sprouts' as sprouts;
+@use '../../src/trunks' as trunks;
+@use 'foundation/palette' as palette;
 
-// Importar sprouts necessários
-@use '../sprouts/button-primary';
-@use '../sprouts/card-product';
+// 1. Reset e base
+@include soils.reset();
+@include soils.typography-base();
 
-// Definir customizações
-$tree-main: (
-  'components': (
-    'button': (
-      'extend': sprout-button-primary,
-      'custom': (
-        'font-weight': 600,
-        'text-transform': uppercase
-      )
-    ),
-    'card': (
-      'extend': sprout-card-product,
-      'custom': (
-        'box-shadow': var(--shadow-lg)
-      )
-    )
-  )
-);
+// 2. Componentes customizados
+.my-brand-header {
+  @extend %trunk-header;
+  background-color: palette.$primary;
+  color: palette.$on-primary;
 
-// Aplicar tree
-@include tree-main($tree-main);
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.my-brand-button {
+  @include sprouts.button-base();
+  background-color: palette.$secondary;
+  color: palette.$on-secondary;
+  border-radius: palette.$border-radius;
+
+  &:hover {
+    background-color: palette.$secondary-variant;
+    transform: translateY(-2px);
+  }
+}
+
+// 3. Layout específico do projeto
+.project-layout {
+  @include soils.layout-grid();
+  min-height: 100vh;
+  background-color: palette.$background;
+
+  .sidebar {
+    background-color: palette.$surface;
+    border-right: 1px solid palette.$border-color;
+  }
+
+  .main-content {
+    background-color: palette.$background;
+    color: palette.$on-background;
+  }
+}
+```
+
+### Gerenciamento de Foundation
+
+```scss
+// foundation/palette.scss - Identidade visual própria
+$primary: #1976d2;
+$on-primary: #ffffff;
+$primary-variant: #1565c0;
+
+$secondary: #dc004e;
+$on-secondary: #ffffff;
+$secondary-variant: #c2185b;
+
+$background: #fafafa;
+$on-background: #212121;
+$surface: #ffffff;
+$on-surface: #212121;
+
+$border-color: #e0e0e0;
+$border-radius: 8px;
+$border-radius-sm: 4px;
+$border-radius-lg: 12px;
+```
+
+### Estratégias de Desenvolvimento
+
+#### Desenvolvimento Paralelo
+
+```bash
+# Desenvolver múltiplos projetos simultaneamente
+# Cada um em seu terminal
+Terminal 1: cd My\ Groves/ecommerce && npm run dev    # http://localhost:3001
+Terminal 2: cd My\ Groves/blog && npm run dev         # http://localhost:3002
+Terminal 3: cd My\ Groves/dashboard && npm run dev    # http://localhost:3003
+```
+
+#### Compartilhamento de Componentes
+
+```scss
+// My Groves/shared-components/tree.scss
+@use '../../src/soils' as soils;
+@use '../../src/sprouts' as sprouts;
+
+// Componentes compartilhados entre projetos
+.shared-button {
+  @include sprouts.button-base();
+  // Estilos base compartilhados
+}
+
+.shared-card {
+  @include sprouts.card-structure();
+  // Estrutura base compartilhada
+}
+```
+
+#### Customização por Projeto
+
+```scss
+// My Groves/project-a/tree.scss
+@use '../shared-components/tree' as shared;
+@use 'foundation/palette' as palette;
+
+// Importar componentes compartilhados
+.shared-button {
+  // Customização específica do projeto A
+  background-color: palette.$primary;
+  color: palette.$on-primary;
+}
+
+// My Groves/project-b/tree.scss
+@use '../shared-components/tree' as shared;
+@use 'foundation/palette' as palette;
+
+// Importar componentes compartilhados
+.shared-button {
+  // Customização específica do projeto B
+  background-color: palette.$secondary;
+  color: palette.$on-secondary;
+}
 ```
 
 ### Estratégias de Adaptação
@@ -260,6 +421,18 @@ npm run dev
 
 Isso iniciará o servidor de desenvolvimento com hot reload automático para mudanças em SCSS e HTML.
 
+### Desenvolvimento com My Groves
+
+```bash
+# Executar projeto específico
+cd My\ Groves/meu-projeto && npm run dev
+
+# Executar múltiplos projetos (terminais diferentes)
+cd My\ Groves/project1 && npm run dev  # Porta 3001
+cd My\ Groves/project2 && npm run dev  # Porta 3002
+cd My\ Groves/project3 && npm run dev  # Porta 3003
+```
+
 ### Build para Produção
 
 Para gerar os arquivos otimizados para produção:
@@ -270,12 +443,40 @@ npm run build
 
 Os arquivos compilados serão gerados na pasta `dist/` com CSS minificado e otimizado.
 
+### Build com My Groves
+
+```bash
+# Build de projeto específico
+cd My\ Groves/meu-projeto && npm run build
+
+# Build otimizado para produção
+cd My\ Groves/meu-projeto && npm run build:prod
+
+# Build múltiplos projetos
+for dir in My\ Groves/*/; do
+  if [ -d "$dir" ]; then
+    echo "Building $dir"
+    cd "$dir" && npm run build && cd ../..
+  fi
+done
+```
+
 ### Preview da Build
 
 Para visualizar a versão de produção localmente:
 
 ```bash
 npm run preview
+```
+
+### Preview com My Groves
+
+```bash
+# Preview de projeto específico
+cd My\ Groves/meu-projeto && npm run preview
+
+# Preview em porta específica
+cd My\ Groves/meu-projeto && npm run preview -- --port 4001
 ```
 
 ## Organização de Arquivos

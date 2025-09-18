@@ -1,0 +1,23 @@
+// ========================================
+// LAYOUT SEEDS — Mapa de sementes para containers e breakpoints
+// ========================================
+
+$layout-seeds: (
+  containers: (
+    1: var(--size-macro-1), // 8rem (128px)
+    2: var(--size-macro-2), // 16rem (256px)
+    3: var(--size-macro-3), // 24rem (384px)
+    4: var(--size-macro-4), // 32rem (512px)
+    5: var(--size-macro-6), // 48rem (768px)
+    6: var(--size-macro-8), // 64rem (1024px)
+    7: 100%                // fluido
+  ),
+  breakpoints: (
+    1: 320px,
+    2: 480px,
+    3: 768px,
+    4: 1024px,
+    5: 1280px,
+    6: 1440px
+  )
+);

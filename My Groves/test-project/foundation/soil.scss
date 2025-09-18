@@ -1,0 +1,237 @@
+// ========================================
+// SOIL — Example Project (Customizações de CSS Variables)
+// ========================================
+// Customizações específicas das variáveis CSS para o Example Project.
+// Este arquivo sobrescreve as variáveis padrão do terrain usando a palette customizada.
+
+// 1. PALETTE CUSTOMIZADA: Importar palette customizada completa PRIMEIRO
+@use './palette' as custom-palette;
+
+// 2. TERRAIN BASE: Importar seeds do terrain DEPOIS da palette customizada
+@use '~terrain/foundation' as foundation;
+@use '~terrain/seeds/layout' as layout;
+@use '~terrain/seeds/motion' as motion;
+@use '~terrain/seeds/outline' as outline;
+@use '~terrain/seeds/scale' as scale;
+@use '~terrain/seeds/spacing' as spacing;
+@use '~terrain/seeds/type' as type;
+
+// ========================================
+// GERAÇÃO DINÂMICA — Variáveis CSS a partir da palette customizada
+// ========================================
+
+:root {
+  // ========================================
+  // VARIÁVEIS DO TERRAIN (usando seeds padrão)
+  // ========================================
+
+  // Layout (containers e breakpoints)
+  @each $category, $submap in layout.$layout-seeds {
+    @if $category == containers {
+      @each $level, $value in $submap {
+        --container-#{$level}: #{$value};
+      }
+    } @else if $category == breakpoints {
+      @each $level, $value in $submap {
+        --breakpoint-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Motion (durações, delays, timings, distâncias)
+  @each $category, $submap in motion.$motion-seeds {
+    @if $category == durations {
+      @each $level, $value in $submap {
+        --motion-duration-#{$level}: #{$value};
+      }
+    } @else if $category == delays {
+      @each $level, $value in $submap {
+        --motion-delay-#{$level}: #{$value};
+      }
+    } @else if $category == timings {
+      @each $level, $value in $submap {
+        --motion-timing-#{$level}: #{$value};
+      }
+    } @else if $category == distances {
+      @each $level, $value in $submap {
+        --motion-distance-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Outline (larguras, estilos, raios)
+  @each $category, $submap in outline.$outline-seeds {
+    @if $category == widths {
+      @each $level, $value in $submap {
+        --border-width-#{$level}: #{$value};
+      }
+    } @else if $category == styles {
+      @each $level, $value in $submap {
+        --border-style-#{$level}: #{$value};
+      }
+    } @else if $category == radii {
+      @each $level, $value in $submap {
+        --radius-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Scale (tamanhos, durações, z-index)
+  @each $category, $submap in scale.$scale-seeds {
+    @if $category == base {
+      @each $key, $value in $submap {
+        @if $key == granular {
+          --scale-granular: #{$value};
+        } @else if $key == micro {
+          --scale-micro: #{$value};
+        } @else if $key == medium {
+          --scale-medium: #{$value};
+        } @else if $key == macro {
+          --scale-macro: #{$value};
+        } @else if $key == duration {
+          --duration-base: #{$value};
+        }
+      }
+    } @else if $category == letter {
+      @each $key, $value in $submap {
+        --letter-#{$key}: #{$value};
+      }
+    } @else if $category == sizes {
+      @each $subcategory, $sizes in $submap {
+        @each $level, $value in $sizes {
+          --size-#{$subcategory}-#{$level}: #{$value};
+        }
+      }
+    } @else if $category == durations {
+      @each $level, $value in $submap {
+        --duration-#{$level}: #{$value};
+      }
+    } @else if $category == z-index {
+      @each $key, $value in $submap {
+        @if $key == negative {
+          --z-index-negative: #{$value};
+        } @else if $key == max {
+          --z-index-max: #{$value};
+        } @else {
+          --z-index-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+
+  // Spacing (padding, margin, gap, etc.)
+  @each $category, $submap in spacing.$spacing-seeds {
+    @if $category == generic {
+      @each $level, $value in $submap {
+        --space-#{$level}: #{$value};
+      }
+    } @else if $category == padding {
+      @each $level, $value in $submap {
+        --padding-#{$level}: #{$value};
+      }
+    } @else if $category == margin {
+      @each $level, $value in $submap {
+        --margin-#{$level}: #{$value};
+      }
+    } @else if $category == gap {
+      @each $level, $value in $submap {
+        --gap-#{$level}: #{$value};
+      }
+    } @else if $category == columns {
+      @each $level, $value in $submap {
+        --columns-#{$level}: #{$value};
+      }
+    } @else if $category == offset {
+      @each $level, $value in $submap {
+        --offset-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Type (fontes, tamanhos, pesos, alturas de linha)
+  @each $category, $submap in type.$type-seeds {
+    @if $category == families {
+      @each $key, $value in $submap {
+        @if type-of($value) == list {
+          --type-#{$key}: #{nth($value, 1)}, #{nth($value, 2)};
+        } @else {
+          --type-#{$key}: #{$value};
+        }
+      }
+    } @else if $category == sizes {
+      @each $level, $value in $submap {
+        --text-size-#{$level}: #{$value};
+      }
+    } @else if $category == line-heights {
+      @each $level, $value in $submap {
+        --line-height-#{$level}: #{$value};
+      }
+    } @else if $category == weights {
+      @each $level, $value in $submap {
+        --font-weight-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // ========================================
+  // GERAÇÃO DINÂMICA — Variáveis CSS a partir da palette customizada
+  // ========================================
+
+  // Gerar variáveis brutas da palette customizada
+
+  // Brand customizado (azul/roxo)
+  @each $variant, $colors in custom-palette.$palette-seeds {
+    @if $variant == brand {
+      @each $subvariant, $color-map in $colors {
+        @each $level, $color in $color-map {
+          --color-#{$subvariant}-#{$level}: #{$color};
+        }
+      }
+    } @else if $variant == neutral {
+      @each $level, $color in $colors {
+        --color-neutral-#{$level}: #{$color};
+      }
+    } @else if $variant == context {
+      @each $level, $color in $colors {
+        --color-context-#{$level}: #{$color};
+      }
+    }
+  }
+
+  // ========================================
+  // VARIÁVEIS SEMÂNTICAS CUSTOMIZADAS
+  // ========================================
+
+  // Cores de brand customizadas (usando a palette azul/roxa do projeto)
+  --interactive-primary: var(--color-standard-1);
+  --interactive-hover: var(--color-standard-2);
+  --interactive-active: var(--color-standard-3);
+
+  --link-color: var(--color-standard-1);
+  --link-hover: var(--color-standard-2);
+  --link-visited: var(--color-aux-1);
+  --link-active: var(--color-standard-2);
+
+  --focus-ring: var(--color-standard-1);
+
+  --gradient-primary: linear-gradient(135deg, var(--color-standard-1), var(--color-aux-1));
+  --gradient-secondary: linear-gradient(135deg, var(--color-standard-4), var(--color-aux-4));
+
+  --border-brand: var(--color-standard-1);
+
+  // ========================================
+  // CUSTOMIZAÇÕES ESPECÍFICAS DO PROJETO
+  // ========================================
+
+  // Layout mais amplo para este projeto
+  --padding-md: 2rem;
+  --margin-lg: 3rem;
+  --gap-xl: 4rem;
+
+  // Tipografia mais impactante
+  --text-xxl: 3.5rem;
+  --text-xl: 2.5rem;
+
+  // Espaçamentos mais generosos
+  --section-spacing: 6rem;
+}

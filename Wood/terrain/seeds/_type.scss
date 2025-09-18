@@ -1,0 +1,40 @@
+// ========================================
+// TYPE SEEDS — Mapa de sementes para tipografia
+// ========================================
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+$type-seeds: (
+  families: (
+    base: ('Jost', sans-serif),    // Marca e títulos
+    aux: ('Barlow', sans-serif),   // Texto corrido
+    mono: ('Fira Code', monospace) // Código e tabelas
+  ),
+  sizes: (
+    1: var(--size-micro-1),  // 0.25rem (4px)
+    2: var(--size-micro-2),  // 0.5rem  (8px)
+    3: var(--size-micro-3),  // 0.75rem (12px)
+    4: var(--size-micro-4),  // 1rem    (16px)
+    5: var(--size-micro-6),  // 1.5rem  (24px)
+    6: var(--size-micro-8),  // 2rem    (32px)
+    7: var(--size-medium-2)  // 4rem    (64px)
+  ),
+  line-heights: (
+    1: 1.2, // tight
+    2: 1.4,
+    3: 1.6, // base
+    4: 1.8, // loose
+    5: 2,
+    6: 2.4,
+    7: 3
+  ),
+  weights: (
+    1: 300, // light
+    2: 400, // regular
+    3: 500, // medium
+    4: 600,
+    5: 700, // bold
+    6: 800,
+    7: 900
+  )
+);

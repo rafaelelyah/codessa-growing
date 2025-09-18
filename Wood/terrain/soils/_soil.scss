@@ -1,0 +1,360 @@
+// ========================================
+// BASE.SCENE — Variáveis semânticas do sistema
+// ========================================
+
+@use "../seeds/palette" as palette;
+@use "../seeds/layout" as layout;
+@use "../seeds/motion" as motion;
+@use "../seeds/outline" as outline;
+@use "../seeds/scale" as scale;
+@use "../seeds/spacing" as spacing;
+@use "../seeds/type" as type;
+
+// ========================================
+// GERAÇÃO DINÂMICA — Variáveis CSS a partir dos seeds
+// ========================================
+
+:root {
+  // Gerar variáveis brutas dos seeds
+
+  // Palette
+  @each $category, $submap in palette.$palette-seeds {
+    @if $category == brand {
+      @each $variant, $colors in $submap {
+        @each $level, $color in $colors {
+          --color-#{$variant}-#{$level}: #{$color};
+        }
+      }
+    } @else if $category == neutral {
+      @each $level, $color in $submap {
+        --color-neutral-#{$level}: #{$color};
+      }
+    } @else if $category == context {
+      @each $level, $color in $submap {
+        --color-context-#{$level}: #{$color};
+      }
+    } @else if $category == gradients {
+      @each $level, $gradient in $submap {
+        --gradient-brand-#{$level}: #{$gradient};
+      }
+    } @else if $category == elevation {
+      @each $level, $shadow in $submap {
+        --elevation-#{$level}: #{$shadow};
+      }
+    } @else if $category == opacity {
+      @each $level, $opacity in $submap {
+        --opacity-#{$level}: #{$opacity};
+      }
+    }
+  }
+
+  // Layout
+  @each $category, $submap in layout.$layout-seeds {
+    @if $category == containers {
+      @each $level, $value in $submap {
+        --container-#{$level}: #{$value};
+      }
+    } @else if $category == breakpoints {
+      @each $level, $value in $submap {
+        --breakpoint-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Motion
+  @each $category, $submap in motion.$motion-seeds {
+    @if $category == durations {
+      @each $level, $value in $submap {
+        --motion-duration-#{$level}: #{$value};
+      }
+    } @else if $category == delays {
+      @each $level, $value in $submap {
+        --motion-delay-#{$level}: #{$value};
+      }
+    } @else if $category == timings {
+      @each $level, $value in $submap {
+        --motion-timing-#{$level}: #{$value};
+      }
+    } @else if $category == distances {
+      @each $level, $value in $submap {
+        --motion-distance-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Outline
+  @each $category, $submap in outline.$outline-seeds {
+    @if $category == widths {
+      @each $level, $value in $submap {
+        --border-width-#{$level}: #{$value};
+      }
+    } @else if $category == styles {
+      @each $level, $value in $submap {
+        --border-style-#{$level}: #{$value};
+      }
+    } @else if $category == radii {
+      @each $level, $value in $submap {
+        --radius-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Scale
+  @each $category, $submap in scale.$scale-seeds {
+    @if $category == base {
+      @each $key, $value in $submap {
+        @if $key == granular {
+          --scale-granular: #{$value};
+        } @else if $key == micro {
+          --scale-micro: #{$value};
+        } @else if $key == medium {
+          --scale-medium: #{$value};
+        } @else if $key == macro {
+          --scale-macro: #{$value};
+        } @else if $key == duration {
+          --duration-base: #{$value};
+        }
+      }
+    } @else if $category == letter {
+      @each $key, $value in $submap {
+        --letter-#{$key}: #{$value};
+      }
+    } @else if $category == sizes {
+      @each $subcategory, $sizes in $submap {
+        @each $level, $value in $sizes {
+          --size-#{$subcategory}-#{$level}: #{$value};
+        }
+      }
+    } @else if $category == durations {
+      @each $level, $value in $submap {
+        --duration-#{$level}: #{$value};
+      }
+    } @else if $category == z-index {
+      @each $key, $value in $submap {
+        @if $key == negative {
+          --z-index-negative: #{$value};
+        } @else if $key == max {
+          --z-index-max: #{$value};
+        } @else {
+          --z-index-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+
+  // Spacing
+  @each $category, $submap in spacing.$spacing-seeds {
+    @if $category == generic {
+      @each $level, $value in $submap {
+        --space-#{$level}: #{$value};
+      }
+    } @else if $category == padding {
+      @each $level, $value in $submap {
+        --padding-#{$level}: #{$value};
+      }
+    } @else if $category == margin {
+      @each $level, $value in $submap {
+        --margin-#{$level}: #{$value};
+      }
+    } @else if $category == gap {
+      @each $level, $value in $submap {
+        --gap-#{$level}: #{$value};
+      }
+    } @else if $category == columns {
+      @each $level, $value in $submap {
+        --columns-#{$level}: #{$value};
+      }
+    } @else if $category == offset {
+      @each $level, $value in $submap {
+        --offset-#{$level}: #{$value};
+      }
+    }
+  }
+
+  // Type
+  @each $category, $submap in type.$type-seeds {
+    @if $category == families {
+      @each $key, $value in $submap {
+        @if type-of($value) == list {
+          --type-#{$key}: #{nth($value, 1)}, #{nth($value, 2)};
+        } @else {
+          --type-#{$key}: #{$value};
+        }
+      }
+    } @else if $category == sizes {
+      @each $level, $value in $submap {
+        --text-size-#{$level}: #{$value};
+      }
+    } @else if $category == line-heights {
+      @each $level, $value in $submap {
+        --line-height-#{$level}: #{$value};
+      }
+    } @else if $category == weights {
+      @each $level, $value in $submap {
+        --font-weight-#{$level}: #{$value};
+      }
+    }
+  }
+
+    // Gerar variáveis semânticas diretamente dos seeds
+
+  // Palette semantic
+  --bg-primary: map-get(map-get(palette.$palette-seeds, neutral), 7);
+  --bg-secondary: map-get(map-get(palette.$palette-seeds, neutral), 6);
+  --bg-muted: map-get(map-get(palette.$palette-seeds, neutral), 5);
+  --bg-subtle: map-get(map-get(palette.$palette-seeds, neutral), 4);
+
+  --text-primary: map-get(map-get(palette.$palette-seeds, neutral), 1);
+  --text-secondary: map-get(map-get(palette.$palette-seeds, neutral), 2);
+  --text-muted: map-get(map-get(palette.$palette-seeds, neutral), 3);
+  --text-subtle: map-get(map-get(palette.$palette-seeds, neutral), 4);
+  --text-inverse: map-get(map-get(palette.$palette-seeds, neutral), 7);
+
+  --border-primary: map-get(map-get(palette.$palette-seeds, neutral), 4);
+  --border-secondary: map-get(map-get(palette.$palette-seeds, neutral), 5);
+  --border-muted: map-get(map-get(palette.$palette-seeds, neutral), 6);
+  --border-brand: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 1);
+  --border-success: map-get(map-get(palette.$palette-seeds, context), 4);
+  --border-error: map-get(map-get(palette.$palette-seeds, context), 1);
+  --border-warning: map-get(map-get(palette.$palette-seeds, context), 3);
+  --border-info: map-get(map-get(palette.$palette-seeds, context), 2);
+
+  --interactive-primary: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 1);
+  --interactive-hover: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 2);
+  --interactive-active: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 3);
+  --interactive-secondary: map-get(map-get(palette.$palette-seeds, neutral), 3);
+  --interactive-secondary-hover: map-get(map-get(palette.$palette-seeds, neutral), 2);
+  --interactive-secondary-active: map-get(map-get(palette.$palette-seeds, neutral), 1);
+
+  --link-color: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 1);
+  --link-hover: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 2);
+  --link-visited: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 3);
+  --link-active: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 4);
+
+  --focus-ring: map-get(map-get(map-get(palette.$palette-seeds, brand), standard), 1);
+  --focus-ring-width: map-get(outline.$outline-seeds, widths, 2);
+  --focus-ring-offset: map-get(spacing.$spacing-seeds, generic, 1);
+
+  --gradient-primary: map-get(map-get(palette.$palette-seeds, gradients), 1);
+  --gradient-secondary: map-get(map-get(palette.$palette-seeds, gradients), 4);
+  --gradient-accent: map-get(map-get(palette.$palette-seeds, gradients), 7);
+
+  --color-success: map-get(map-get(palette.$palette-seeds, context), 4);
+  --color-error: map-get(map-get(palette.$palette-seeds, context), 1);
+  --color-warning: map-get(map-get(palette.$palette-seeds, context), 3);
+  --color-info: map-get(map-get(palette.$palette-seeds, context), 2);
+
+  --bg-success: map-get(map-get(palette.$palette-seeds, context), 4);
+  --bg-error: map-get(map-get(palette.$palette-seeds, context), 1);
+  --bg-warning: map-get(map-get(palette.$palette-seeds, context), 3);
+  --bg-info: map-get(map-get(palette.$palette-seeds, context), 2);
+
+  --text-success: map-get(map-get(palette.$palette-seeds, context), 4);
+  --text-error: map-get(map-get(palette.$palette-seeds, context), 1);
+  --text-warning: map-get(map-get(palette.$palette-seeds, context), 3);
+  --text-info: map-get(map-get(palette.$palette-seeds, context), 2);
+
+  --interactive-success: map-get(map-get(palette.$palette-seeds, context), 4);
+  --interactive-success-hover: map-get(map-get(palette.$palette-seeds, context), 5);
+  --interactive-success-active: map-get(map-get(palette.$palette-seeds, context), 6);
+  --interactive-error: map-get(map-get(palette.$palette-seeds, context), 1);
+  --interactive-error-hover: map-get(map-get(palette.$palette-seeds, context), 11);
+  --interactive-error-active: map-get(map-get(palette.$palette-seeds, context), 12);
+  --interactive-warning: map-get(map-get(palette.$palette-seeds, context), 3);
+  --interactive-warning-hover: map-get(map-get(palette.$palette-seeds, context), 7);
+  --interactive-warning-active: map-get(map-get(palette.$palette-seeds, context), 8);
+  --interactive-info: map-get(map-get(palette.$palette-seeds, context), 2);
+  --interactive-info-hover: map-get(map-get(palette.$palette-seeds, context), 9);
+  --interactive-info-active: map-get(map-get(palette.$palette-seeds, context), 10);
+
+    // Layout semantic
+  --container-xs: map-get(layout.$layout-seeds, containers, 1);
+  --container-sm: map-get(layout.$layout-seeds, containers, 2);
+  --container-md: map-get(layout.$layout-seeds, containers, 4);
+  --container-lg: map-get(layout.$layout-seeds, containers, 6);
+  --container-full: map-get(layout.$layout-seeds, containers, 7);
+  --container-padding-inline: map-get(spacing.$spacing-seeds, generic, 4);
+
+  --breakpoint-xs: map-get(layout.$layout-seeds, breakpoints, 1);
+  --breakpoint-sm: map-get(layout.$layout-seeds, breakpoints, 2);
+  --breakpoint-md: map-get(layout.$layout-seeds, breakpoints, 3);
+  --breakpoint-lg: map-get(layout.$layout-seeds, breakpoints, 4);
+  --breakpoint-xl: map-get(layout.$layout-seeds, breakpoints, 5);
+
+  --z-base: map-get(scale.$scale-seeds, z-index, 0);
+  --z-low: map-get(scale.$scale-seeds, z-index, 1);
+  --z-default: map-get(scale.$scale-seeds, z-index, 2);
+  --z-dropdown: map-get(scale.$scale-seeds, z-index, 3);
+  --z-sticky: map-get(scale.$scale-seeds, z-index, 4);
+  --z-fixed: map-get(scale.$scale-seeds, z-index, 5);
+  --z-modal: map-get(scale.$scale-seeds, z-index, 6);
+  --z-popover: map-get(scale.$scale-seeds, z-index, 7);
+  --z-toast: map-get(scale.$scale-seeds, z-index, 8);
+  --z-overlay: map-get(scale.$scale-seeds, z-index, 9);
+  --z-max: map-get(scale.$scale-seeds, z-index, max);
+
+  // Typography semantic
+  --font-base: #{nth(map-get(type.$type-seeds, families, base), 1)}, #{nth(map-get(type.$type-seeds, families, base), 2)};
+  --font-aux: #{nth(map-get(type.$type-seeds, families, aux), 1)}, #{nth(map-get(type.$type-seeds, families, aux), 2)};
+  --font-mono: #{nth(map-get(type.$type-seeds, families, mono), 1)}, #{nth(map-get(type.$type-seeds, families, mono), 2)};
+
+  --text-xs: map-get(type.$type-seeds, sizes, 1);
+  --text-sm: map-get(type.$type-seeds, sizes, 3);
+  --text-md: map-get(type.$type-seeds, sizes, 4);
+  --text-lg: map-get(type.$type-seeds, sizes, 5);
+  --text-xl: map-get(type.$type-seeds, sizes, 6);
+  --text-xxl: map-get(type.$type-seeds, sizes, 7);
+
+  --font-light: map-get(type.$type-seeds, weights, 1);
+  --font-regular: map-get(type.$type-seeds, weights, 2);
+  --font-medium: map-get(type.$type-seeds, weights, 3);
+  --font-bold: map-get(type.$type-seeds, weights, 5);
+
+  --leading-tight: map-get(type.$type-seeds, line-heights, 1);
+  --leading-base: map-get(type.$type-seeds, line-heights, 3);
+  --leading-loose: map-get(type.$type-seeds, line-heights, 4);
+
+  // Spacing semantic
+  --padding-xs: map-get(spacing.$spacing-seeds, generic, 1);
+  --padding-sm: map-get(spacing.$spacing-seeds, generic, 2);
+  --padding-md: map-get(spacing.$spacing-seeds, generic, 4);
+  --padding-lg: map-get(spacing.$spacing-seeds, generic, 6);
+
+  --margin-xs: map-get(spacing.$spacing-seeds, generic, 1);
+  --margin-sm: map-get(spacing.$spacing-seeds, generic, 2);
+  --margin-md: map-get(spacing.$spacing-seeds, generic, 4);
+  --margin-lg: map-get(spacing.$spacing-seeds, generic, 6);
+
+  --gap-xs: map-get(spacing.$spacing-seeds, generic, 1);
+  --gap-sm: map-get(spacing.$spacing-seeds, generic, 2);
+  --gap-md: map-get(spacing.$spacing-seeds, generic, 4);
+  --gap-lg: map-get(spacing.$spacing-seeds, generic, 6);
+
+  --offset-sm: map-get(spacing.$spacing-seeds, generic, 2);
+  --offset-md: map-get(spacing.$spacing-seeds, generic, 4);
+  --offset-lg: map-get(spacing.$spacing-seeds, generic, 6);
+
+  // Borders semantic
+  --border-width: map-get(outline.$outline-seeds, widths, 2);
+  --border-style: map-get(outline.$outline-seeds, styles, 1);
+  --border-radius-sm: map-get(outline.$outline-seeds, radii, 2);
+  --border-radius-md: map-get(outline.$outline-seeds, radii, 4);
+  --border-radius-lg: map-get(outline.$outline-seeds, radii, 6);
+  --border-radius-pill: map-get(outline.$outline-seeds, radii, 7);
+  --border-radius-circle: map-get(outline.$outline-seeds, radii, circle);
+
+  // Motion semantic
+  --duration-fast: map-get(motion.$motion-seeds, durations, 1);
+  --duration-base: map-get(motion.$motion-seeds, durations, 3);
+  --duration-slow: map-get(motion.$motion-seeds, durations, 5);
+
+  --delay-short: map-get(motion.$motion-seeds, delays, 1);
+  --delay-long: map-get(motion.$motion-seeds, delays, 4);
+
+  --timing-smooth: map-get(motion.$motion-seeds, timings, 5);
+  --timing-linear: map-get(motion.$motion-seeds, timings, 4);
+
+  --motion-distance-sm: map-get(motion.$motion-seeds, distances, 2);
+  --motion-distance-md: map-get(motion.$motion-seeds, distances, 3);
+  --motion-distance-lg: map-get(motion.$motion-seeds, distances, 5);
+}

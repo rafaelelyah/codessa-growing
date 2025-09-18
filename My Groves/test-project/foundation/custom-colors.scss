@@ -1,0 +1,104 @@
+// ========================================
+// CUSTOM COLORS — Example Project (Cores Customizadas Diretas)
+// ========================================
+// Este arquivo define as cores customizadas diretamente como variáveis CSS,
+// evitando conflitos com a paleta padrão do terrain.
+
+:root {
+  // ========================================
+  // CORES CUSTOMIZADAS DIRETAS (AZUL/ROXO)
+  // ========================================
+
+  // Brand customizado (azul/roxo)
+  --color-standard-1: #1e3a8a;    // Azul escuro principal
+  --color-standard-2: #3b82f6;    // Azul médio
+  --color-standard-3: #60a5fa;    // Azul claro
+  --color-standard-4: #93c5fd;    // Azul muito claro
+  --color-standard-5: #bfdbfe;    // Azul pastel
+  --color-standard-6: #dbeafe;    // Azul muito pastel
+  --color-standard-7: #eff6ff;    // Azul quase branco
+
+  --color-deep-1: #1e293b;    // Azul muito escuro
+  --color-deep-2: #334155;    // Azul escuro acinzentado
+  --color-deep-3: #475569;    // Azul médio escuro
+  --color-deep-4: #64748b;    // Azul acinzentado
+  --color-deep-5: #94a3b8;    // Azul claro acinzentado
+  --color-deep-6: #cbd5e1;    // Azul muito claro acinzentado
+  --color-deep-7: #f1f5f9;    // Azul quase branco acinzentado
+
+  --color-soft-1: #2563eb;    // Azul vibrante
+  --color-soft-2: #3b82f6;    // Azul médio vibrante
+  --color-soft-3: #60a5fa;    // Azul claro vibrante
+  --color-soft-4: #93c5fd;    // Azul pastel vibrante
+  --color-soft-5: #bfdbfe;    // Azul muito pastel vibrante
+  --color-soft-6: #dbeafe;    // Azul quase branco vibrante
+  --color-soft-7: #eff6ff;    // Azul branco vibrante
+
+  --color-aux-1: #7c3aed;    // Roxo principal
+  --color-aux-2: #8b5cf6;    // Roxo médio
+  --color-aux-3: #a78bfa;    // Roxo claro
+  --color-aux-4: #c4b5fd;    // Roxo pastel
+  --color-aux-5: #ddd6fe;    // Roxo muito pastel
+  --color-aux-6: #ede9fe;    // Roxo quase branco
+  --color-aux-7: #f5f3ff;    // Roxo branco
+
+  --color-aux-deep-1: #581c87;    // Roxo muito escuro
+  --color-aux-deep-2: #7c2d92;    // Roxo escuro
+  --color-aux-deep-3: #9333ea;    // Roxo médio escuro
+  --color-aux-deep-4: #a855f7;    // Roxo acinzentado
+  --color-aux-deep-5: #c084fc;    // Roxo claro acinzentado
+  --color-aux-deep-6: #d8b4fe;    // Roxo muito claro acinzentado
+  --color-aux-deep-7: #f3e8ff;    // Roxo quase branco acinzentado
+
+  --color-aux-soft-1: #8b5cf6;    // Roxo vibrante
+  --color-aux-soft-2: #a78bfa;    // Roxo médio vibrante
+  --color-aux-soft-3: #c4b5fd;    // Roxo claro vibrante
+  --color-aux-soft-4: #ddd6fe;    // Roxo pastel vibrante
+  --color-aux-soft-5: #ede9fe;    // Roxo quase branco vibrante
+  --color-aux-soft-6: #f5f3ff;    // Roxo branco vibrante
+  --color-aux-soft-7: #faf5ff;    // Roxo muito branco vibrante
+
+  // Neutras customizadas (azul)
+  --color-neutral-1: #0f172a;    // Azul muito escuro para texto
+  --color-neutral-2: #1e293b;    // Azul escuro para texto secundário
+  --color-neutral-3: #334155;    // Azul médio para texto muted
+  --color-neutral-4: #475569;    // Azul claro para bordas
+  --color-neutral-5: #64748b;    // Azul muito claro para bordas suaves
+  --color-neutral-6: #cbd5e1;    // Azul pastel para backgrounds
+  --color-neutral-7: #f1f5f9;    // Azul quase branco para backgrounds
+
+  // Context (mantém cores padrão para consistência)
+  --color-context-1: #dc2626;    // Vermelho para erro
+  --color-context-2: #2563eb;    // Azul para info
+  --color-context-3: #d97706;    // Âmbar para warning
+  --color-context-4: #16a34a;    // Verde para success
+  --color-context-5: #db2777;    // Rosa para error alternativo
+  --color-context-6: #ea580c;    // Laranja para warning alternativo
+  --color-context-7: #0891b2;    // Ciano para info alternativo
+  --color-context-8: #7c3aed;    // Roxo para accent
+  --color-context-9: #be185d;    // Rosa escuro para error alternativo
+  --color-context-10: #65a30d;   // Verde limão para success alternativo
+  --color-context-11: #dc2626;   // Vermelho para error hover
+  --color-context-12: #1d4ed8;   // Azul escuro para info hover
+
+  // ========================================
+  // VARIÁVEIS SEMÂNTICAS CUSTOMIZADAS
+  // ========================================
+
+  // Cores de brand customizadas (usando a palette azul/roxa do projeto)
+  --interactive-primary: var(--color-standard-1);
+  --interactive-hover: var(--color-standard-2);
+  --interactive-active: var(--color-standard-3);
+
+  --link-color: var(--color-standard-1);
+  --link-hover: var(--color-standard-2);
+  --link-visited: var(--color-aux-1);
+  --link-active: var(--color-standard-2);
+
+  --focus-ring: var(--color-standard-1);
+
+  --gradient-primary: linear-gradient(135deg, var(--color-standard-1), var(--color-aux-1));
+  --gradient-secondary: linear-gradient(135deg, var(--color-standard-4), var(--color-aux-4));
+
+  --border-brand: var(--color-standard-1);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Project - Codessa Growing</title>
+
+  <!-- Codessa Growing - Tree SCSS do projeto -->
+  <link rel="stylesheet" href="./tree.scss">
+
+  <!-- JavaScript do projeto -->
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <!-- Header usando trunk .header -->
+  <header class="header">
+    <h1>Example Project</h1>
+    <p class="project-highlight">Sistema Codessa Growing em ação</p>
+  </header>
+
+  <!-- Hero section usando trunk .hero -->
+  <section class="hero">
+    <h1 class="hero__title">Bem-vindo ao Example Project</h1>
+    <p class="hero__subtitle">Demonstração completa dos componentes da tree customizada</p>
+    <div class="hero__cta">
+      <button class="btn">Botão Primário</button>
+      <button class="btn btn--secondary">Botão Secundário</button>
+      <button class="btn btn--ghost">Botão Ghost</button>
+    </div>
+  </section>
+
+  <!-- Features usando trunk .feature-grid -->
+  <section class="feature-grid">
+    <div class="feature-item">
+      <div class="feature-icon">🌱</div>
+      <h3 class="feature-title">Foundation</h3>
+      <p class="feature-description">Base sólida com soil, seeds e bark customizados para seu projeto.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🌳</div>
+      <h3 class="feature-title">Tree</h3>
+      <p class="feature-description">Componentes específicos construídos com sprouts (mixins) reutilizáveis.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🎨</div>
+      <h3 class="feature-title">Customização</h3>
+      <p class="feature-description">Cores, tipografia e estilos totalmente customizáveis por projeto.</p>
+    </div>
+  </section>
+
+  <!-- Cards usando trunk .card -->
+  <section style="padding: 4rem 2rem; background: #f8f9fa;">
+    <h2 style="text-align: center; margin-bottom: 3rem; color: var(--color-standard-1);">Exemplos de Cards</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+
+      <div class="card">
+        <h3>Card Padrão</h3>
+        <p>Card com estilo padrão usando o sprout project-card.</p>
+        <button class="btn">Ação</button>
+      </div>
+
+      <div class="card card--featured">
+        <h3>Card Destaque</h3>
+        <p>Card com gradiente característico do projeto.</p>
+        <span class="project-badge">Novo</span>
+      </div>
+
+      <div class="card card--outline">
+        <h3>Card Outline</h3>
+        <p>Card com borda e fundo transparente.</p>
+        <button class="btn btn--secondary">Saiba Mais</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer usando header trunk com variant -->
+  <footer class="header header--muted" style="margin-top: 4rem;">
+    <p>&copy; 2025 Example Project - Construído com Codessa Growing</p>
+  </footer>
+</body>
+</html>

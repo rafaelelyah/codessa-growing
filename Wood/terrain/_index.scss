@@ -1,0 +1,12 @@
+// ========================================
+// Codessa Growing - Main Styles
+// ========================================
+
+// Ordem correta: Seeds → Soils → Foundation → Components
+
+@forward 'seeds/index.scss';      // Valores base
+@forward 'soils/index.scss';      // Variáveis semânticas
+@forward 'foundation/index.scss'; // Resets + bark + tree
+@forward 'trees/index.scss';      // Componentes funcionais
+
+// Nota: JavaScript (sparks) é importado via HTML, não via Sass

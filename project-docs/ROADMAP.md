@@ -1,8 +1,8 @@
 # Codessa Growing — ROADMAP
 
-**Última atualização:** Setembro 2025
-**Status:** Arquitetura base completa
-**Versão:** 0.0.1-alpha
+**Última atualização:** 18 de Setembro de 2025
+**Status:** Arquitetura reestruturada + Integração JS
+**Versão:** 0.0.2-alpha
 
 ## Visão Geral
 
@@ -10,16 +10,22 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
 
 ## Estado Atual
 
-### Implementação Base Completa
-- **Arquitetura completa:** Seeds → Soils → Sprouts → Trunks → Leafs
+### ✅ Arquitetura Modular Validada + Multi-Tecnologia
+- **Arquitetura reestruturada:** Seeds como mapas → Soil otimizado → Tree com variáveis CSS
 - **Sistema de navegação:** 4 variants funcionais
 - **Documentação abrangente:** 6 camadas documentadas
 - **Filosofias nomeadas:** Extend Cascade, Leaf Touch
+- **Integração JavaScript:** API veins.js para acesso programático
+- **Performance otimizada:** Tree-shaking automático + variáveis CSS
+- **✅ My Groves validado:** Projetos independentes com builds separados
+- **✅ Multi-tecnologia:** Estratégia definida para expansão tecnológica
 
 ### Em Desenvolvimento
 - **Exemplos práticos:** Guias de uso detalhados
 - **Expansão de componentes:** Modal, tabs, cards
-- **Sistema de temas:** Dark/light mode
+- **Sistema de temas:** Dark/light mode com veins.js
+- **Integração avançada:** Temas dinâmicos em runtime
+- **🚀 Multi-tecnologia:** Projetos piloto em diferentes tecnologias
 
 ## Roadmap Detalhado
 
@@ -30,6 +36,12 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
   - [x] Sprouts - Mixins construtores funcionais
   - [x] Trunks - Componentes estruturais
   - [x] Leafs - Modificadores visuais
+- [x] **Reestruturação Arquitetural Completa**
+  - [x] Seeds convertidos para mapas Sass estruturados
+  - [x] Soil otimizado para consumo direto via map-get
+  - [x] Tree migrado para variáveis CSS nativas
+  - [x] Correção de sintaxe e compatibilidade Sass
+  - [x] Integração JavaScript com API veins.js
 - [x] **Sistema de Herança Inteligente (Extend Cascade)**
   - [x] @extend entre componentes
   - [x] Separação funcional vs visual
@@ -75,10 +87,24 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
   - [ ] Breadcrumbs
   - [ ] Pagination
 - [ ] **Temas e Personalização Avançada**
-  - [ ] Sistema de temas dark/light
-  - [ ] Custom properties dinâmicas
+  - [x] Sistema de temas dark/light (base implementada)
+  - [x] Custom properties dinâmicas via veins.js
   - [ ] Temas por componente
   - [ ] Sistema de cores customizáveis
+  - [ ] Theme builder tool
+- [ ] **Integração JavaScript e Runtime**
+  - [x] API veins.js para acesso programático
+  - [x] Funções utilitárias (getCssVar, setCssVar, applyTheme)
+  - [ ] Integração com frameworks (React, Vue, Svelte)
+  - [ ] Temas dinâmicos em runtime
+  - [ ] Componentes reativos
+- [ ] **🚀 Multi-Tecnologia (NOVO)**
+  - [x] Estratégia definida para expansão tecnológica
+  - [x] My Groves validado com projetos independentes
+  - [ ] Projetos piloto: Next.js, Nuxt.js, Laravel, Django
+  - [ ] Adaptadores por tecnologia
+  - [ ] CLI multi-tecnologia
+  - [ ] Documentação específica por stack
 - [ ] **Testes e Qualidade**
   - [ ] Testes visuais automatizados
   - [ ] Testes de acessibilidade (Lighthouse)
@@ -104,10 +130,14 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
 
 ## Métricas de Progresso
 
-- **Arquitetura:** 100% completa
+- **Arquitetura:** 100% completa + reestruturação avançada
 - **Componentes base:** 90% completos
-- **Documentação:** 85% completa
+- **Documentação:** 90% completa
+- **Integração JS:** 70% completa
 - **Testes:** 30% cobertura
+- **Performance:** Otimizada com tree-shaking
+- **✅ My Groves:** 100% validado (projetos independentes)
+- **🚀 Multi-tecnologia:** Estratégia definida e roadmap criado
 
 ## Características Técnicas
 
@@ -116,15 +146,18 @@ O Growing é o framework CSS modular do Codessa, oferecendo uma arquitetura Trun
 - [x] **Performance:** PurgeCSS remove CSS não utilizado automaticamente
 - [x] **Acessibilidade:** Sistema de focus e navegação por teclado
 - [x] **Responsividade:** Breakpoints semânticos e layouts fluidos
+- [x] **Integração JS:** API veins.js para acesso programático
+- [x] **Temas Dinâmicos:** Alteração de temas em runtime
 - [ ] **Atualização:** Sistema preparado para updates sem breaking changes
 - [ ] **Extensibilidade:** Arquitetura modular permite novos componentes
 
 ## Próximos Marcos
 
 1. **Outubro 2025:** Exemplos práticos completos
-2. **Novembro 2025:** Expansão da biblioteca de componentes
-3. **Dezembro 2025:** Sistema de temas funcional
-4. **Janeiro 2026:** Testes automatizados
+2. **Outubro-Novembro 2025:** 🚀 Projetos piloto multi-tecnologia (Next.js, Laravel)
+3. **Novembro 2025:** Expansão da biblioteca de componentes
+4. **Dezembro 2025:** Sistema de temas funcional
+5. **Janeiro 2026:** Adaptadores multi-tecnologia e CLI atualizado
 
 ## Como Contribuir
 

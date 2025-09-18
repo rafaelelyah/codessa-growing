@@ -1,0 +1,17 @@
+{
+  "name": "Example Project",
+  "description": "Projeto exemplo do Codessa Growing",
+  "version": "1.0.0",
+  "foundation": {
+    "seeds": ["colors"],
+    "soils": ["theme"],
+    "barks": ["custom"]
+  },
+  "dependencies": {
+    "terrain": {
+      "leafs": ["all"],
+      "sprouts": ["buttons", "forms"],
+      "trunks": ["header", "footer"]
+    }
+  }
+}

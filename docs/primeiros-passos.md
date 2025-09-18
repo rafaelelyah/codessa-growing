@@ -6,6 +6,16 @@ Bem-vindo ao **Codessa Growing**! Este guia irá ajudá-lo a dar os primeiros pa
 
 O Growing é uma arquitetura organizada em camadas que transforma design tokens em componentes finais, permitindo desenvolvimento visual consistente e escalável.
 
+### Sistema My Groves 🏗️
+
+O **My Groves** é o sistema de projetos independentes do Growing, permitindo:
+
+- **Projetos Independentes**: Cada projeto com sua própria identidade visual
+- **Builds Simultâneos**: Múltiplos projetos rodando ao mesmo tempo
+- **Estrutura Compartilhada**: Todos usam o mesmo core Growing
+- **Customização Total**: Paletas de cores e configurações próprias
+- **Escalabilidade**: Fácil adicionar novos projetos
+
 ## Conceitos Básicos
 
 ### As Camadas do Sistema
@@ -67,11 +77,22 @@ Após a instalação, você terá esta estrutura:
 ```
 Growing/
 ├── src/
-│   ├── main.scss          # Arquivo principal SCSS
+│   ├── main.scss          # Arquivo principal SCSS (core compartilhado)
 │   ├── groves/            # Componentes estruturais
 │   ├── harvest/           # Sistema de colheita
 │   ├── sparks/            # Utilitários e mixins
 │   └── terrain/           # Layout e grids
+├── My Groves/             # 🆕 Sistema de projetos independentes
+│   ├── example-project/   # Projeto exemplo (azul/roxo)
+│   │   ├── tree.scss      # Ponto de entrada personalizado
+│   │   ├── foundation/    # Paleta e identidade visual
+│   │   ├── index.html     # Página do projeto
+│   │   └── vite.config.js # Configuração específica
+│   └── test-project/      # Projeto teste (verde/teal)
+│       ├── tree.scss      # Ponto de entrada personalizado
+│       ├── foundation/    # Paleta e identidade visual
+│       ├── index.html     # Página do projeto
+│       └── vite.config.js # Configuração específica
 ├── Nest/
 │   ├── cli.py            # CLI Python para gerenciamento
 │   ├── Grow/
@@ -146,6 +167,22 @@ Crie um arquivo HTML simples:
 </html>
 ```
 
+### 4. Explorar Projetos My Groves
+
+O sistema já vem com projetos exemplo no My Groves:
+
+```bash
+# Executar projeto exemplo
+cd My\ Groves/example-project
+npm run dev
+
+# Em outro terminal, executar projeto teste
+cd My\ Groves/test-project
+npm run dev
+```
+
+**Resultado:** Dois projetos rodando simultaneamente em portas diferentes!
+
 ## Desenvolvimento Básico
 
 ### Trabalhando com SCSS
@@ -185,6 +222,31 @@ O Growing usa SCSS como linguagem principal. Aqui estão os conceitos básicos:
 }
 ```
 
+### Trabalhando com My Groves
+
+Para desenvolvimento em projetos independentes:
+
+```scss
+// My Groves/meu-projeto/tree.scss
+@use '../../src/soils' as *;
+@use 'foundation/palette' as palette;
+
+// Componente com identidade visual própria
+.my-brand-button {
+  @include sprout-button();
+  background-color: palette.$primary;
+  color: palette.$on-primary;
+  border-radius: palette.$border-radius;
+}
+
+// Layout personalizado
+.my-brand-layout {
+  @include layout-grid();
+  background-color: palette.$background;
+  color: palette.$on-background;
+}
+```
+
 ### Sistema de Build
 
 O projeto usa Vite para desenvolvimento e build:
@@ -205,8 +267,11 @@ npm run preview
 ### Aprenda Mais
 
 1. **Entenda a arquitetura completa** em [Visão Geral da Arquitetura](arquitetura/visao-geral.md)
-2. **Explore componentes específicos** nos [Guias de Uso](componentes/guias-uso/)
-3. **Aprenda sobre ferramentas** em [Grow Manager](ferramentas/grow-manager.md)
+2. **Explore projetos My Groves** em [My Groves](arquitetura/my-groves.md)
+3. **Veja exemplos práticos** dos projetos exemplo em `My Groves/`
+4. **Crie seu primeiro projeto independente** seguindo os exemplos
+5. **Explore componentes específicos** nos [Guias de Uso](componentes/guias-uso/)
+6. **Aprenda sobre ferramentas** em [Grow Manager](ferramentas/grow-manager.md)
 
 ### Desenvolvimento Avançado
 

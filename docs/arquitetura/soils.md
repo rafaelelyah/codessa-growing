@@ -27,9 +27,40 @@ As **Soils** são a camada que traduz os **Seeds** (tokens brutos) em **Veins** 
 
 Essa abstração permite que você mude o tema (ex: de claro para escuro) ou a densidade (ex: de espaçoso para compacto) alterando apenas os valores das Veins, sem precisar modificar os componentes que as utilizam.
 
+### Consumo dos Seeds
+
+O Soil consome os Seeds através de mapas Sass estruturados. Cada Seed é um mapa que contém sub-mapas organizados por categoria:
+
+- **Palette Seeds**: `$palette-seeds` com sub-mapas `brand`, `neutral`, `context`, etc.
+- **Spacing Seeds**: `$spacing-seeds` com sub-mapas `generic`, `padding`, `margin`, etc.
+- **Type Seeds**: `$type-seeds` com sub-mapas `families`, `sizes`, `weights`, etc.
+
+O Soil usa `map-get` para acessar esses valores e gerar as variáveis CSS diretamente, garantindo uma arquitetura limpa e modular.
+
 ## Soil Base (`_soil.scss`)
 
-A Soil Base (`_soil.scss`) define o contrato semântico principal do sistema. Ela organiza os Veins visuais derivados dos Seeds em categorias como cor, tipografia, espaçamento, borda, motion, layout e hierarquia. Todas as variantes de Soil herdam e sobrescrevem a partir dela.
+A Soil Base (`_soil.scss`) define o contrato semântico principal do sistema. Ela importa os Seeds e gera as Veins (variáveis CSS) diretamente dos mapas de Seeds usando `map-get`. Todas as variantes de Soil herdam e sobrescrevem a partir dela.
+
+### Estrutura Atual
+
+```scss
+// src/terrain/soils/_soil.scss
+@use '../seeds' as seeds;
+
+// Geração de variáveis CSS diretamente dos Seeds
+:root {
+  // Raw veins (variáveis brutas)
+  --color-neutral-1: #{map-get(seeds.$palette-seeds, neutral, 1)};
+  --color-neutral-2: #{map-get(seeds.$palette-seeds, neutral, 2)};
+  // ...
+
+  // Semantic veins (variáveis semânticas)
+  --bg-primary: var(--color-neutral-1);
+  --bg-secondary: var(--color-neutral-2);
+  --text-primary: var(--color-neutral-9);
+  // ...
+}
+```
 
 ## Temas
 
@@ -91,9 +122,9 @@ Todas as Soils são encaminhadas via `soils/_index.scss`. Para consumir Veins em
 
 ## Boas Práticas
 
-- Soils são contextos visuais compostos — não devem ser alteradas diretamente, mas sim estendidas ou combinadas conforme a necessidade.
-- Use atributos como `data-theme` e `data-density` para aplicar variantes sem modificar a estrutura dos componentes.
-- Crie novas Soils a partir da `_soil.scss` base quando precisar de variações específicas para produtos, marcas ou ambientes.
-- Evite duplicar Veins — prefira compor a partir das definições já existentes na `_soil.scss` e suas variantes.
-- Mantenha nomes semânticos e consistentes para facilitar leitura, manutenção e escalabilidade.
-- Soils devem ser tratadas como camadas de contexto — não como estilos isolados ou sobrescritas pontuais.
+- **Seeds como fonte da verdade**: Mantenha os valores base nos Seeds e use o Soil apenas para gerar as variáveis semânticas via `map-get`.
+- **Sem mapas intermediários**: O Soil deve gerar variáveis CSS diretamente dos Seeds, evitando mapas intermediários para manter a arquitetura limpa.
+- **Nomes consistentes**: Use convenções claras para nomes de mapas nos Seeds (ex: `$palette-seeds`, `$spacing-seeds`) e variáveis CSS (ex: `--color-neutral-1`, `--bg-primary`).
+- **Composição dinâmica**: Use atributos como `data-theme` e `data-density` para aplicar variantes sem modificar a estrutura dos componentes.
+- **Extensibilidade**: Crie novas Soils a partir da `_soil.scss` base quando precisar de variações específicas, sobrescrevendo apenas as Veins necessárias.
+- **Manutenção**: Alterações nos Seeds se propagam automaticamente para as Veins através do `map-get`, facilitando atualizações consistentes.

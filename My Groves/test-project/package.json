@@ -1,0 +1,21 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "Projeto de teste usando Codessa Growing com paleta verde/teal",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "if exist dist rmdir /s /q dist"
+  },
+  "devDependencies": {
+    "vite": "^4.4.0",
+    "sass": "^1.63.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

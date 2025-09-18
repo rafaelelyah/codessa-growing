@@ -1,0 +1,21 @@
+// ========================================
+// Landing Page Simples - Seeds Customizados
+// ========================================
+
+// Importa seeds base do terrain
+@use '~terrain/seeds' as base-seeds;
+
+// Seeds customizados para landing page
+$landing-seeds: (
+  colors: (
+    primary: #FF6B35,      // Laranja vibrante
+    secondary: #F7931E,    // Laranja claro
+    accent: #2D3748,       // Cinza escuro
+    success: #10B981,      // Verde
+    warning: #F59E0B,      // Amarelo
+    error: #EF4444         // Vermelho
+  )
+);
+
+// Exporta para uso nos soils
+@forward '~terrain/seeds';

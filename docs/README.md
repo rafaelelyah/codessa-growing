@@ -11,6 +11,16 @@ O Growing é um sistema de design e desenvolvimento que utiliza uma arquitetura 
 - Leafs são ajustes pontuais de estilo
 - Desenvolvimento direto no Tree (sem my-tree intermediário)
 
+### Sistema My Groves
+
+O **My Groves** é o sistema de projetos independentes do Growing, permitindo criar e gerenciar múltiplos projetos com builds simultâneos:
+
+- **Projetos Independentes**: Cada projeto tem sua própria configuração e paleta de cores
+- **Builds Simultâneos**: Projetos rodam em portas diferentes sem conflitos
+- **Estrutura Unificada**: Todos os projetos compartilham o mesmo core Growing
+- **Customização Total**: Cada projeto pode ter identidade visual própria
+- **Escalabilidade**: Fácil adicionar novos projetos ao sistema
+
 ## Estrutura da Documentação
 
 ### [Primeiros Passos](./primeiros-passos.md)
@@ -27,6 +37,7 @@ O Growing é um sistema de design e desenvolvimento que utiliza uma arquitetura 
 - [Sprouts](./arquitetura/sprouts.md) - Construtores de componentes
 - [Trunks](./arquitetura/trunks.md) - Componentes finais
 - [Leafs](./arquitetura/leafs.md) - Ajustes pontuais
+- [My Groves](./arquitetura/my-groves.md) - Sistema de projetos independentes
 
 ### [Componentes](./componentes/)
 - [Trees](./componentes/trees.md) - Ambiente de desenvolvimento
@@ -65,12 +76,22 @@ npm run dev
 ### Estrutura Atual do Projeto
 ```
 Growing/
-├── src/
-│   ├── main.scss          # Arquivo principal SCSS
+├── Wood/
+│   ├── main.scss          # Arquivo principal SCSS (core compartilhado)
 │   ├── groves/            # Componentes estruturais
 │   ├── harvest/           # Sistema de colheita
-│   ├── sparks/            # Utilitários e mixins
 │   └── terrain/           # Layout e grids
+├── My Groves/             # 🆕 Sistema de projetos independentes
+│   ├── example-project/   # Projeto exemplo (azul/roxo)
+│   │   ├── tree.scss      # Ponto de entrada personalizado
+│   │   ├── foundation/    # Paleta e identidade visual
+│   │   ├── index.html     # Página do projeto
+│   │   └── vite.config.js # Configuração específica
+│   └── test-project/      # Projeto teste (verde/teal)
+│       ├── tree.scss      # Ponto de entrada personalizado
+│       ├── foundation/    # Paleta e identidade visual
+│       ├── index.html     # Página do projeto
+│       └── vite.config.js # Configuração específica
 ├── Nest/
 │   ├── cli.py            # CLI Python para gerenciamento
 │   ├── Grow/
@@ -112,13 +133,29 @@ npm run grow:validate   # Validação do sistema
 O Tree é o ambiente onde você desenvolve diretamente usando SCSS:
 
 ```scss
-// src/main.scss
-@use 'soils' as *;
+// My Groves/example-project/tree.scss
+@use '../../src/soils' as *;
 
 // Seu código personalizado
 .my-custom-component {
   @include sprout-button();
   @extend %trunk-header;
+}
+```
+
+### Sistema My Groves
+
+Para desenvolvimento com projetos independentes:
+
+```scss
+// My Groves/my-project/tree.scss
+@use './foundation' as project;
+
+// Componente personalizado com identidade visual própria
+.my-brand-button {
+  @include sprout-button();
+  background-color: palette.$primary;
+  color: palette.$on-primary;
 }
 ```
 
@@ -136,16 +173,24 @@ npm run nest:grow
 npm run nest:tools
 ```
 
-### Sistema Grow (JavaScript)
+### Sistema My Groves
 ```bash
-# Interface principal
-npm run grow
+# Criar novo projeto independente
+npm run create-project my-new-project
 
-# Ajuda do sistema
-npm run grow:help
+# Executar projeto específico
+cd My\ Groves/my-new-project && npm run dev
 
-# Validação
-npm run grow:validate
+# Executar múltiplos projetos simultaneamente
+# Terminal 1: cd My\ Groves/project1 && npm run dev
+# Terminal 2: cd My\ Groves/project2 && npm run dev
+
+# Build de projeto específico
+cd My\ Groves/my-project && npm run build
+
+# Gerenciar projetos
+npm run groves:list     # Listar todos os projetos
+npm run groves:status   # Status de todos os projetos
 ```
 
 ## Sistema de Design
@@ -272,4 +317,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para
 3. Explore os [Componentes](./componentes/) disponíveis
 4. Consulte o [ROADMAP](../../project-docs/ROADMAP.md) para funcionalidades futuras
 
-🎉 **Bem-vindo ao Growing!** Desenvolvendo interfaces modernas nunca foi tão produtivo.
+🎉 **Bem-vindo ao Growing!** Desenvolver interfaces modernas nunca foi tão produtivo.
