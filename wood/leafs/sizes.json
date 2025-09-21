@@ -1,0 +1,94 @@
+{
+  "file": "sizes.scss",
+  "lastUpdated": "2025-09-21T18:16:01.417Z",
+  "leafs": [
+    {
+      "name": "leaf-container",
+      "modifiers": [
+        "&--full",
+        "&--lg",
+        "&--md",
+        "&--sm",
+        "&--xl"
+      ]
+    },
+    {
+      "name": "leaf-height",
+      "modifiers": [
+        "&--auto",
+        "&--fit",
+        "&--full",
+        "&--max",
+        "&--min",
+        "&--px",
+        "&--screen"
+      ]
+    },
+    {
+      "name": "leaf-max-height",
+      "modifiers": [
+        "&--fit",
+        "&--full",
+        "&--max",
+        "&--min",
+        "&--none",
+        "&--screen"
+      ]
+    },
+    {
+      "name": "leaf-max-width",
+      "modifiers": [
+        "&--fit",
+        "&--full",
+        "&--lg",
+        "&--max",
+        "&--md",
+        "&--min",
+        "&--none",
+        "&--prose",
+        "&--sm",
+        "&--xl",
+        "&--xs"
+      ]
+    },
+    {
+      "name": "leaf-min-height",
+      "modifiers": [
+        "&--fit",
+        "&--full",
+        "&--max",
+        "&--min",
+        "&--screen"
+      ]
+    },
+    {
+      "name": "leaf-min-width",
+      "modifiers": [
+        "&--fit",
+        "&--full",
+        "&--max",
+        "&--min"
+      ]
+    },
+    {
+      "name": "leaf-vh",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-vw",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-width",
+      "modifiers": [
+        "&--auto",
+        "&--fit",
+        "&--full",
+        "&--max",
+        "&--min",
+        "&--px",
+        "&--screen"
+      ]
+    }
+  ]
+}

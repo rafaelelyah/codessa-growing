@@ -1,0 +1,180 @@
+{
+  "file": "textual.scss",
+  "description": "Textual constructors for headings, paragraphs, code blocks and typography utilities",
+  "architecture": {
+    "generics": ["sprout-heading", "sprout-heading-uppercase", "sprout-paragraph", "sprout-paragraph-muted", "sprout-fluid-type", "sprout-text-truncate", "sprout-text-multiline", "sprout-code-block", "sprout-inline-code"],
+    "specifics": ["sprout-heading-display", "sprout-heading-hero", "sprout-heading-section", "sprout-heading-subsection", "sprout-heading-card", "sprout-text-lead", "sprout-text-body", "sprout-text-caption", "sprout-text-small", "sprout-text-highlight", "sprout-text-quote", "sprout-text-error", "sprout-text-success", "sprout-text-warning", "sprout-code-inline", "sprout-code-block-large", "sprout-code-block-small", "sprout-text-center", "sprout-text-left", "sprout-text-right", "sprout-text-justify", "sprout-text-nowrap", "sprout-text-break", "sprout-text-responsive", "sprout-heading-responsive"]
+  },
+  "sprouts": [
+    {
+      "name": "sprout-heading",
+      "description": "Generic heading mixin with customizable size, weight and margin",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-heading-uppercase",
+      "description": "Uppercase heading with letter spacing",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-paragraph",
+      "description": "Generic paragraph mixin with customizable size and margin",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-paragraph-muted",
+      "description": "Muted paragraph with secondary text color",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-fluid-type",
+      "description": "Fluid typography that scales with viewport using clamp",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-truncate",
+      "description": "Single line text truncation with ellipsis",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-multiline",
+      "description": "Multi-line text truncation with line clamp",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-code-block",
+      "description": "Code block styling with monospace font and background",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-inline-code",
+      "description": "Inline code styling with monospace font and background",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-heading-display",
+      "description": "Display heading with large size and black weight",
+      "dependencies": ["sprout-heading"]
+    },
+    {
+      "name": "sprout-heading-hero",
+      "description": "Hero heading with extra large size and bold weight",
+      "dependencies": ["sprout-heading"]
+    },
+    {
+      "name": "sprout-heading-section",
+      "description": "Section heading with 2xl size and bold weight",
+      "dependencies": ["sprout-heading"]
+    },
+    {
+      "name": "sprout-heading-subsection",
+      "description": "Subsection heading with xl size and semibold weight",
+      "dependencies": ["sprout-heading"]
+    },
+    {
+      "name": "sprout-heading-card",
+      "description": "Card heading with lg size and semibold weight",
+      "dependencies": ["sprout-heading"]
+    },
+    {
+      "name": "sprout-text-lead",
+      "description": "Lead text with larger size and medium weight",
+      "dependencies": ["sprout-paragraph"]
+    },
+    {
+      "name": "sprout-text-body",
+      "description": "Body text with standard paragraph styling",
+      "dependencies": ["sprout-paragraph"]
+    },
+    {
+      "name": "sprout-text-caption",
+      "description": "Caption text with small size and muted color",
+      "dependencies": ["sprout-paragraph"]
+    },
+    {
+      "name": "sprout-text-small",
+      "description": "Small text with extra small size and muted color",
+      "dependencies": ["sprout-paragraph"]
+    },
+    {
+      "name": "sprout-text-highlight",
+      "description": "Highlighted text with background color and padding",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-quote",
+      "description": "Quote text with left border and italic styling",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-error",
+      "description": "Error text with error color and medium weight",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-success",
+      "description": "Success text with success color and medium weight",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-warning",
+      "description": "Warning text with warning color and medium weight",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-code-inline",
+      "description": "Inline code with smaller font size",
+      "dependencies": ["sprout-inline-code"]
+    },
+    {
+      "name": "sprout-code-block-large",
+      "description": "Large code block with medium padding and base font size",
+      "dependencies": ["sprout-code-block"]
+    },
+    {
+      "name": "sprout-code-block-small",
+      "description": "Small code block with extra small padding and font size",
+      "dependencies": ["sprout-code-block"]
+    },
+    {
+      "name": "sprout-text-center",
+      "description": "Center text alignment",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-left",
+      "description": "Left text alignment",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-right",
+      "description": "Right text alignment",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-justify",
+      "description": "Justified text alignment",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-nowrap",
+      "description": "No-wrap white space",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-break",
+      "description": "Word break and overflow wrap for long words",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-text-responsive",
+      "description": "Responsive text that scales with viewport",
+      "dependencies": ["sprout-fluid-type"]
+    },
+    {
+      "name": "sprout-heading-responsive",
+      "description": "Responsive heading that scales with viewport",
+      "dependencies": ["sprout-fluid-type"]
+    }
+  ]
+}

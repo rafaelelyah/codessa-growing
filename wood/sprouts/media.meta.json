@@ -1,0 +1,248 @@
+{
+  "file": "media.scss",
+  "description": "Media constructors for responsive design, aspect ratios, images and videos",
+  "architecture": {
+    "generics": ["sprout-media-up", "sprout-media-down", "sprout-media-between", "sprout-media-only", "sprout-media-orientation", "sprout-media-prefers-color-scheme", "sprout-media-prefers-reduced-motion", "sprout-aspect-ratio", "sprout-aspect-square", "sprout-aspect-video", "sprout-aspect-photo", "sprout-aspect-card", "sprout-image-base", "sprout-image-responsive", "sprout-image-cover", "sprout-image-contain", "sprout-image-circle", "sprout-background-image", "sprout-video-base", "sprout-video-responsive", "sprout-video-fullscreen"],
+    "specifics": ["sprout-media-mobile", "sprout-media-tablet", "sprout-media-desktop", "sprout-media-mobile-first", "sprout-media-tablet-first", "sprout-media-desktop-first", "sprout-media-portrait", "sprout-media-landscape", "sprout-media-dark-mode", "sprout-media-light-mode", "sprout-media-reduced-motion", "sprout-media-no-preference", "sprout-image-avatar-sm", "sprout-image-avatar-md", "sprout-image-avatar-lg", "sprout-image-thumbnail", "sprout-image-hero", "sprout-image-card", "sprout-video-player", "sprout-video-background", "sprout-video-modal", "sprout-media-container", "sprout-media-gallery", "sprout-media-carousel", "sprout-media-loading", "sprout-media-placeholder"]
+  },
+  "sprouts": [
+    {
+      "name": "sprout-media-up",
+      "description": "Media query for minimum width breakpoint",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-down",
+      "description": "Media query for maximum width breakpoint",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-between",
+      "description": "Media query for width range between two breakpoints",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-only",
+      "description": "Media query for exact breakpoint range",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-orientation",
+      "description": "Media query for device orientation",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-prefers-color-scheme",
+      "description": "Media query for user's color scheme preference",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-prefers-reduced-motion",
+      "description": "Media query for user's motion preference",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-aspect-ratio",
+      "description": "Generic aspect ratio mixin with custom ratio parameter",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-aspect-square",
+      "description": "Square aspect ratio (1:1)",
+      "dependencies": ["sprout-aspect-ratio"]
+    },
+    {
+      "name": "sprout-aspect-video",
+      "description": "Video aspect ratio (16:9)",
+      "dependencies": ["sprout-aspect-ratio"]
+    },
+    {
+      "name": "sprout-aspect-photo",
+      "description": "Photo aspect ratio (4:3)",
+      "dependencies": ["sprout-aspect-ratio"]
+    },
+    {
+      "name": "sprout-aspect-card",
+      "description": "Card aspect ratio (3:4)",
+      "dependencies": ["sprout-aspect-ratio"]
+    },
+    {
+      "name": "sprout-image-base",
+      "description": "Base image styling with responsive behavior",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-image-responsive",
+      "description": "Responsive image with base styling",
+      "dependencies": ["sprout-image-base"]
+    },
+    {
+      "name": "sprout-image-cover",
+      "description": "Image with cover object-fit for containers",
+      "dependencies": ["sprout-image-base"]
+    },
+    {
+      "name": "sprout-image-contain",
+      "description": "Image with contain object-fit for containers",
+      "dependencies": ["sprout-image-base"]
+    },
+    {
+      "name": "sprout-image-circle",
+      "description": "Circular image with cover object-fit",
+      "dependencies": ["sprout-image-base"]
+    },
+    {
+      "name": "sprout-background-image",
+      "description": "Background image with customizable size, position and attachment",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-video-base",
+      "description": "Base video styling with responsive behavior",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-video-responsive",
+      "description": "Responsive video with base styling",
+      "dependencies": ["sprout-video-base"]
+    },
+    {
+      "name": "sprout-video-fullscreen",
+      "description": "Fullscreen video styling",
+      "dependencies": ["sprout-video-base"]
+    },
+    {
+      "name": "sprout-media-mobile",
+      "description": "Mobile breakpoint media query (max-width: sm)",
+      "dependencies": ["sprout-media-down"]
+    },
+    {
+      "name": "sprout-media-tablet",
+      "description": "Tablet breakpoint media query (sm to lg)",
+      "dependencies": ["sprout-media-between"]
+    },
+    {
+      "name": "sprout-media-desktop",
+      "description": "Desktop breakpoint media query (min-width: lg)",
+      "dependencies": ["sprout-media-up"]
+    },
+    {
+      "name": "sprout-media-mobile-first",
+      "description": "Mobile-first breakpoint media query (min-width: sm)",
+      "dependencies": ["sprout-media-up"]
+    },
+    {
+      "name": "sprout-media-tablet-first",
+      "description": "Tablet-first breakpoint media query (min-width: md)",
+      "dependencies": ["sprout-media-up"]
+    },
+    {
+      "name": "sprout-media-desktop-first",
+      "description": "Desktop-first breakpoint media query (min-width: lg)",
+      "dependencies": ["sprout-media-up"]
+    },
+    {
+      "name": "sprout-media-portrait",
+      "description": "Portrait orientation media query",
+      "dependencies": ["sprout-media-orientation"]
+    },
+    {
+      "name": "sprout-media-landscape",
+      "description": "Landscape orientation media query",
+      "dependencies": ["sprout-media-orientation"]
+    },
+    {
+      "name": "sprout-media-dark-mode",
+      "description": "Dark mode color scheme preference media query",
+      "dependencies": ["sprout-media-prefers-color-scheme"]
+    },
+    {
+      "name": "sprout-media-light-mode",
+      "description": "Light mode color scheme preference media query",
+      "dependencies": ["sprout-media-prefers-color-scheme"]
+    },
+    {
+      "name": "sprout-media-reduced-motion",
+      "description": "Reduced motion preference media query",
+      "dependencies": ["sprout-media-prefers-reduced-motion"]
+    },
+    {
+      "name": "sprout-media-no-preference",
+      "description": "No motion preference media query",
+      "dependencies": ["sprout-media-prefers-reduced-motion"]
+    },
+    {
+      "name": "sprout-image-avatar-sm",
+      "description": "Small circular avatar image (32px)",
+      "dependencies": ["sprout-image-circle"]
+    },
+    {
+      "name": "sprout-image-avatar-md",
+      "description": "Medium circular avatar image (48px)",
+      "dependencies": ["sprout-image-circle"]
+    },
+    {
+      "name": "sprout-image-avatar-lg",
+      "description": "Large circular avatar image (64px)",
+      "dependencies": ["sprout-image-circle"]
+    },
+    {
+      "name": "sprout-image-thumbnail",
+      "description": "Thumbnail image with fixed size and border radius",
+      "dependencies": ["sprout-image-base"]
+    },
+    {
+      "name": "sprout-image-hero",
+      "description": "Hero image with video aspect ratio and border radius",
+      "dependencies": ["sprout-image-cover", "sprout-aspect-video"]
+    },
+    {
+      "name": "sprout-image-card",
+      "description": "Card image with card aspect ratio and border radius",
+      "dependencies": ["sprout-image-cover", "sprout-aspect-card"]
+    },
+    {
+      "name": "sprout-video-player",
+      "description": "Video player with video aspect ratio and styling",
+      "dependencies": ["sprout-video-base", "sprout-aspect-video"]
+    },
+    {
+      "name": "sprout-video-background",
+      "description": "Background video positioned fixed and fullscreen",
+      "dependencies": ["sprout-video-fullscreen"]
+    },
+    {
+      "name": "sprout-video-modal",
+      "description": "Modal video with constrained dimensions",
+      "dependencies": ["sprout-video-base"]
+    },
+    {
+      "name": "sprout-media-container",
+      "description": "Media container with responsive border radius",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-gallery",
+      "description": "Responsive media gallery grid layout",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-carousel",
+      "description": "Horizontal scrolling media carousel",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-loading",
+      "description": "Loading state overlay with shimmer animation",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-media-placeholder",
+      "description": "Placeholder for media content with aspect ratio",
+      "dependencies": ["sprout-aspect-video"]
+    }
+  ],
+  "keyframes": [
+    "sprout-loading-shimmer"
+  ]
+}

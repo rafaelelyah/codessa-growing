@@ -1,0 +1,135 @@
+{
+  "mixins": {
+    "sprout-transition": {
+      "description": "Generic transition mixin with customizable properties, duration and timing",
+      "dependencies": []
+    },
+    "sprout-transition-hover": {
+      "description": "Hover transition mixin with fast duration",
+      "dependencies": []
+    },
+    "sprout-animation": {
+      "description": "Generic animation mixin with customizable name, duration, timing and fill mode",
+      "dependencies": []
+    },
+    "sprout-animation-fade-in": {
+      "description": "Fade in animation preset",
+      "dependencies": ["sprout-animation"]
+    },
+    "sprout-animation-fade-out": {
+      "description": "Fade out animation preset",
+      "dependencies": ["sprout-animation"]
+    },
+    "sprout-animation-slide-up": {
+      "description": "Slide up animation preset",
+      "dependencies": ["sprout-animation"]
+    },
+    "sprout-animation-slide-down": {
+      "description": "Slide down animation preset",
+      "dependencies": ["sprout-animation"]
+    },
+    "sprout-effect-scale": {
+      "description": "Scale transform effect",
+      "dependencies": []
+    },
+    "sprout-effect-rotate": {
+      "description": "Rotate transform effect",
+      "dependencies": []
+    },
+    "sprout-effect-translate": {
+      "description": "Translate transform effect",
+      "dependencies": []
+    },
+    "sprout-effect-blur": {
+      "description": "Blur filter effect",
+      "dependencies": []
+    },
+    "sprout-effect-brightness": {
+      "description": "Brightness filter effect",
+      "dependencies": []
+    },
+    "sprout-effect-opacity": {
+      "description": "Opacity effect",
+      "dependencies": []
+    },
+    "sprout-transition-smooth": {
+      "description": "Smooth transition preset",
+      "dependencies": ["sprout-transition"]
+    },
+    "sprout-transition-fast": {
+      "description": "Fast transition preset",
+      "dependencies": ["sprout-transition"]
+    },
+    "sprout-transition-slow": {
+      "description": "Slow transition preset",
+      "dependencies": ["sprout-transition"]
+    },
+    "sprout-transition-color": {
+      "description": "Color transition preset",
+      "dependencies": ["sprout-transition"]
+    },
+    "sprout-transition-transform": {
+      "description": "Transform transition preset",
+      "dependencies": ["sprout-transition"]
+    },
+    "sprout-animation-enter": {
+      "description": "Enter animation preset",
+      "dependencies": ["sprout-animation-fade-in"]
+    },
+    "sprout-animation-exit": {
+      "description": "Exit animation preset",
+      "dependencies": ["sprout-animation-fade-out"]
+    },
+    "sprout-animation-bounce": {
+      "description": "Bounce animation preset",
+      "dependencies": ["sprout-animation"]
+    },
+    "sprout-animation-slide-in-up": {
+      "description": "Slide in up animation preset",
+      "dependencies": ["sprout-animation-slide-up"]
+    },
+    "sprout-animation-slide-in-down": {
+      "description": "Slide in down animation preset",
+      "dependencies": ["sprout-animation-slide-down"]
+    },
+    "sprout-effect-hover-lift": {
+      "description": "Hover lift effect combining scale and translate",
+      "dependencies": ["sprout-effect-scale", "sprout-effect-translate"]
+    },
+    "sprout-effect-hover-glow": {
+      "description": "Hover glow effect with box shadow",
+      "dependencies": []
+    },
+    "sprout-effect-active-press": {
+      "description": "Active press effect with scale",
+      "dependencies": ["sprout-effect-scale"]
+    },
+    "sprout-effect-muted": {
+      "description": "Muted effect with reduced opacity",
+      "dependencies": ["sprout-effect-opacity"]
+    },
+    "sprout-effect-highlight": {
+      "description": "Highlight effect with increased brightness",
+      "dependencies": ["sprout-effect-brightness"]
+    },
+    "sprout-interactive-button": {
+      "description": "Interactive button with hover and active states",
+      "dependencies": ["sprout-transition-smooth", "sprout-effect-hover-lift", "sprout-effect-active-press"]
+    },
+    "sprout-interactive-card": {
+      "description": "Interactive card with hover effects",
+      "dependencies": ["sprout-transition-color", "sprout-effect-scale"]
+    },
+    "sprout-interactive-link": {
+      "description": "Interactive link with hover effects",
+      "dependencies": ["sprout-transition-color", "sprout-effect-scale"]
+    }
+  },
+  "keyframes": [
+    "sprout-fade-in",
+    "sprout-fade-out",
+    "sprout-slide-up",
+    "sprout-slide-down",
+    "sprout-bounce"
+  ]
+}

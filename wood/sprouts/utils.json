@@ -1,0 +1,184 @@
+{
+  "file": "utils.scss",
+  "lastUpdated": "2025-09-21T17:19:40.180Z",
+  "sprouts": [
+    {
+      "name": "sprout-list-reset",
+      "description": "Reset list styles, margins and padding",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-button-reset",
+      "description": "Reset button styles to inherit from parent",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-link-reset",
+      "description": "Reset link styles to inherit color and remove decoration",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-input-reset",
+      "description": "Reset input styles to inherit from parent",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-sr-only",
+      "description": "Screen reader only content (completely hidden visually)",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-sr-only-focusable",
+      "description": "Screen reader only content that becomes visible when focused",
+      "dependencies": [
+        "sprout-sr-only"
+      ]
+    },
+    {
+      "name": "sprout-focus-visible",
+      "description": "Focus ring for keyboard navigation only",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-focus-none",
+      "description": "Remove focus outline",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-no-select",
+      "description": "Disable text selection",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-select-all",
+      "description": "Enable text selection for all content",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-pointer-events-none",
+      "description": "Disable pointer events",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-pointer-events-auto",
+      "description": "Enable pointer events",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-scroll-smooth",
+      "description": "Enable smooth scrolling behavior",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-scroll-auto",
+      "description": "Enable auto scrolling behavior",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-overflow-scroll",
+      "description": "Enable scrolling overflow",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-overflow-hidden",
+      "description": "Hide overflow content",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-overflow-visible",
+      "description": "Show overflow content",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-transform-none",
+      "description": "Remove all transforms",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-transform-gpu",
+      "description": "Force GPU acceleration for transforms",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-will-change-auto",
+      "description": "Reset will-change property",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-will-change-transform",
+      "description": "Optimize for transform changes",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-will-change-opacity",
+      "description": "Optimize for opacity changes",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-debug-outline",
+      "description": "Debug utility to add colored outline",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-debug-bg",
+      "description": "Debug utility to add background color",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-debug-grid",
+      "description": "Debug utility to show grid overlay",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-debug-spacing",
+      "description": "Debug utility to show spacing grid",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-contain-layout",
+      "description": "CSS containment for layout, style and paint",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-contain-strict",
+      "description": "Strict CSS containment",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-isolation",
+      "description": "Create new stacking context",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-print-hidden",
+      "description": "Hide element when printing",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-print-visible",
+      "description": "Show element when printing",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-print-break-before",
+      "description": "Force page break before element when printing",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-print-break-after",
+      "description": "Force page break after element when printing",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-reduce-motion",
+      "description": "Disable animations and transitions for users who prefer reduced motion",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-motion-safe",
+      "description": "Apply styles only when user doesn't prefer reduced motion",
+      "dependencies": []
+    }
+  ],
+  "keyframes": []
+}

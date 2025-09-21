@@ -1,0 +1,87 @@
+{
+  "file": "position.scss",
+  "lastUpdated": "2025-09-21T18:16:01.410Z",
+  "leafs": [
+    {
+      "name": "leaf-bottom",
+      "modifiers": [
+        "&--auto",
+        "&--full",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-inset",
+      "modifiers": [
+        "&--auto",
+        "&--full",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-left",
+      "modifiers": [
+        "&--auto",
+        "&--full",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-object-position",
+      "modifiers": [
+        "&--bottom",
+        "&--center",
+        "&--left",
+        "&--left-bottom",
+        "&--left-top",
+        "&--right",
+        "&--right-bottom",
+        "&--right-top",
+        "&--top"
+      ]
+    },
+    {
+      "name": "leaf-position",
+      "modifiers": [
+        "&--absolute",
+        "&--fixed",
+        "&--inherit",
+        "&--initial",
+        "&--relative",
+        "&--static",
+        "&--sticky",
+        "&--unset"
+      ]
+    },
+    {
+      "name": "leaf-right",
+      "modifiers": [
+        "&--auto",
+        "&--full",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-top",
+      "modifiers": [
+        "&--auto",
+        "&--full",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-transform-origin",
+      "modifiers": [
+        "&--bottom",
+        "&--bottom-left",
+        "&--bottom-right",
+        "&--center",
+        "&--left",
+        "&--right",
+        "&--top",
+        "&--top-left",
+        "&--top-right"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+
+// ========================================
+// SPROUTS — NAVIGATION CONSTRUCTORS
+// ========================================
+// Mixins específicos para componentes de navegação.
+//
+// NOTA: Muitos mixins genéricos foram movidos para layout.scss
+// Este arquivo contém apenas funcionalidades específicas de navegação
+
+// ----------------------------------------
+// NAV SCROLLABLE (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-nav-scrollable($direction: 'horizontal', $gap: 'sm') {
+  @if $direction == 'horizontal' {
+    @include sprout-flex-row($gap: $gap);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  } @else {
+    @include sprout-flex-column($gap: $gap);
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+}
+
+// ----------------------------------------
+// BREADCRUMBS (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-breadcrumbs($separator: '/', $gap: 'xs') {
+  @include sprout-flex-row($gap: $gap, $align: center, $justify: start);
+  flex-wrap: wrap;
+
+  li {
+    &::after {
+      content: "#{$separator}";
+      margin-inline: var(--gap-xs);
+      color: var(--text-muted);
+    }
+
+    &:last-child::after {
+      content: '';
+      margin: 0;
+    }
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--text-hover);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// ----------------------------------------
+// NAV MENU (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-nav-menu($orientation: 'vertical', $gap: 'sm') {
+  @if $orientation == 'horizontal' {
+    @include sprout-flex-row($gap: $gap, $align: center);
+  } @else {
+    @include sprout-flex-column($gap: $gap, $align: flex-start);
+  }
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+
+    a {
+      display: block;
+      padding: var(--padding-sm) var(--padding-md);
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: var(--border-radius-sm);
+      transition: background-color var(--duration-fast) var(--timing-smooth);
+
+      &:hover {
+        background-color: var(--bg-hover);
+        color: var(--text-hover);
+      }
+
+      &:focus {
+        outline: var(--focus-ring-width) solid var(--focus-ring);
+        outline-offset: var(--focus-ring-offset);
+      }
+    }
+
+    &.active a {
+      background-color: var(--bg-active);
+      color: var(--text-active);
+      font-weight: var(--font-medium);
+    }
+  }
+}
+
+// ----------------------------------------
+// NAV DROPDOWN (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-nav-dropdown {
+  position: relative;
+
+  .nav-dropdown-toggle {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: var(--z-dropdown, 1000);
+    min-width: 200px;
+    background-color: var(--bg-surface);
+    border: var(--border-width-1) solid var(--border-default);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity var(--duration-fast) var(--timing-smooth),
+                visibility var(--duration-fast) var(--timing-smooth),
+                transform var(--duration-fast) var(--timing-smooth);
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    ul {
+      @include sprout-nav-menu;
+      padding: var(--padding-sm);
+    }
+  }
+}
+
+// ----------------------------------------
+// NAV TABS (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-nav-tabs {
+  @include sprout-flex-row($gap: 0, $align: flex-end);
+  border-bottom: var(--border-width-1) solid var(--border-light);
+
+  li {
+    a {
+      padding: var(--padding-md) var(--padding-lg);
+      border-bottom: 3px solid transparent;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all var(--duration-fast) var(--timing-smooth);
+
+      &:hover {
+        color: var(--text-primary);
+        background-color: var(--bg-hover);
+      }
+
+      &:focus {
+        outline: var(--focus-ring-width) solid var(--focus-ring);
+        outline-offset: var(--focus-ring-offset);
+      }
+    }
+
+    &.active a {
+      color: var(--text-primary);
+      border-bottom-color: var(--border-primary);
+      background-color: transparent;
+    }
+  }
+}
+
+// ----------------------------------------
+// NAV PAGINATION (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-nav-pagination {
+  @include sprout-flex-row($gap: 'xs', $align: center, $justify: center);
+  flex-wrap: wrap;
+
+  li {
+    a, span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      height: 40px;
+      padding: var(--padding-sm) var(--padding-md);
+      border: var(--border-width-1) solid var(--border-light);
+      border-radius: var(--border-radius-sm);
+      color: var(--text-primary);
+      text-decoration: none;
+      background-color: var(--bg-surface);
+      transition: all var(--duration-fast) var(--timing-smooth);
+
+      &:hover {
+        background-color: var(--bg-hover);
+        border-color: var(--border-hover);
+      }
+
+      &:focus {
+        outline: var(--focus-ring-width) solid var(--focus-ring);
+        outline-offset: var(--focus-ring-offset);
+      }
+    }
+
+    &.active span {
+      background-color: var(--interactive-primary);
+      border-color: var(--interactive-primary);
+      color: var(--text-inverse);
+      font-weight: var(--font-medium);
+    }
+
+    &.disabled span {
+      opacity: var(--opacity-disabled);
+      pointer-events: none;
+    }
+  }
+}
+
+// ----------------------------------------
+// NAV SIDEBAR (Específico - Útil)
+// ----------------------------------------
+
+@mixin sprout-nav-sidebar($width: '16rem', $position: 'left') {
+  @include sprout-element(
+    $position: fixed,
+    $top: 0,
+    $width: $width,
+    $height: 100vh,
+    $z-index: var(--z-sidebar, 900)
+  );
+
+  @if $position == 'left' {
+    left: 0;
+  } @else {
+    right: 0;
+  }
+
+  background-color: var(--bg-surface);
+  border-inline-end: var(--border-width-1) solid var(--border-light);
+  overflow-y: auto;
+
+  .nav-sidebar-content {
+    padding: var(--padding-lg);
+  }
+
+  .nav-sidebar-header {
+    padding: var(--padding-lg);
+    border-bottom: var(--border-width-1) solid var(--border-light);
+  }
+
+  .nav-sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--padding-lg);
+    border-top: var(--border-width-1) solid var(--border-light);
+  }
+}

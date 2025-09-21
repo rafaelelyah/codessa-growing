@@ -1,0 +1,130 @@
+{
+  "file": "fields.scss",
+  "description": "Field constructors for form elements and their components",
+  "architecture": {
+    "generics": ["sprout-field-base", "sprout-field-input", "sprout-field-textarea", "sprout-field-state"],
+    "specifics": ["sprout-field-sm", "sprout-field-md", "sprout-field-lg", "sprout-field-text", "sprout-field-email", "sprout-field-password", "sprout-field-number", "sprout-field-search", "sprout-field-url", "sprout-field-tel", "sprout-field-error", "sprout-field-success", "sprout-field-warning", "sprout-field-disabled", "sprout-field-primary", "sprout-field-ghost", "sprout-field-floating", "sprout-field-group", "sprout-field-group-vertical", "sprout-field-with-icon"]
+  },
+  "sprouts": [
+    {
+      "name": "sprout-field-base",
+      "description": "Base mixin for form fields with customizable padding, font size, border radius and width",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-field-input",
+      "description": "Generic input field mixin with type and size parameters",
+      "dependencies": ["sprout-field-base"]
+    },
+    {
+      "name": "sprout-field-textarea",
+      "description": "Textarea field mixin with customizable rows and resize behavior",
+      "dependencies": ["sprout-field-base"]
+    },
+    {
+      "name": "sprout-field-state",
+      "description": "State styling mixin for error, success, disabled and warning states",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-field-sm",
+      "description": "Small size field preset",
+      "dependencies": ["sprout-field-base"]
+    },
+    {
+      "name": "sprout-field-md",
+      "description": "Medium size field preset (default)",
+      "dependencies": ["sprout-field-base"]
+    },
+    {
+      "name": "sprout-field-lg",
+      "description": "Large size field preset",
+      "dependencies": ["sprout-field-base"]
+    },
+    {
+      "name": "sprout-field-text",
+      "description": "Text input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-email",
+      "description": "Email input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-password",
+      "description": "Password input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-number",
+      "description": "Number input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-search",
+      "description": "Search input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-url",
+      "description": "URL input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-tel",
+      "description": "Telephone input field preset",
+      "dependencies": ["sprout-field-input"]
+    },
+    {
+      "name": "sprout-field-error",
+      "description": "Error state field styling",
+      "dependencies": ["sprout-field-state"]
+    },
+    {
+      "name": "sprout-field-success",
+      "description": "Success state field styling",
+      "dependencies": ["sprout-field-state"]
+    },
+    {
+      "name": "sprout-field-warning",
+      "description": "Warning state field styling",
+      "dependencies": ["sprout-field-state"]
+    },
+    {
+      "name": "sprout-field-disabled",
+      "description": "Disabled state field styling",
+      "dependencies": ["sprout-field-state"]
+    },
+    {
+      "name": "sprout-field-primary",
+      "description": "Primary styled field with focus states",
+      "dependencies": ["sprout-field-md"]
+    },
+    {
+      "name": "sprout-field-ghost",
+      "description": "Ghost styled field with transparent background",
+      "dependencies": ["sprout-field-md"]
+    },
+    {
+      "name": "sprout-field-floating",
+      "description": "Floating label field style with bottom border only",
+      "dependencies": ["sprout-field-md"]
+    },
+    {
+      "name": "sprout-field-group",
+      "description": "Horizontal field group layout",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-field-group-vertical",
+      "description": "Vertical field group layout",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-field-with-icon",
+      "description": "Field with icon positioning support",
+      "dependencies": []
+    }
+  ]
+}

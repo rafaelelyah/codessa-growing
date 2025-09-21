@@ -1,0 +1,66 @@
+{
+  "file": "ratio.scss",
+  "lastUpdated": "2025-09-21T18:16:01.412Z",
+  "leafs": [
+    {
+      "name": "leaf-aspect-ratio",
+      "modifiers": [
+        "&--a4",
+        "&--a4-landscape",
+        "&--auto",
+        "&--banner",
+        "&--book",
+        "&--card",
+        "&--classic",
+        "&--facebook-post",
+        "&--golden",
+        "&--golden-portrait",
+        "&--instagram-landscape",
+        "&--instagram-portrait",
+        "&--instagram-square",
+        "&--linkedin-post",
+        "&--logo-landscape",
+        "&--logo-square",
+        "&--magazine",
+        "&--magazine-landscape",
+        "&--pinterest-pin",
+        "&--portrait",
+        "&--poster",
+        "&--square",
+        "&--story",
+        "&--tall",
+        "&--tiktok-video",
+        "&--twitter-post",
+        "&--video",
+        "&--wide",
+        "&--youtube-thumbnail"
+      ]
+    },
+    {
+      "name": "leaf-object-fit",
+      "modifiers": [
+        "&--contain",
+        "&--cover",
+        "&--fill",
+        "&--none",
+        "&--scale-down"
+      ]
+    },
+    {
+      "name": "leaf-object-position",
+      "modifiers": [
+        "&--bottom",
+        "&--center",
+        "&--left",
+        "&--left-bottom",
+        "&--left-top",
+        "&--right",
+        "&--right-bottom",
+        "&--right-top",
+        "&--top",
+        "&--top-left",
+        "&--top-right"
+      ]
+    }
+  ]
+}

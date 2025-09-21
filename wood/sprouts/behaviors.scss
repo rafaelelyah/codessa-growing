@@ -1,0 +1,247 @@
+
+// ========================================
+// SPROUTS — BEHAVIORAL CONSTRUCTORS
+// ========================================
+// Mixins para aplicar transições, animações e efeitos.
+//
+// ARQUITETURA:
+// - Genéricos: sprout-transition, sprout-animation, sprout-effect
+// - Específicos: presets pré-configurados para casos comuns
+
+// ----------------------------------------
+// TRANSITION GENERICS
+// ----------------------------------------
+
+@mixin sprout-transition(
+  $props: 'all',
+  $duration: 'base',
+  $timing: 'smooth'
+) {
+  transition: #{$props} var(--duration-#{$duration}) var(--timing-#{$timing});
+}
+
+@mixin sprout-transition-hover(
+  $props: 'all',
+  $duration: 'fast'
+) {
+  transition: #{$props} var(--duration-#{$duration}) var(--timing-smooth);
+}
+
+// ----------------------------------------
+// ANIMATION GENERICS
+// ----------------------------------------
+
+@mixin sprout-animation(
+  $name: 'fade-in',
+  $duration: 'base',
+  $timing: 'smooth',
+  $fill: 'forwards'
+) {
+  animation: #{$name} var(--duration-#{$duration}) var(--timing-#{$timing}) #{$fill};
+}
+
+@mixin sprout-animation-fade-in($duration: 'base') {
+  @include sprout-animation($name: 'sprout-fade-in', $duration: $duration);
+}
+
+@mixin sprout-animation-fade-out($duration: 'base') {
+  @include sprout-animation($name: 'sprout-fade-out', $duration: $duration);
+}
+
+@mixin sprout-animation-slide-up($duration: 'base') {
+  @include sprout-animation($name: 'sprout-slide-up', $duration: $duration);
+}
+
+@mixin sprout-animation-slide-down($duration: 'base') {
+  @include sprout-animation($name: 'sprout-slide-down', $duration: $duration);
+}
+
+// ----------------------------------------
+// EFFECT GENERICS
+// ----------------------------------------
+
+@mixin sprout-effect-scale($scale: 1.05) {
+  transform: scale($scale);
+}
+
+@mixin sprout-effect-rotate($degrees: 0) {
+  transform: rotate(#{$degrees}deg);
+}
+
+@mixin sprout-effect-translate($x: 0, $y: 0) {
+  transform: translate(#{$x}, #{$y});
+}
+
+@mixin sprout-effect-blur($amount: 4px) {
+  filter: blur($amount);
+}
+
+@mixin sprout-effect-brightness($amount: 1) {
+  filter: brightness($amount);
+}
+
+@mixin sprout-effect-opacity($opacity: 1) {
+  opacity: $opacity;
+}
+
+// ----------------------------------------
+// KEYFRAMES
+// ----------------------------------------
+
+@keyframes sprout-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sprout-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sprout-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sprout-slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sprout-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+// ----------------------------------------
+// TRANSITION PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-transition-smooth {
+  @include sprout-transition($props: 'all', $duration: 'base', $timing: 'smooth');
+}
+
+@mixin sprout-transition-fast {
+  @include sprout-transition($props: 'all', $duration: 'fast', $timing: 'smooth');
+}
+
+@mixin sprout-transition-slow {
+  @include sprout-transition($props: 'all', $duration: 'slow', $timing: 'smooth');
+}
+
+@mixin sprout-transition-color {
+  @include sprout-transition($props: 'color, background-color', $duration: 'fast');
+}
+
+@mixin sprout-transition-transform {
+  @include sprout-transition($props: 'transform', $duration: 'base');
+}
+
+// ----------------------------------------
+// ANIMATION PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-animation-enter {
+  @include sprout-animation-fade-in('base');
+}
+
+@mixin sprout-animation-exit {
+  @include sprout-animation-fade-out('base');
+}
+
+@mixin sprout-animation-bounce {
+  @include sprout-animation($name: 'sprout-bounce', $duration: 'base');
+}
+
+@mixin sprout-animation-slide-in-up {
+  @include sprout-animation-slide-up('base');
+}
+
+@mixin sprout-animation-slide-in-down {
+  @include sprout-animation-slide-down('base');
+}
+
+// ----------------------------------------
+// EFFECT PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-effect-hover-lift {
+  @include sprout-effect-scale(1.02);
+  @include sprout-effect-translate($y: -2px);
+}
+
+@mixin sprout-effect-hover-glow {
+  box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.3);
+}
+
+@mixin sprout-effect-active-press {
+  @include sprout-effect-scale(0.98);
+}
+
+@mixin sprout-effect-muted {
+  @include sprout-effect-opacity(0.6);
+}
+
+@mixin sprout-effect-highlight {
+  @include sprout-effect-brightness(1.1);
+}
+
+// ----------------------------------------
+// INTERACTION PRESETS (Específicos - Compostos)
+// ----------------------------------------
+
+@mixin sprout-interactive-button {
+  @include sprout-transition-smooth;
+
+  &:hover {
+    @include sprout-effect-hover-lift;
+  }
+
+  &:active {
+    @include sprout-effect-active-press;
+  }
+}
+
+@mixin sprout-interactive-card {
+  @include sprout-transition-color;
+
+  &:hover {
+    @include sprout-effect-scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin sprout-interactive-link {
+  @include sprout-transition-color;
+
+  &:hover {
+    @include sprout-effect-scale(1.05);
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "file": "behaviors.scss",
+  "lastUpdated": "2025-09-21T17:19:40.161Z",
+  "sprouts": [],
+  "keyframes": [
+    "sprout-fade-in",
+    "sprout-fade-out",
+    "sprout-slide-up",
+    "sprout-slide-down",
+    "sprout-bounce"
+  ]
+}

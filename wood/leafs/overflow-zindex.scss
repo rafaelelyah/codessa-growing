@@ -1,0 +1,88 @@
+// ========================================
+// LEAF — OVERFLOW & Z-INDEX (modificadores de overflow e camadas)
+// ========================================
+// Modificadores pontuais para controle de overflow e posicionamento em Z.
+
+// ----------------------------------------
+// OVERFLOW GENERAL MODIFIERS
+// ----------------------------------------
+
+.leaf-overflow {
+  &--visible { overflow: visible !important; }
+  &--hidden { overflow: hidden !important; }
+  &--clip { overflow: clip !important; }
+  &--scroll { overflow: scroll !important; }
+  &--auto { overflow: auto !important; }
+}
+
+// ----------------------------------------
+// OVERFLOW X MODIFIERS
+// ----------------------------------------
+
+.leaf-overflow-x {
+  &--visible { overflow-x: visible !important; }
+  &--hidden { overflow-x: hidden !important; }
+  &--clip { overflow-x: clip !important; }
+  &--scroll { overflow-x: scroll !important; }
+  &--auto { overflow-x: auto !important; }
+}
+
+// ----------------------------------------
+// OVERFLOW Y MODIFIERS
+// ----------------------------------------
+
+.leaf-overflow-y {
+  &--visible { overflow-y: visible !important; }
+  &--hidden { overflow-y: hidden !important; }
+  &--clip { overflow-y: clip !important; }
+  &--scroll { overflow-y: scroll !important; }
+  &--auto { overflow-y: auto !important; }
+}
+
+// ----------------------------------------
+// TEXT OVERFLOW MODIFIERS
+// ----------------------------------------
+
+.leaf-text-overflow {
+  &--clip { text-overflow: clip !important; }
+  &--ellipsis { text-overflow: ellipsis !important; }
+}
+
+// ----------------------------------------
+// Z-INDEX SEMANTIC MODIFIERS
+// ----------------------------------------
+
+.leaf-z-index {
+  &--auto { z-index: auto !important; }
+  &--0 { z-index: 0 !important; }
+  &--10 { z-index: 10 !important; }
+  &--20 { z-index: 20 !important; }
+  &--30 { z-index: 30 !important; }
+  &--40 { z-index: 40 !important; }
+  &--50 { z-index: 50 !important; }
+  &--60 { z-index: 60 !important; }
+  &--70 { z-index: 70 !important; }
+  &--80 { z-index: 80 !important; }
+  &--90 { z-index: 90 !important; }
+  &--100 { z-index: 100 !important; }
+  &--1000 { z-index: 1000 !important; }
+  &--9999 { z-index: 9999 !important; }
+}
+
+// ----------------------------------------
+// Z-INDEX NAMED MODIFIERS (using design tokens)
+// ----------------------------------------
+
+.leaf-z {
+  &--base { z-index: var(--z-base) !important; }
+  &--low { z-index: var(--z-low) !important; }
+  &--default { z-index: var(--z-default) !important; }
+  &--dropdown { z-index: var(--z-dropdown) !important; }
+  &--sticky { z-index: var(--z-sticky) !important; }
+  &--fixed { z-index: var(--z-fixed) !important; }
+  &--modal { z-index: var(--z-modal) !important; }
+  &--popover { z-index: var(--z-popover) !important; }
+  &--toast { z-index: var(--z-toast) !important; }
+  &--overlay { z-index: var(--z-overlay) !important; }
+  &--max { z-index: var(--z-max) !important; }
+}

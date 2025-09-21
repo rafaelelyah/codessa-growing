@@ -1,0 +1,131 @@
+// ========================================
+// LEAF — DISPLAY & VISIBILITY (modificadores)
+// ========================================
+// Modificadores pontuais para display, overflow e visibilidade.
+
+// ----------------------------------------
+// DISPLAY MODIFIERS
+// ----------------------------------------
+
+.leaf-display {
+  &--block { display: block !important; }
+  &--inline { display: inline !important; }
+  &--inline-block { display: inline-block !important; }
+  &--flex { display: flex !important; }
+  &--inline-flex { display: inline-flex !important; }
+  &--grid { display: grid !important; }
+  &--inline-grid { display: inline-grid !important; }
+  &--table { display: table !important; }
+  &--table-row { display: table-row !important; }
+  &--table-cell { display: table-cell !important; }
+  &--none { display: none !important; }
+  &--contents { display: contents !important; }
+}
+
+// ----------------------------------------
+// OVERFLOW MODIFIERS
+// ----------------------------------------
+
+.leaf-overflow {
+  &--visible { overflow: visible !important; }
+  &--hidden { overflow: hidden !important; }
+  &--scroll { overflow: scroll !important; }
+  &--auto { overflow: auto !important; }
+}
+
+.leaf-overflow-x {
+  &--visible { overflow-x: visible !important; }
+  &--hidden { overflow-x: hidden !important; }
+  &--scroll { overflow-x: scroll !important; }
+  &--auto { overflow-x: auto !important; }
+}
+
+.leaf-overflow-y {
+  &--visible { overflow-y: visible !important; }
+  &--hidden { overflow-y: hidden !important; }
+  &--scroll { overflow-y: scroll !important; }
+  &--auto { overflow-y: auto !important; }
+}
+
+// ----------------------------------------
+// VISIBILITY MODIFIERS
+// ----------------------------------------
+
+.leaf-visibility {
+  &--visible { visibility: visible !important; }
+  &--hidden { visibility: hidden !important; }
+  &--collapse { visibility: collapse !important; }
+}
+
+// ----------------------------------------
+// POSITION MODIFIERS
+// ----------------------------------------
+
+.leaf-position {
+  &--static { position: static !important; }
+  &--relative { position: relative !important; }
+  &--absolute { position: absolute !important; }
+  &--fixed { position: fixed !important; }
+  &--sticky { position: sticky !important; }
+}
+
+// ----------------------------------------
+// FLOAT MODIFIERS
+// ----------------------------------------
+
+.leaf-float {
+  &--left { float: left !important; }
+  &--right { float: right !important; }
+  &--none { float: none !important; }
+}
+
+.leaf-clear {
+  &--left { clear: left !important; }
+  &--right { clear: right !important; }
+  &--both { clear: both !important; }
+  &--none { clear: none !important; }
+}
+
+// ----------------------------------------
+// OBJECT FIT MODIFIERS
+// ----------------------------------------
+
+.leaf-object-fit {
+  &--contain { object-fit: contain !important; }
+  &--cover { object-fit: cover !important; }
+  &--fill { object-fit: fill !important; }
+  &--none { object-fit: none !important; }
+  &--scale-down { object-fit: scale-down !important; }
+}
+
+// ----------------------------------------
+// OBJECT POSITION MODIFIERS
+// ----------------------------------------
+
+.leaf-object-position {
+  &--center { object-position: center !important; }
+  &--top { object-position: top !important; }
+  &--bottom { object-position: bottom !important; }
+  &--left { object-position: left !important; }
+  &--right { object-position: right !important; }
+  &--top-left { object-position: top left !important; }
+  &--top-right { object-position: top right !important; }
+  &--bottom-left { object-position: bottom left !important; }
+  &--bottom-right { object-position: bottom right !important; }
+}
+
+// ----------------------------------------
+// ISOLATION MODIFIERS
+// ----------------------------------------
+
+.leaf-isolation {
+  &--auto { isolation: auto !important; }
+  &--isolate { isolation: isolate !important; }
+}
+
+.leaf-contain {
+  &--none { contain: none !important; }
+  &--layout { contain: layout !important; }
+  &--paint { contain: paint !important; }
+  &--strict { contain: strict !important; }
+}

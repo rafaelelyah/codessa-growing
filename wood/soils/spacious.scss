@@ -1,0 +1,41 @@
+// ========================================
+// SOIL SPACIOUS
+// ========================================
+
+[data-density="spacious"] {
+
+  // Tipografia ampliada
+  --text-sm: var(--text-size-3);
+  --text-md: var(--text-size-4);
+  --text-lg: var(--text-size-5);
+  --text-xl: var(--text-size-6);
+
+  // Altura de linha mais relaxada
+  --leading-base: var(--line-height-4);
+  --leading-loose: var(--line-height-5);
+
+  // Espaçamentos ampliados
+  --padding-sm: var(--padding-3);
+  --padding-md: var(--padding-4);
+  --padding-lg: var(--padding-6);
+
+  --margin-sm: var(--margin-3);
+  --margin-md: var(--margin-4);
+  --margin-lg: var(--margin-6);
+
+  --gap-sm: var(--gap-3);
+  --gap-md: var(--gap-4);
+  --gap-lg: var(--gap-6);
+
+  // Containers mais largos
+  --container-xs: var(--container-3);
+  --container-sm: var(--container-4);
+  --container-md: var(--container-6);
+  --container-lg: var(--container-7);
+
+  // Bordas maiores para amplitude
+  --border-radius-sm: var(--radius-3);
+  --border-radius-md: var(--radius-4);
+  --border-radius-lg: var(--radius-5);
+
+}

@@ -1,0 +1,319 @@
+
+// ========================================
+// SPROUTS — TEXTUAL CONSTRUCTORS
+// ========================================
+// Mixins para criar elementos textuais consistentes.
+//
+// ARQUITETURA:
+// - Genéricos: sprout-heading, sprout-paragraph, etc.
+// - Específicos: presets para casos comuns
+
+// ----------------------------------------
+// HEADING GENERICS
+// ----------------------------------------
+
+@mixin sprout-heading($size: 'xl', $weight: 'bold', $margin-bottom: 'sm') {
+  font-size: var(--text-#{$size});
+  font-weight: var(--font-#{$weight});
+  line-height: var(--leading-tight);
+  margin-block-end: var(--margin-#{$margin-bottom});
+  color: var(--text-primary);
+}
+
+@mixin sprout-heading-uppercase($size: 'md', $margin-bottom: 'sm') {
+  font-size: var(--text-#{$size});
+  text-transform: uppercase;
+  letter-spacing: var(--letter-wide);
+  margin-block-end: var(--margin-#{$margin-bottom});
+  color: var(--text-primary);
+}
+
+// ----------------------------------------
+// PARAGRAPH GENERICS
+// ----------------------------------------
+
+@mixin sprout-paragraph($size: 'md', $margin-bottom: 'md') {
+  font-size: var(--text-#{$size});
+  line-height: var(--leading-loose);
+  margin-block-end: var(--margin-#{$margin-bottom});
+  color: var(--text-secondary);
+}
+
+@mixin sprout-paragraph-muted($size: 'md', $margin-bottom: 'md') {
+  font-size: var(--text-#{$size});
+  line-height: var(--leading-loose);
+  margin-block-end: var(--margin-#{$margin-bottom});
+  color: var(--text-muted);
+}
+
+// ----------------------------------------
+// FLUID TYPE GENERICS
+// ----------------------------------------
+
+@mixin sprout-fluid-type($min-size: 1rem, $max-size: 2rem, $viewport-width: 2vw) {
+  font-size: clamp(#{$min-size}, #{$viewport-width}, #{$max-size});
+}
+
+// ----------------------------------------
+// TRUNCATION GENERICS
+// ----------------------------------------
+
+@mixin sprout-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin sprout-text-multiline($lines: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: #{$lines};
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ----------------------------------------
+// CODE BLOCK GENERICS
+// ----------------------------------------
+
+@mixin sprout-code-block($padding: 'sm') {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background-color: var(--bg-muted);
+  padding: var(--padding-#{$padding});
+  border-radius: var(--border-radius-sm);
+  overflow-x: auto;
+  white-space: pre;
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+}
+
+@mixin sprout-inline-code($padding-x: 'xs', $padding-y: '2px') {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background-color: var(--bg-muted);
+  padding: #{$padding-y} var(--padding-#{$padding-x});
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+}
+
+// ----------------------------------------
+// HEADING PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-heading-display {
+  @include sprout-heading($size: '4xl', $weight: 'black', $margin-bottom: 'lg');
+  letter-spacing: var(--letter-tight);
+}
+
+@mixin sprout-heading-hero {
+  @include sprout-heading($size: '3xl', $weight: 'bold', $margin-bottom: 'lg');
+  line-height: var(--leading-snug);
+}
+
+@mixin sprout-heading-section {
+  @include sprout-heading($size: '2xl', $weight: 'bold', $margin-bottom: 'md');
+}
+
+@mixin sprout-heading-subsection {
+  @include sprout-heading($size: 'xl', $weight: 'semibold', $margin-bottom: 'sm');
+}
+
+@mixin sprout-heading-card {
+  @include sprout-heading($size: 'lg', $weight: 'semibold', $margin-bottom: 'xs');
+}
+
+// ----------------------------------------
+// TEXT PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-text-lead {
+  @include sprout-paragraph($size: 'lg', $margin-bottom: 'lg');
+  font-weight: var(--font-medium);
+}
+
+@mixin sprout-text-body {
+  @include sprout-paragraph($size: 'md', $margin-bottom: 'md');
+}
+
+@mixin sprout-text-caption {
+  @include sprout-paragraph($size: 'sm', $margin-bottom: 'sm');
+  color: var(--text-muted);
+}
+
+@mixin sprout-text-small {
+  @include sprout-paragraph($size: 'xs', $margin-bottom: 'xs');
+  color: var(--text-muted);
+}
+
+// ----------------------------------------
+// TYPOGRAPHY PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-text-highlight {
+  background-color: var(--bg-highlight);
+  padding: var(--padding-xs) var(--padding-sm);
+  border-radius: var(--border-radius-xs);
+  font-weight: var(--font-medium);
+}
+
+@mixin sprout-text-quote {
+  border-left: 4px solid var(--border-primary);
+  padding-left: var(--padding-md);
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+@mixin sprout-text-error {
+  color: var(--text-error);
+  font-weight: var(--font-medium);
+}
+
+@mixin sprout-text-success {
+  color: var(--text-success);
+  font-weight: var(--font-medium);
+}
+
+@mixin sprout-text-warning {
+  color: var(--text-warning);
+  font-weight: var(--font-medium);
+}
+
+// ----------------------------------------
+// CODE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-code-inline {
+  @include sprout-inline-code;
+  font-size: 0.875em;
+}
+
+@mixin sprout-code-block-large {
+  @include sprout-code-block($padding: 'md');
+  font-size: var(--text-base);
+}
+
+@mixin sprout-code-block-small {
+  @include sprout-code-block($padding: 'xs');
+  font-size: var(--text-xs);
+}
+
+// ----------------------------------------
+// TEXT UTILITY PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-text-center {
+  text-align: center;
+}
+
+@mixin sprout-text-left {
+  text-align: left;
+}
+
+@mixin sprout-text-right {
+  text-align: right;
+}
+
+@mixin sprout-text-justify {
+  text-align: justify;
+}
+
+@mixin sprout-text-nowrap {
+  white-space: nowrap;
+}
+
+@mixin sprout-text-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+// ----------------------------------------
+// RESPONSIVE TEXT PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-text-responsive {
+  @include sprout-fluid-type(1rem, 1.25rem, 2vw);
+
+  @include sprout-media-up('md') {
+    @include sprout-fluid-type(1.125rem, 1.5rem, 1.5vw);
+  }
+}
+
+@mixin sprout-heading-responsive {
+  @include sprout-fluid-type(1.5rem, 3rem, 4vw);
+
+  @include sprout-media-up('md') {
+    @include sprout-fluid-type(2rem, 4rem, 3vw);
+  }
+
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  margin-block-end: var(--margin-md);
+}
+
+// ----------------------------------------
+// PARAGRAPHS
+// ----------------------------------------
+
+@mixin sprout-paragraph($size: 'md', $margin-bottom: 'md') {
+  font-size: var(--text-#{$size});
+  line-height: var(--leading-loose);
+  margin-block-end: var(--margin-#{$margin-bottom});
+  color: var(--text-secondary);
+}
+
+@mixin sprout-paragraph-muted($size: 'md', $margin-bottom: 'md') {
+  font-size: var(--text-#{$size});
+  line-height: var(--leading-loose);
+  margin-block-end: var(--margin-#{$margin-bottom});
+  color: var(--text-muted);
+}
+
+// ----------------------------------------
+// FLUID TYPE
+// ----------------------------------------
+
+@mixin sprout-fluid-type($min-size: 1rem, $max-size: 2rem, $viewport-width: 2vw) {
+  font-size: clamp(#{$min-size}, #{$viewport-width}, #{$max-size});
+}
+
+// ----------------------------------------
+// TRUNCATION
+// ----------------------------------------
+
+@mixin sprout-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin sprout-text-multiline($lines: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: #{$lines};
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ----------------------------------------
+// CODE BLOCKS
+// ----------------------------------------
+
+@mixin sprout-code-block($padding: 'sm') {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background-color: var(--bg-muted);
+  padding: var(--padding-#{$padding});
+  border-radius: var(--border-radius-sm);
+  overflow-x: auto;
+  white-space: pre;
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+}
+
+@mixin sprout-inline-code($padding-x: 'xs', $padding-y: '2px') {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background-color: var(--bg-muted);
+  padding: #{$padding-y} var(--padding-#{$padding-x});
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+}

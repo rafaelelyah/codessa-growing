@@ -35,6 +35,7 @@ O **My Groves** revoluciona o desenvolvimento permitindo **projetos independente
 - **Sistema de Sync Inteligente**: Downloads organizados em pastas `grow-sync/` com estratégias específicas por tipo de asset
 - **Integração com Nest Grow**: CLI avançado para gerenciamento de componentes e assets
 - **My Groves**: Sistema de projetos independentes com builds simultâneos
+- **Sistema de Tokens JSON**: Design tokens como fonte única da verdade com geração automática de CSS/SCSS
 - **Documentação Completa**: Guias atualizados com exemplos práticos
 - **Arquitetura Validada**: Sistema testado e comprovado em produção
 

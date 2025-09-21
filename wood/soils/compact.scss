@@ -1,0 +1,41 @@
+// ========================================
+// SOIL COMPACT
+// ========================================
+
+[data-density="compact"] {
+
+  // Tipografia menor
+  --text-sm: var(--text-size-1);
+  --text-md: var(--text-size-2);
+  --text-lg: var(--text-size-3);
+  --text-xl: var(--text-size-4);
+
+  // Altura de linha mais justa
+  --leading-base: var(--line-height-2);
+  --leading-loose: var(--line-height-3);
+
+  // Espaçamentos reduzidos
+  --padding-sm: var(--padding-1);
+  --padding-md: var(--padding-2);
+  --padding-lg: var(--padding-3);
+
+  --margin-sm: var(--margin-1);
+  --margin-md: var(--margin-2);
+  --margin-lg: var(--margin-3);
+
+  --gap-sm: var(--gap-1);
+  --gap-md: var(--gap-2);
+  --gap-lg: var(--gap-3);
+
+  // Containers mais estreitos
+  --container-xs: var(--container-1);
+  --container-sm: var(--container-2);
+  --container-md: var(--container-3);
+  --container-lg: var(--container-4);
+
+  // Bordas menores para densidade
+  --border-radius-sm: var(--radius-1);
+  --border-radius-md: var(--radius-2);
+  --border-radius-lg: var(--radius-3);
+
+}

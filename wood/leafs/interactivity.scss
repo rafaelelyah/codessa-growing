@@ -1,0 +1,161 @@
+// ========================================
+// LEAF — INTERACTIVITY (modificadores de interação)
+// ========================================
+// Modificadores pontuais para cursores, eventos de ponteiro e seleção.
+
+// ----------------------------------------
+// CURSOR MODIFIERS
+// ----------------------------------------
+
+.leaf-cursor {
+  &--auto { cursor: auto !important; }
+  &--default { cursor: default !important; }
+  &--none { cursor: none !important; }
+  &--context-menu { cursor: context-menu !important; }
+  &--help { cursor: help !important; }
+  &--pointer { cursor: pointer !important; }
+  &--progress { cursor: progress !important; }
+  &--wait { cursor: wait !important; }
+  &--cell { cursor: cell !important; }
+  &--crosshair { cursor: crosshair !important; }
+  &--text { cursor: text !important; }
+  &--vertical-text { cursor: vertical-text !important; }
+  &--alias { cursor: alias !important; }
+  &--copy { cursor: copy !important; }
+  &--move { cursor: move !important; }
+  &--no-drop { cursor: no-drop !important; }
+  &--not-allowed { cursor: not-allowed !important; }
+  &--grab { cursor: grab !important; }
+  &--grabbing { cursor: grabbing !important; }
+  &--all-scroll { cursor: all-scroll !important; }
+  &--col-resize { cursor: col-resize !important; }
+  &--row-resize { cursor: row-resize !important; }
+  &--n-resize { cursor: n-resize !important; }
+  &--e-resize { cursor: e-resize !important; }
+  &--s-resize { cursor: s-resize !important; }
+  &--w-resize { cursor: w-resize !important; }
+  &--ne-resize { cursor: ne-resize !important; }
+  &--nw-resize { cursor: nw-resize !important; }
+  &--se-resize { cursor: se-resize !important; }
+  &--sw-resize { cursor: sw-resize !important; }
+  &--ew-resize { cursor: ew-resize !important; }
+  &--ns-resize { cursor: ns-resize !important; }
+  &--nesw-resize { cursor: nesw-resize !important; }
+  &--nwse-resize { cursor: nwse-resize !important; }
+  &--zoom-in { cursor: zoom-in !important; }
+  &--zoom-out { cursor: zoom-out !important; }
+}
+
+// ----------------------------------------
+// POINTER EVENTS MODIFIERS
+// ----------------------------------------
+
+.leaf-pointer-events {
+  &--none { pointer-events: none !important; }
+  &--auto { pointer-events: auto !important; }
+  &--visiblePainted { pointer-events: visiblePainted !important; }
+  &--visibleFill { pointer-events: visibleFill !important; }
+  &--visibleStroke { pointer-events: visibleStroke !important; }
+  &--visible { pointer-events: visible !important; }
+  &--painted { pointer-events: painted !important; }
+  &--fill { pointer-events: fill !important; }
+  &--stroke { pointer-events: stroke !important; }
+  &--all { pointer-events: all !important; }
+}
+
+// ----------------------------------------
+// USER SELECT MODIFIERS
+// ----------------------------------------
+
+.leaf-user-select {
+  &--none {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+  &--auto {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+  }
+  &--text {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+  &--all {
+    -webkit-user-select: all !important;
+    -moz-user-select: all !important;
+    -ms-user-select: all !important;
+    user-select: all !important;
+  }
+}
+
+// ----------------------------------------
+// TOUCH ACTION MODIFIERS
+// ----------------------------------------
+
+.leaf-touch-action {
+  &--auto { touch-action: auto !important; }
+  &--none { touch-action: none !important; }
+  &--pan-x { touch-action: pan-x !important; }
+  &--pan-y { touch-action: pan-y !important; }
+  &--pinch-zoom { touch-action: pinch-zoom !important; }
+  &--manipulation { touch-action: manipulation !important; }
+}
+
+// ----------------------------------------
+// SCROLL BEHAVIOR MODIFIERS
+// ----------------------------------------
+
+.leaf-scroll-behavior {
+  &--auto { scroll-behavior: auto !important; }
+  &--smooth { scroll-behavior: smooth !important; }
+}
+
+// ----------------------------------------
+// RESIZE MODIFIERS
+// ----------------------------------------
+
+.leaf-resize {
+  &--none { resize: none !important; }
+  &--both { resize: both !important; }
+  &--horizontal { resize: horizontal !important; }
+  &--vertical { resize: vertical !important; }
+}
+
+// ----------------------------------------
+// LINK NAVIGATION MODIFIERS
+// ----------------------------------------
+
+.leaf-link-nav {
+  // Remove borda amarela padrão do clique
+  &--no-outline {
+    &:focus,
+    &:active {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  // Underline amarelo no hover (mais fino e suave)
+  &--underline-yellow {
+    text-decoration: none !important;
+    transition: text-decoration var(--duration-base) var(--timing-smooth) !important;
+
+    &:hover {
+      text-decoration: underline !important;
+      text-decoration-color: var(--interactive-primary) !important;
+      text-decoration-thickness: 1px !important;
+    }
+  }
+
+  // Combinação dos dois
+  &--clean {
+    @extend .leaf-link-nav--no-outline;
+    @extend .leaf-link-nav--underline-yellow;
+  }
+}

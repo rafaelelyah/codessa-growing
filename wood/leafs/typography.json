@@ -1,0 +1,209 @@
+{
+  "file": "typography.scss",
+  "lastUpdated": "2025-09-21T18:16:01.426Z",
+  "leafs": [
+    {
+      "name": "leaf-font-family",
+      "modifiers": [
+        "&--base",
+        "&--body",
+        "&--code",
+        "&--heading",
+        "&--mono",
+        "&--sans",
+        "&--serif",
+        "&--system"
+      ]
+    },
+    {
+      "name": "leaf-font-size",
+      "modifiers": [
+        "&--base",
+        "&--lg",
+        "&--sm",
+        "&--xl",
+        "&--xs"
+      ]
+    },
+    {
+      "name": "leaf-font-smoothing",
+      "modifiers": [
+        "&--antialiased",
+        "&--subpixel-antialiased"
+      ]
+    },
+    {
+      "name": "leaf-font-style",
+      "modifiers": [
+        "&--italic",
+        "&--normal",
+        "&--oblique"
+      ]
+    },
+    {
+      "name": "leaf-font-variant-numeric",
+      "modifiers": [
+        "&--diagonal-fractions",
+        "&--lining-nums",
+        "&--normal",
+        "&--oldstyle-nums",
+        "&--ordinal",
+        "&--proportional-nums",
+        "&--slashed-zero",
+        "&--stacked-fractions",
+        "&--tabular-nums"
+      ]
+    },
+    {
+      "name": "leaf-font-weight",
+      "modifiers": [
+        "&--black",
+        "&--bold",
+        "&--extrabold",
+        "&--extralight",
+        "&--light",
+        "&--medium",
+        "&--normal",
+        "&--semibold",
+        "&--thin"
+      ]
+    },
+    {
+      "name": "leaf-hyphens",
+      "modifiers": [
+        "&--auto",
+        "&--manual",
+        "&--none"
+      ]
+    },
+    {
+      "name": "leaf-letter-spacing",
+      "modifiers": [
+        "&--normal",
+        "&--tight",
+        "&--tighter",
+        "&--wide",
+        "&--wider",
+        "&--widest"
+      ]
+    },
+    {
+      "name": "leaf-line-height",
+      "modifiers": [
+        "&--loose",
+        "&--none",
+        "&--normal",
+        "&--relaxed",
+        "&--snug",
+        "&--tight"
+      ]
+    },
+    {
+      "name": "leaf-overflow-wrap",
+      "modifiers": [
+        "&--anywhere",
+        "&--break-word",
+        "&--normal"
+      ]
+    },
+    {
+      "name": "leaf-text-align",
+      "modifiers": [
+        "&--center",
+        "&--end",
+        "&--justify",
+        "&--left",
+        "&--right",
+        "&--start"
+      ]
+    },
+    {
+      "name": "leaf-text-decoration",
+      "modifiers": [
+        "&--line-through",
+        "&--none",
+        "&--overline",
+        "&--underline"
+      ]
+    },
+    {
+      "name": "leaf-text-decoration-style",
+      "modifiers": [
+        "&--dashed",
+        "&--dotted",
+        "&--double",
+        "&--solid",
+        "&--wavy"
+      ]
+    },
+    {
+      "name": "leaf-text-decoration-thickness",
+      "modifiers": [
+        "&--auto",
+        "&--from-font"
+      ]
+    },
+    {
+      "name": "leaf-text-indent",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-text-overflow",
+      "modifiers": [
+        "&--clip",
+        "&--ellipsis"
+      ]
+    },
+    {
+      "name": "leaf-text-rendering",
+      "modifiers": [
+        "&--auto",
+        "&--geometricPrecision",
+        "&--optimizeLegibility",
+        "&--optimizeSpeed"
+      ]
+    },
+    {
+      "name": "leaf-text-transform",
+      "modifiers": [
+        "&--capitalize",
+        "&--lowercase",
+        "&--none",
+        "&--uppercase"
+      ]
+    },
+    {
+      "name": "leaf-vertical-align",
+      "modifiers": [
+        "&--baseline",
+        "&--bottom",
+        "&--middle",
+        "&--sub",
+        "&--super",
+        "&--text-bottom",
+        "&--text-top",
+        "&--top"
+      ]
+    },
+    {
+      "name": "leaf-white-space",
+      "modifiers": [
+        "&--break-spaces",
+        "&--normal",
+        "&--nowrap",
+        "&--pre",
+        "&--pre-line",
+        "&--pre-wrap"
+      ]
+    },
+    {
+      "name": "leaf-word-break",
+      "modifiers": [
+        "&--break-all",
+        "&--break-word",
+        "&--keep-all",
+        "&--normal"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+// ========================================
+// LEAF — EFFECTS (modificadores visuais)
+// ========================================
+// Modificadores pontuais para sombras, transições, opacidade e filtros.
+
+// ----------------------------------------
+// SHADOW MODIFIERS
+// ----------------------------------------
+
+.leaf-shadow {
+  &--none { box-shadow: none !important; }
+  &--xs { box-shadow: var(--shadow-xs) !important; }
+  &--sm { box-shadow: var(--shadow-sm) !important; }
+  &--md { box-shadow: var(--shadow-md) !important; }
+  &--lg { box-shadow: var(--shadow-lg) !important; }
+  &--xl { box-shadow: var(--shadow-xl) !important; }
+  &--inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06) !important; }
+}
+
+// ----------------------------------------
+// TRANSITION MODIFIERS
+// ----------------------------------------
+
+.leaf-transition {
+  &--none { transition: none !important; }
+  &--fast { transition: all var(--duration-fast) var(--timing-smooth) !important; }
+  &--base { transition: all var(--duration-base) var(--timing-smooth) !important; }
+  &--slow { transition: all var(--duration-slow) var(--timing-smooth) !important; }
+
+  &--color { transition: color var(--duration-fast) var(--timing-smooth),
+                      background-color var(--duration-fast) var(--timing-smooth) !important; }
+  &--transform { transition: transform var(--duration-base) var(--timing-smooth) !important; }
+  &--opacity { transition: opacity var(--duration-fast) var(--timing-smooth) !important; }
+}
+
+// ----------------------------------------
+// OPACITY MODIFIERS
+// ----------------------------------------
+
+.leaf-opacity {
+  &--0 { opacity: 0 !important; }
+  &--10 { opacity: 0.1 !important; }
+  &--20 { opacity: 0.2 !important; }
+  &--30 { opacity: 0.3 !important; }
+  &--40 { opacity: 0.4 !important; }
+  &--50 { opacity: 0.5 !important; }
+  &--60 { opacity: 0.6 !important; }
+  &--70 { opacity: 0.7 !important; }
+  &--80 { opacity: 0.8 !important; }
+  &--90 { opacity: 0.9 !important; }
+  &--100 { opacity: 1 !important; }
+}
+
+// ----------------------------------------
+// FILTER MODIFIERS
+// ----------------------------------------
+
+.leaf-blur {
+  &--none { filter: blur(0) !important; }
+  &--sm { filter: blur(4px) !important; }
+  &--md { filter: blur(8px) !important; }
+  &--lg { filter: blur(12px) !important; }
+  &--xl { filter: blur(24px) !important; }
+}
+
+.leaf-brightness {
+  &--0 { filter: brightness(0) !important; }
+  &--50 { filter: brightness(0.5) !important; }
+  &--75 { filter: brightness(0.75) !important; }
+  &--90 { filter: brightness(0.9) !important; }
+  &--100 { filter: brightness(1) !important; }
+  &--110 { filter: brightness(1.1) !important; }
+  &--125 { filter: brightness(1.25) !important; }
+  &--150 { filter: brightness(1.5) !important; }
+}
+
+.leaf-contrast {
+  &--0 { filter: contrast(0) !important; }
+  &--50 { filter: contrast(0.5) !important; }
+  &--75 { filter: contrast(0.75) !important; }
+  &--100 { filter: contrast(1) !important; }
+  &--125 { filter: contrast(1.25) !important; }
+  &--150 { filter: contrast(1.5) !important; }
+}
+
+.leaf-grayscale {
+  &--0 { filter: grayscale(0) !important; }
+  &--100 { filter: grayscale(1) !important; }
+}
+
+.leaf-invert {
+  &--0 { filter: invert(0) !important; }
+  &--100 { filter: invert(1) !important; }
+}
+
+.leaf-sepia {
+  &--0 { filter: sepia(0) !important; }
+  &--100 { filter: sepia(1) !important; }
+}
+
+.leaf-saturate {
+  &--0 { filter: saturate(0) !important; }
+  &--50 { filter: saturate(0.5) !important; }
+  &--100 { filter: saturate(1) !important; }
+  &--150 { filter: saturate(1.5) !important; }
+  &--200 { filter: saturate(2) !important; }
+}
+
+// ----------------------------------------
+// BACKDROP FILTER MODIFIERS
+// ----------------------------------------
+
+.leaf-backdrop-blur {
+  &--none {
+    -webkit-backdrop-filter: blur(0) !important;
+    backdrop-filter: blur(0) !important;
+  }
+  &--sm {
+    -webkit-backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(4px) !important;
+  }
+  &--md {
+    -webkit-backdrop-filter: blur(8px) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+  &--lg {
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  &--xl {
+    -webkit-backdrop-filter: blur(24px) !important;
+    backdrop-filter: blur(24px) !important;
+  }
+}
+
+// ----------------------------------------
+// MIX BLEND MODE MODIFIERS
+// ----------------------------------------
+
+.leaf-mix-blend {
+  &--normal { mix-blend-mode: normal !important; }
+  &--multiply { mix-blend-mode: multiply !important; }
+  &--screen { mix-blend-mode: screen !important; }
+  &--overlay { mix-blend-mode: overlay !important; }
+  &--darken { mix-blend-mode: darken !important; }
+  &--lighten { mix-blend-mode: lighten !important; }
+  &--difference { mix-blend-mode: difference !important; }
+  &--exclusion { mix-blend-mode: exclusion !important; }
+}
+
+// ----------------------------------------
+// WILL CHANGE MODIFIERS
+// ----------------------------------------
+
+.leaf-will-change {
+  &--auto { will-change: auto !important; }
+  &--scroll { will-change: scroll-position !important; }
+  &--contents { will-change: contents !important; }
+  &--transform { will-change: transform !important; }
+  &--opacity { will-change: opacity !important; }
+}

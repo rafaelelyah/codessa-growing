@@ -14,9 +14,9 @@
     "nest:grow": "python Nest/cli.py grow",
     "nest:status": "python Nest/cli.py status",
     "nest:tools": "python Nest/cli.py tools",
-    "grow": "node Nest/Grow/grow.js",
-    "grow:help": "node Nest/Grow/grow.js --help",
-    "grow:validate": "node Nest/Grow/grow.js validate"
+    "grow": "node grow/grow.js",
+    "grow:create": "node grow/grow.js create",
+    "grow:help": "node grow/grow.js help"
   },
   "engines": {
     "node": ">=18.0.0"

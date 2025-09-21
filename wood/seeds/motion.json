@@ -1,0 +1,30 @@
+{
+  "durations": {
+    "1": "map.get(seeds.$sizes-seeds, 'durations', '1')",
+    "2": "map.get(seeds.$sizes-seeds, 'durations', '2')",
+    "3": "map.get(seeds.$sizes-seeds, 'durations', '3')",
+    "4": "map.get(seeds.$sizes-seeds, 'durations', '4')",
+    "5": "map.get(seeds.$sizes-seeds, 'durations', '5')"
+  },
+  "delays": {
+    "1": "map.get(seeds.$sizes-seeds, 'durations', '1')",
+    "2": "map.get(seeds.$sizes-seeds, 'durations', '2')",
+    "3": "map.get(seeds.$sizes-seeds, 'durations', '3')",
+    "4": "map.get(seeds.$sizes-seeds, 'durations', '4')",
+    "5": "map.get(seeds.$sizes-seeds, 'durations', '5')"
+  },
+  "timings": {
+    "1": "ease-in",
+    "2": "ease-out",
+    "3": "ease-in-out",
+    "4": "linear",
+    "5": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "distances": {
+    "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+    "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+    "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+    "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+    "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')"
+  }
+}

@@ -1,0 +1,76 @@
+// ========================================
+// SOIL DARK
+// ========================================
+
+[data-theme="dark"] {
+
+  // Fundo escuro, texto claro
+  --bg-primary: var(--color-neutral-1);
+  --bg-secondary: var(--color-neutral-2);
+  --bg-muted: var(--color-neutral-3);
+  --bg-subtle: var(--color-neutral-4);
+
+  --text-primary: var(--color-neutral-7);
+  --text-secondary: var(--color-neutral-6);
+  --text-muted: var(--color-neutral-5);
+  --text-subtle: var(--color-neutral-4);
+  --text-inverse: var(--color-neutral-1);
+
+  // Bordas mais visíveis e consistentes
+  --border-primary: var(--color-neutral-4);
+  --border-secondary: var(--color-neutral-3);
+  --border-aux: var(--color-neutral-5);
+  --border-brand: var(--color-standard-4);
+
+  // Interações com contraste
+  --interactive-primary: var(--color-standard-2);
+  --interactive-hover: var(--color-standard-3);
+  --interactive-active: var(--color-standard-4);
+
+  // Gradientes adaptados para tema escuro
+  --gradient-primary: var(--gradient-brand-2);
+  --gradient-secondary: var(--gradient-brand-5);
+  --gradient-accent: var(--gradient-brand-7);
+
+  // Estados de contexto adaptados para tema escuro
+  --color-success: var(--color-context-4);     // Mantém verde (universal)
+  --color-error: var(--color-context-1);       // Mantém vermelho (universal)
+  --color-warning: var(--color-context-3);     // Mantém amarelo (universal)
+  --color-info: var(--color-context-2);        // Mantém azul (universal)
+
+  // Backgrounds de contexto com ajuste para tema escuro
+  --bg-success: rgba(0, 128, 0, 0.1);          // Verde sutil no escuro
+  --bg-error: rgba(255, 0, 0, 0.1);            // Vermelho sutil no escuro
+  --bg-warning: rgba(255, 255, 0, 0.1);        // Amarelo sutil no escuro
+  --bg-info: rgba(0, 0, 255, 0.1);             // Azul sutil no escuro
+
+  // Textos de contexto (mantém cores originais para legibilidade)
+  --text-success: var(--color-success);
+  --text-error: var(--color-error);
+  --text-warning: var(--color-warning);
+  --text-info: var(--color-info);
+
+  // Bordas de contexto
+  --border-success: var(--color-success);
+  --border-error: var(--color-error);
+  --border-warning: var(--color-warning);
+  --border-info: var(--color-info);
+
+  // Interações de contexto para tema escuro
+  --interactive-success: var(--color-success);
+  --interactive-success-hover: var(--color-context-5);
+  --interactive-success-active: var(--color-context-6);
+
+  --interactive-error: var(--color-error);
+  --interactive-error-hover: var(--color-context-11);
+  --interactive-error-active: var(--color-context-12);
+
+  --interactive-warning: var(--color-warning);
+  --interactive-warning-hover: var(--color-context-7);
+  --interactive-warning-active: var(--color-context-8);
+
+  --interactive-info: var(--color-info);
+  --interactive-info-hover: var(--color-context-9);
+  --interactive-info-active: var(--color-context-10);
+
+}

@@ -1,0 +1,275 @@
+{
+  "file": "layout.scss",
+  "description": "Layout constructors for positioning, sizing, containers, grids and flexbox",
+  "architecture": {
+    "generics": ["sprout-position", "sprout-size", "sprout-element"],
+    "specifics": ["sprout-size-short-vh", "sprout-size-short-vw", "sprout-size-full", "sprout-size-auto", "sprout-size-container-sm", "sprout-size-container-md", "sprout-size-container-lg", "sprout-position-fixed-top", "sprout-position-fixed-bottom", "sprout-position-sticky-top", "sprout-position-sticky-bottom", "sprout-position-absolute-center", "sprout-position-absolute-top-left", "sprout-position-absolute-top-right", "sprout-position-absolute-bottom-left", "sprout-position-absolute-bottom-right", "sprout-element-fixed-header", "sprout-element-sticky-sidebar", "sprout-element-fullscreen-overlay", "sprout-container-sm", "sprout-container-md", "sprout-container-lg", "sprout-container-full", "sprout-container-fluid", "sprout-section-fullscreen", "sprout-section-hero", "sprout-grid-basic", "sprout-grid-responsive", "sprout-grid-col-span", "sprout-grid-row-span", "sprout-grid-area", "sprout-grid-col-start", "sprout-grid-col-end", "sprout-grid-row-start", "sprout-grid-row-end", "sprout-flex-row", "sprout-flex-column", "sprout-flex-center", "sprout-flex-space-between", "sprout-column-equal", "sprout-column-auto", "sprout-column-grow", "sprout-spacing-section", "sprout-spacing-component", "sprout-hidden", "sprout-visible", "sprout-clearfix", "sprout-overflow-hidden", "sprout-overflow-auto", "sprout-overflow-scroll"]
+  },
+  "sprouts": [
+    {
+      "name": "sprout-position",
+      "description": "Generic positioning mixin with customizable position, coordinates and z-index",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-size",
+      "description": "Generic sizing mixin with width, height and min/max dimensions",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-element",
+      "description": "Composite element configurator combining size and position parameters",
+      "dependencies": ["sprout-size", "sprout-position"]
+    },
+    {
+      "name": "sprout-size-short-vh",
+      "description": "Full viewport height sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-size-short-vw",
+      "description": "Full viewport width sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-size-full",
+      "description": "Full width and height sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-size-auto",
+      "description": "Auto width and height sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-size-container-sm",
+      "description": "Small container max-width sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-size-container-md",
+      "description": "Medium container max-width sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-size-container-lg",
+      "description": "Large container max-width sizing",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-position-fixed-top",
+      "description": "Fixed positioning at top of viewport",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-fixed-bottom",
+      "description": "Fixed positioning at bottom of viewport",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-sticky-top",
+      "description": "Sticky positioning at top",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-sticky-bottom",
+      "description": "Sticky positioning at bottom",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-absolute-center",
+      "description": "Absolute positioning centered in parent",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-absolute-top-left",
+      "description": "Absolute positioning at top-left corner",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-absolute-top-right",
+      "description": "Absolute positioning at top-right corner",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-absolute-bottom-left",
+      "description": "Absolute positioning at bottom-left corner",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-position-absolute-bottom-right",
+      "description": "Absolute positioning at bottom-right corner",
+      "dependencies": ["sprout-position"]
+    },
+    {
+      "name": "sprout-element-fixed-header",
+      "description": "Fixed header element with standard dimensions and z-index",
+      "dependencies": ["sprout-element"]
+    },
+    {
+      "name": "sprout-element-sticky-sidebar",
+      "description": "Sticky sidebar element with standard dimensions",
+      "dependencies": ["sprout-element"]
+    },
+    {
+      "name": "sprout-element-fullscreen-overlay",
+      "description": "Fullscreen overlay element with high z-index",
+      "dependencies": ["sprout-element"]
+    },
+    {
+      "name": "sprout-container-sm",
+      "description": "Small responsive container with auto margins and padding",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-container-md",
+      "description": "Medium responsive container with auto margins and padding",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-container-lg",
+      "description": "Large responsive container with auto margins and padding",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-container-full",
+      "description": "Full width container with auto margins and padding",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-container-fluid",
+      "description": "Fluid container with full width and padding",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-section-fullscreen",
+      "description": "Fullscreen section with 100vh height",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-section-hero",
+      "description": "Hero section with full width and minimum viewport height",
+      "dependencies": ["sprout-size"]
+    },
+    {
+      "name": "sprout-grid-basic",
+      "description": "Basic CSS grid with customizable columns and gap",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-responsive",
+      "description": "Responsive CSS grid with custom column template",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-col-span",
+      "description": "Grid column span utility",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-row-span",
+      "description": "Grid row span utility",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-area",
+      "description": "Grid area positioning utility",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-col-start",
+      "description": "Grid column start positioning",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-col-end",
+      "description": "Grid column end positioning",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-row-start",
+      "description": "Grid row start positioning",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-grid-row-end",
+      "description": "Grid row end positioning",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-flex-row",
+      "description": "Horizontal flexbox container with customizable alignment and gap",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-flex-column",
+      "description": "Vertical flexbox container with customizable alignment and gap",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-flex-center",
+      "description": "Centered flexbox container",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-flex-space-between",
+      "description": "Space-between flexbox container",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-column-equal",
+      "description": "Equal flex column sizing",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-column-auto",
+      "description": "Auto-sized flex column",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-column-grow",
+      "description": "Growing flex column",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-spacing-section",
+      "description": "Standard section block padding",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-spacing-component",
+      "description": "Standard component padding",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-hidden",
+      "description": "Hide element with display none",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-visible",
+      "description": "Show element with display block",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-clearfix",
+      "description": "Clearfix utility for floated elements",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-overflow-hidden",
+      "description": "Hidden overflow utility",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-overflow-auto",
+      "description": "Auto overflow utility",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-overflow-scroll",
+      "description": "Scroll overflow utility",
+      "dependencies": []
+    }
+  ]
+}

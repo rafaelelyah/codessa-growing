@@ -1,0 +1,365 @@
+
+// ========================================
+// SPROUTS — MEDIA CONSTRUCTORS
+// ========================================
+// Mixins para media queries, elementos de mídia e aspect ratios.
+//
+// ARQUITETURA:
+// - Genéricos: sprout-media-*, sprout-aspect-ratio, sprout-image-*, sprout-video-*
+// - Específicos: presets para breakpoints e elementos comuns
+
+// ----------------------------------------
+// MEDIA QUERY GENERICS
+// ----------------------------------------
+
+@mixin sprout-media-up($breakpoint) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-down($breakpoint) {
+  @media (max-width: var(--breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-between($min, $max) {
+  @media (min-width: var(--breakpoint-#{$min})) and (max-width: var(--breakpoint-#{$max})) {
+    @content;
+  }
+}
+
+@mixin sprout-media-only($breakpoint) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) and (max-width: var(--breakpoint-#{$breakpoint}-max)) {
+    @content;
+  }
+}
+
+@mixin sprout-media-orientation($orientation) {
+  @media (orientation: #{$orientation}) {
+    @content;
+  }
+}
+
+@mixin sprout-media-prefers-color-scheme($scheme) {
+  @media (prefers-color-scheme: #{$scheme}) {
+    @content;
+  }
+}
+
+@mixin sprout-media-prefers-reduced-motion($motion) {
+  @media (prefers-reduced-motion: #{$motion}) {
+    @content;
+  }
+}
+
+// ----------------------------------------
+// ASPECT RATIO GENERICS
+// ----------------------------------------
+
+@mixin sprout-aspect-ratio($ratio) {
+  aspect-ratio: #{$ratio};
+}
+
+@mixin sprout-aspect-square {
+  @include sprout-aspect-ratio(1);
+}
+
+@mixin sprout-aspect-video {
+  @include sprout-aspect-ratio(16 / 9);
+}
+
+@mixin sprout-aspect-photo {
+  @include sprout-aspect-ratio(4 / 3);
+}
+
+@mixin sprout-aspect-card {
+  @include sprout-aspect-ratio(3 / 4);
+}
+
+// ----------------------------------------
+// IMAGE GENERICS
+// ----------------------------------------
+
+@mixin sprout-image-base {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@mixin sprout-image-responsive {
+  @include sprout-image-base;
+
+  @include sprout-media-up('md') {
+    // Customizações para telas maiores se necessário
+  }
+}
+
+@mixin sprout-image-cover {
+  @include sprout-image-base;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin sprout-image-contain {
+  @include sprout-image-base;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin sprout-image-circle {
+  @include sprout-image-base;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// ----------------------------------------
+// BACKGROUND IMAGE GENERICS
+// ----------------------------------------
+
+@mixin sprout-background-image(
+  $url: null,
+  $size: 'cover',
+  $position: 'center',
+  $repeat: 'no-repeat',
+  $attachment: 'scroll'
+) {
+  @if $url != null {
+    background-image: url(#{$url});
+  }
+  background-size: #{$size};
+  background-position: #{$position};
+  background-repeat: #{$repeat};
+  background-attachment: #{$attachment};
+}
+
+// ----------------------------------------
+// VIDEO GENERICS
+// ----------------------------------------
+
+@mixin sprout-video-base {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@mixin sprout-video-responsive {
+  @include sprout-video-base;
+
+  @include sprout-media-up('md') {
+    // Customizações para telas maiores se necessário
+  }
+}
+
+@mixin sprout-video-fullscreen {
+  @include sprout-video-base;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+// ----------------------------------------
+// MEDIA BREAKPOINT PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-media-mobile {
+  @include sprout-media-down('sm');
+}
+
+@mixin sprout-media-tablet {
+  @include sprout-media-between('sm', 'lg');
+}
+
+@mixin sprout-media-desktop {
+  @include sprout-media-up('lg');
+}
+
+@mixin sprout-media-mobile-first {
+  @include sprout-media-up('sm');
+}
+
+@mixin sprout-media-tablet-first {
+  @include sprout-media-up('md');
+}
+
+@mixin sprout-media-desktop-first {
+  @include sprout-media-up('lg');
+}
+
+// ----------------------------------------
+// MEDIA ORIENTATION PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-media-portrait {
+  @include sprout-media-orientation('portrait');
+}
+
+@mixin sprout-media-landscape {
+  @include sprout-media-orientation('landscape');
+}
+
+// ----------------------------------------
+// MEDIA PREFERENCE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-media-dark-mode {
+  @include sprout-media-prefers-color-scheme('dark');
+}
+
+@mixin sprout-media-light-mode {
+  @include sprout-media-prefers-color-scheme('light');
+}
+
+@mixin sprout-media-reduced-motion {
+  @include sprout-media-prefers-reduced-motion('reduce');
+}
+
+@mixin sprout-media-no-preference {
+  @include sprout-media-prefers-reduced-motion('no-preference');
+}
+
+// ----------------------------------------
+// IMAGE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-image-avatar-sm {
+  @include sprout-image-circle;
+  width: 32px;
+  height: 32px;
+}
+
+@mixin sprout-image-avatar-md {
+  @include sprout-image-circle;
+  width: 48px;
+  height: 48px;
+}
+
+@mixin sprout-image-avatar-lg {
+  @include sprout-image-circle;
+  width: 64px;
+  height: 64px;
+}
+
+@mixin sprout-image-thumbnail {
+  @include sprout-image-base;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+}
+
+@mixin sprout-image-hero {
+  @include sprout-image-cover;
+  @include sprout-aspect-video;
+  border-radius: var(--border-radius-md);
+}
+
+@mixin sprout-image-card {
+  @include sprout-image-cover;
+  @include sprout-aspect-card;
+  border-radius: var(--border-radius-sm);
+}
+
+// ----------------------------------------
+// VIDEO PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-video-player {
+  @include sprout-video-base;
+  @include sprout-aspect-video;
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-muted);
+}
+
+@mixin sprout-video-background {
+  @include sprout-video-fullscreen;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@mixin sprout-video-modal {
+  @include sprout-video-base;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--border-radius-lg);
+}
+
+// ----------------------------------------
+// MEDIA CONTAINER PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-media-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-md);
+
+  @include sprout-media-up('md') {
+    border-radius: var(--border-radius-lg);
+  }
+}
+
+@mixin sprout-media-gallery {
+  display: grid;
+  gap: var(--gap-md);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  @include sprout-media-up('md') {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@mixin sprout-media-carousel {
+  display: flex;
+  gap: var(--gap-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: var(--padding-md);
+
+  & > * {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+// ----------------------------------------
+// MEDIA LOADING PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-media-loading {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: sprout-loading-shimmer 1.5s infinite;
+  }
+}
+
+@keyframes sprout-loading-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@mixin sprout-media-placeholder {
+  @include sprout-aspect-video;
+  background-color: var(--bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  border-radius: var(--border-radius-md);
+}

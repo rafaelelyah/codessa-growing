@@ -1,0 +1,292 @@
+// ========================================
+// LEAF — RESPONSIVE (modificadores responsivos)
+// ========================================
+// Modificadores pontuais para controle responsivo de exibição e layout.
+
+// ----------------------------------------
+// DISPLAY RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-display {
+  &--none { display: none !important; }
+  &--block { display: block !important; }
+  &--inline { display: inline !important; }
+  &--inline-block { display: inline-block !important; }
+  &--flex { display: flex !important; }
+  &--inline-flex { display: inline-flex !important; }
+  &--grid { display: grid !important; }
+  &--inline-grid { display: inline-grid !important; }
+  &--table { display: table !important; }
+  &--table-row { display: table-row !important; }
+  &--table-cell { display: table-cell !important; }
+
+  // Responsive variants
+  &--none--xs { display: none !important; }
+  &--none--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      display: none !important;
+    }
+  }
+  &--none--md {
+    @media (min-width: var(--breakpoint-md)) {
+      display: none !important;
+    }
+  }
+  &--none--lg {
+    @media (min-width: var(--breakpoint-lg)) {
+      display: none !important;
+    }
+  }
+  &--none--xl {
+    @media (min-width: var(--breakpoint-xl)) {
+      display: none !important;
+    }
+  }
+
+  &--block--xs { display: block !important; }
+  &--block--sm {
+    display: none !important;
+    @media (min-width: var(--breakpoint-sm)) {
+      display: block !important;
+    }
+  }
+  &--block--md {
+    display: none !important;
+    @media (min-width: var(--breakpoint-md)) {
+      display: block !important;
+    }
+  }
+  &--block--lg {
+    display: none !important;
+    @media (min-width: var(--breakpoint-lg)) {
+      display: block !important;
+    }
+  }
+  &--block--xl {
+    display: none !important;
+    @media (min-width: var(--breakpoint-xl)) {
+      display: block !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// FLEX DIRECTION RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-flex-direction {
+  &--column--xs { flex-direction: column !important; }
+  &--column--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      flex-direction: column !important;
+    }
+  }
+  &--column--md {
+    @media (min-width: var(--breakpoint-md)) {
+      flex-direction: column !important;
+    }
+  }
+  &--row--xs { flex-direction: row !important; }
+  &--row--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      flex-direction: row !important;
+    }
+  }
+  &--row--md {
+    @media (min-width: var(--breakpoint-md)) {
+      flex-direction: row !important;
+    }
+  }
+  &--row-reverse--xs { flex-direction: row-reverse !important; }
+  &--row-reverse--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      flex-direction: row-reverse !important;
+    }
+  }
+  &--column-reverse--xs { flex-direction: column-reverse !important; }
+  &--column-reverse--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      flex-direction: column-reverse !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// GRID RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-grid-cols {
+  &--1--xs { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+  &--1--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+  }
+  &--2--xs { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  &--2--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+  &--3--xs { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  &--3--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+  }
+  &--4--xs { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  &--4--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+  }
+  &--5--xs { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+  &--5--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    }
+  }
+  &--6--xs { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  &--6--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// TEXT ALIGN RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-text-align {
+  &--left--xs { text-align: left !important; }
+  &--left--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      text-align: left !important;
+    }
+  }
+  &--center--xs { text-align: center !important; }
+  &--center--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      text-align: center !important;
+    }
+  }
+  &--right--xs { text-align: right !important; }
+  &--right--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      text-align: right !important;
+    }
+  }
+  &--justify--xs { text-align: justify !important; }
+  &--justify--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      text-align: justify !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// WIDTH RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-width {
+  &--full--xs { width: 100% !important; }
+  &--full--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      width: 100% !important;
+    }
+  }
+  &--auto--xs { width: auto !important; }
+  &--auto--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      width: auto !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// HEIGHT RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-height {
+  &--full--xs { height: 100% !important; }
+  &--full--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      height: 100% !important;
+    }
+  }
+  &--auto--xs { height: auto !important; }
+  &--auto--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      height: auto !important;
+    }
+  }
+  &--screen--xs { height: 100vh !important; }
+  &--screen--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      height: 100vh !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// POSITION RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-position {
+  &--static--xs { position: static !important; }
+  &--static--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      position: static !important;
+    }
+  }
+  &--relative--xs { position: relative !important; }
+  &--relative--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      position: relative !important;
+    }
+  }
+  &--absolute--xs { position: absolute !important; }
+  &--absolute--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      position: absolute !important;
+    }
+  }
+  &--fixed--xs { position: fixed !important; }
+  &--fixed--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      position: fixed !important;
+    }
+  }
+  &--sticky--xs { position: sticky !important; }
+  &--sticky--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      position: sticky !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// VISIBILITY RESPONSIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-visibility {
+  &--visible--xs { visibility: visible !important; }
+  &--visible--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      visibility: visible !important;
+    }
+  }
+  &--hidden--xs { visibility: hidden !important; }
+  &--hidden--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      visibility: hidden !important;
+    }
+  }
+  &--collapse--xs { visibility: collapse !important; }
+  &--collapse--sm {
+    @media (min-width: var(--breakpoint-sm)) {
+      visibility: collapse !important;
+    }
+  }
+}

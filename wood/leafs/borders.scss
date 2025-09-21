@@ -1,0 +1,123 @@
+// ========================================
+// LEAF — BORDERS & RADIUS (modificadores)
+// ========================================
+// Modificadores pontuais para bordas e cantos.
+
+// ----------------------------------------
+// BORDER WIDTH MODIFIERS
+// ----------------------------------------
+
+.leaf-border-w {
+  &--0 { border-width: var(--border-width-0) !important; }
+  &--1 { border-width: var(--border-width-1) !important; }
+  &--2 { border-width: var(--border-width-2) !important; }
+  &--3 { border-width: var(--border-width-3) !important; }
+  &--4 { border-width: var(--border-width-4) !important; }
+}
+
+// ----------------------------------------
+// BORDER STYLE MODIFIERS
+// ----------------------------------------
+
+.leaf-border-style {
+  &--none { border-style: none !important; }
+  &--solid { border-style: solid !important; }
+  &--dashed { border-style: dashed !important; }
+  &--dotted { border-style: dotted !important; }
+  &--double { border-style: double !important; }
+}
+
+// ----------------------------------------
+// BORDER RADIUS MODIFIERS
+// ----------------------------------------
+
+.leaf-radius {
+  &--none { border-radius: 0 !important; }
+  &--xs { border-radius: var(--border-radius-xs) !important; }
+  &--sm { border-radius: var(--border-radius-sm) !important; }
+  &--md { border-radius: var(--border-radius-md) !important; }
+  &--lg { border-radius: var(--border-radius-lg) !important; }
+  &--xl { border-radius: var(--border-radius-xl) !important; }
+  &--pill { border-radius: var(--border-radius-pill) !important; }
+  &--circle { border-radius: var(--border-radius-circle) !important; }
+  &--full { border-radius: 9999px !important; }
+}
+
+// ----------------------------------------
+// BORDER SIDE MODIFIERS
+// ----------------------------------------
+
+.leaf-border {
+  &-top {
+    &--none { border-top: none !important; }
+    &--solid { border-top: var(--border-width-1) solid var(--border-default) !important; }
+    &--dashed { border-top: var(--border-width-1) dashed var(--border-default) !important; }
+  }
+
+  &-right {
+    &--none { border-right: none !important; }
+    &--solid { border-right: var(--border-width-1) solid var(--border-default) !important; }
+    &--dashed { border-right: var(--border-width-1) dashed var(--border-default) !important; }
+  }
+
+  &-bottom {
+    &--none { border-bottom: none !important; }
+    &--solid { border-bottom: var(--border-width-1) solid var(--border-default) !important; }
+    &--dashed { border-bottom: var(--border-width-1) dashed var(--border-default) !important; }
+  }
+
+  &-left {
+    &--none { border-left: none !important; }
+    &--solid { border-left: var(--border-width-1) solid var(--border-default) !important; }
+    &--dashed { border-left: var(--border-width-1) dashed var(--border-default) !important; }
+  }
+}
+
+// ----------------------------------------
+// BORDER PRESETS
+// ----------------------------------------
+
+.leaf-border-all {
+  &--none { border: none !important; }
+  &--solid { border: var(--border-width-1) solid var(--border-default) !important; }
+  &--dashed { border: var(--border-width-1) dashed var(--border-default) !important; }
+}
+
+.leaf-border-outline {
+  &--focus { outline: var(--focus-ring-width) solid var(--focus-ring) !important; }
+  &--error { outline: var(--focus-ring-width) solid var(--border-error) !important; }
+  &--success { outline: var(--focus-ring-width) solid var(--border-success) !important; }
+}
+
+// ----------------------------------------
+// FOCUS RING MODIFIERS
+// ----------------------------------------
+
+.leaf-focus-ring {
+  &--visible {
+    &:focus-visible {
+      outline: var(--focus-ring-width) solid var(--focus-ring) !important;
+      outline-offset: var(--focus-ring-offset) !important;
+    }
+  }
+
+  &--none {
+    &:focus-visible {
+      outline: none !important;
+    }
+  }
+}
+
+// ----------------------------------------
+// BORDER COLOR MODIFIERS
+// ----------------------------------------
+
+.leaf-border-color {
+  &--default { border-color: var(--border-default) !important; }
+  &--muted { border-color: var(--border-muted) !important; }
+  &--primary { border-color: var(--border-primary) !important; }
+  &--secondary { border-color: var(--border-secondary) !important; }
+  &--error { border-color: var(--border-error) !important; }
+  &--success { border-color: var(--border-success) !important; }
+  &--warning { border-color: var(--border-warning) !important; }
+}

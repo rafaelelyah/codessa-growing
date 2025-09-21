@@ -1,0 +1,263 @@
+
+// ========================================
+// SPROUTS — UTILITY CONSTRUCTORS
+// ========================================
+// Mixins para funcionalidades utilitárias específicas.
+//
+// NOTA: Utilities básicas (hidden, visible, etc.) foram movidas para layout.scss
+// Este arquivo contém apenas utilities avançadas e específicas
+
+// ----------------------------------------
+// RESET UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sprout-button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin sprout-link-reset {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@mixin sprout-input-reset {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+// ----------------------------------------
+// ACCESSIBILITY UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin sprout-sr-only-focusable {
+  @include sprout-sr-only;
+
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: var(--padding-sm);
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+@mixin sprout-focus-visible {
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+@mixin sprout-focus-none {
+  &:focus {
+    outline: none;
+  }
+}
+
+// ----------------------------------------
+// INTERACTION UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+@mixin sprout-select-all {
+  user-select: all;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+}
+
+@mixin sprout-pointer-events-none {
+  pointer-events: none;
+}
+
+@mixin sprout-pointer-events-auto {
+  pointer-events: auto;
+}
+
+// ----------------------------------------
+// SCROLL UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+@mixin sprout-scroll-auto {
+  scroll-behavior: auto;
+}
+
+@mixin sprout-overflow-scroll {
+  overflow: scroll;
+}
+
+@mixin sprout-overflow-hidden {
+  overflow: hidden;
+}
+
+@mixin sprout-overflow-visible {
+  overflow: visible;
+}
+
+// ----------------------------------------
+// TRANSFORM UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-transform-none {
+  transform: none;
+}
+
+@mixin sprout-transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@mixin sprout-will-change-auto {
+  will-change: auto;
+}
+
+@mixin sprout-will-change-transform {
+  will-change: transform;
+}
+
+@mixin sprout-will-change-opacity {
+  will-change: opacity;
+}
+
+// ----------------------------------------
+// DEBUG UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-debug-outline($color: red, $width: 2px) {
+  outline: #{$width} solid #{$color} !important;
+}
+
+@mixin sprout-debug-bg($color: rgba(255, 0, 0, 0.1)) {
+  background-color: #{$color} !important;
+}
+
+@mixin sprout-debug-grid($size: 20px, $color: rgba(0, 0, 0, 0.1)) {
+  background-image:
+    linear-gradient(to right, #{$color} 1px, transparent 1px),
+    linear-gradient(to bottom, #{$color} 1px, transparent 1px);
+  background-size: #{$size} #{$size};
+}
+
+@mixin sprout-debug-spacing($color: rgba(255, 0, 0, 0.1)) {
+  background:
+    linear-gradient(to right, #{$color} 1px, transparent 1px),
+    linear-gradient(to bottom, #{$color} 1px, transparent 1px);
+  background-size: var(--gap-sm) var(--gap-sm);
+}
+
+// ----------------------------------------
+// PERFORMANCE UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-contain-layout {
+  contain: layout style paint;
+}
+
+@mixin sprout-contain-strict {
+  contain: strict;
+}
+
+@mixin sprout-isolation {
+  isolation: isolate;
+}
+
+// ----------------------------------------
+// PRINT UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-print-hidden {
+  @media print {
+    display: none !important;
+  }
+}
+
+@mixin sprout-print-visible {
+  @media print {
+    display: block !important;
+  }
+}
+
+@mixin sprout-print-break-before {
+  @media print {
+    page-break-before: always;
+  }
+}
+
+@mixin sprout-print-break-after {
+  @media print {
+    page-break-after: always;
+  }
+}
+
+// ----------------------------------------
+// MOTION UTILITIES (Específicos)
+// ----------------------------------------
+
+@mixin sprout-reduce-motion {
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@mixin sprout-motion-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    // Safe to use motion
+  }
+}

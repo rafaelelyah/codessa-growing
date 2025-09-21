@@ -1,0 +1,279 @@
+
+// ========================================
+// SPROUTS — FIELD CONSTRUCTORS
+// ========================================
+// Mixins para construir campos de formulário e seus elementos.
+//
+// ARQUITETURA:
+// - Genéricos: sprout-field-base, sprout-field-input, sprout-field-state
+// - Específicos: presets para tipos comuns de campos
+
+// ----------------------------------------
+// FIELD BASE GENERICS
+// ----------------------------------------
+
+@mixin sprout-field-base(
+  $padding-y: 'sm',
+  $padding-x: 'md',
+  $font-size: 'md',
+  $border-radius: 'sm',
+  $border-width: '1'
+) {
+  // Reset de estilos padrão do navegador
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // Dimensões e espaçamento
+  width: 100%;
+  padding: var(--padding-#{$padding-y}) var(--padding-#{$padding-x});
+  font-size: var(--text-#{$font-size});
+  line-height: var(--leading-normal);
+
+  // Bordas e fundo
+  border: var(--border-width-#{$border-width}) solid var(--border-default);
+  border-radius: var(--border-radius-#{$border-radius});
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+
+  // Tipografia
+  font-family: inherit;
+  font-weight: var(--font-normal);
+
+  // Estados de foco
+  &:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px var(--shadow-focus);
+  }
+
+  // Estados de hover
+  &:hover {
+    border-color: var(--border-hover);
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+  }
+
+  // Transições
+  transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+@mixin sprout-field-input(
+  $type: 'text',
+  $size: 'md'
+) {
+  @include sprout-field-base($font-size: $size);
+}
+
+@mixin sprout-field-textarea(
+  $rows: 4,
+  $resize: 'vertical'
+) {
+  @include sprout-field-base;
+  min-height: calc(var(--text-md) * #{$rows} * var(--leading-normal));
+  resize: #{$resize};
+}
+
+// ----------------------------------------
+// FIELD STATE GENERICS
+// ----------------------------------------
+
+@mixin sprout-field-state($status) {
+  @if $status == error {
+    border-color: var(--border-error);
+    background-color: var(--bg-error);
+    color: var(--text-error);
+  } @else if $status == success {
+    border-color: var(--border-success);
+    background-color: var(--bg-success);
+    color: var(--text-success);
+  } @else if $status == disabled {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  } @else if $status == warning {
+    border-color: var(--border-warning);
+    background-color: var(--bg-warning);
+    color: var(--text-warning);
+  }
+}
+
+// ----------------------------------------
+// FIELD SIZE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-field-sm {
+  @include sprout-field-base(
+    $padding-y: 'xs',
+    $padding-x: 'sm',
+    $font-size: 'sm',
+    $border-radius: 'xs'
+  );
+}
+
+@mixin sprout-field-md {
+  @include sprout-field-base(
+    $padding-y: 'sm',
+    $padding-x: 'md',
+    $font-size: 'md',
+    $border-radius: 'sm'
+  );
+}
+
+@mixin sprout-field-lg {
+  @include sprout-field-base(
+    $padding-y: 'md',
+    $padding-x: 'lg',
+    $font-size: 'lg',
+    $border-radius: 'md'
+  );
+}
+
+// ----------------------------------------
+// FIELD TYPE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-field-text {
+  @include sprout-field-input($type: 'text');
+}
+
+@mixin sprout-field-email {
+  @include sprout-field-input($type: 'email');
+}
+
+@mixin sprout-field-password {
+  @include sprout-field-input($type: 'password');
+}
+
+@mixin sprout-field-number {
+  @include sprout-field-input($type: 'number');
+}
+
+@mixin sprout-field-search {
+  @include sprout-field-input($type: 'search');
+}
+
+@mixin sprout-field-url {
+  @include sprout-field-input($type: 'url');
+}
+
+@mixin sprout-field-tel {
+  @include sprout-field-input($type: 'tel');
+}
+
+// ----------------------------------------
+// FIELD STATE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-field-error {
+  @include sprout-field-state('error');
+}
+
+@mixin sprout-field-success {
+  @include sprout-field-state('success');
+}
+
+@mixin sprout-field-warning {
+  @include sprout-field-state('warning');
+}
+
+@mixin sprout-field-disabled {
+  @include sprout-field-state('disabled');
+}
+
+// ----------------------------------------
+// FIELD COMPOSITE PRESETS (Específicos - Compostos)
+// ----------------------------------------
+
+@mixin sprout-field-primary {
+  @include sprout-field-md;
+
+  border-color: var(--border-primary);
+  background-color: var(--bg-primary);
+
+  &:focus {
+    border-color: var(--border-primary-focus);
+    box-shadow: 0 0 0 3px var(--shadow-primary-focus);
+  }
+}
+
+@mixin sprout-field-ghost {
+  @include sprout-field-md;
+
+  border-color: transparent;
+  background-color: transparent;
+
+  &:focus {
+    border-color: var(--border-focus);
+    background-color: var(--bg-input);
+  }
+}
+
+@mixin sprout-field-floating {
+  @include sprout-field-md;
+
+  border: none;
+  border-bottom: var(--border-width-1) solid var(--border-default);
+  border-radius: 0;
+  background-color: transparent;
+
+  &:focus {
+    border-bottom-color: var(--border-focus);
+    box-shadow: none;
+  }
+}
+
+// ----------------------------------------
+// FIELD GROUP PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-field-group {
+  display: flex;
+  gap: var(--gap-sm);
+
+  .sprout-field {
+    flex: 1;
+    margin: 0;
+  }
+}
+
+@mixin sprout-field-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+// ----------------------------------------
+// FIELD ACCESSORY PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-field-with-icon {
+  position: relative;
+
+  .sprout-field__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-muted);
+  }
+
+  .sprout-field__icon--left {
+    left: var(--padding-md);
+  }
+
+  .sprout-field__icon--right {
+    right: var(--padding-md);
+  }
+
+  &.sprout-field--icon-left .sprout-field__input {
+    padding-left: calc(var(--padding-md) + 1.5rem);
+  }
+
+  &.sprout-field--icon-right .sprout-field__input {
+    padding-right: calc(var(--padding-md) + 1.5rem);
+  }
+}

@@ -1,0 +1,70 @@
+// ========================================
+// LEAF — ASPECT RATIO & OBJECT FIT (modificadores de proporção e ajuste)
+// ========================================
+// Modificadores pontuais para controle de aspect ratio e object fit.
+
+// ----------------------------------------
+// ASPECT RATIO MODIFIERS
+// ----------------------------------------
+
+.leaf-aspect-ratio {
+  &--auto { aspect-ratio: auto !important; }
+  &--square { aspect-ratio: 1 / 1 !important; }
+  &--video { aspect-ratio: 16 / 9 !important; }
+  &--classic { aspect-ratio: 4 / 3 !important; }
+  &--wide { aspect-ratio: 21 / 9 !important; }
+  &--portrait { aspect-ratio: 3 / 4 !important; }
+  &--tall { aspect-ratio: 9 / 16 !important; }
+  &--golden { aspect-ratio: 1.618 / 1 !important; }
+  &--golden-portrait { aspect-ratio: 1 / 1.618 !important; }
+  &--a4 { aspect-ratio: 210 / 297 !important; }
+  &--a4-landscape { aspect-ratio: 297 / 210 !important; }
+  &--instagram-square { aspect-ratio: 1 / 1 !important; }
+  &--instagram-portrait { aspect-ratio: 4 / 5 !important; }
+  &--instagram-landscape { aspect-ratio: 1.91 / 1 !important; }
+  &--facebook-post { aspect-ratio: 1.91 / 1 !important; }
+  &--twitter-post { aspect-ratio: 16 / 9 !important; }
+  &--linkedin-post { aspect-ratio: 1.91 / 1 !important; }
+  &--pinterest-pin { aspect-ratio: 2 / 3 !important; }
+  &--youtube-thumbnail { aspect-ratio: 16 / 9 !important; }
+  &--tiktok-video { aspect-ratio: 9 / 16 !important; }
+  &--story { aspect-ratio: 9 / 16 !important; }
+  &--banner { aspect-ratio: 3 / 1 !important; }
+  &--logo-square { aspect-ratio: 1 / 1 !important; }
+  &--logo-landscape { aspect-ratio: 3 / 1 !important; }
+  &--card { aspect-ratio: 16 / 10 !important; }
+  &--poster { aspect-ratio: 27 / 40 !important; }
+  &--book { aspect-ratio: 3 / 4 !important; }
+  &--magazine { aspect-ratio: 8.5 / 11 !important; }
+  &--magazine-landscape { aspect-ratio: 11 / 8.5 !important; }
+}
+
+// ----------------------------------------
+// OBJECT FIT MODIFIERS
+// ----------------------------------------
+
+.leaf-object-fit {
+  &--contain { object-fit: contain !important; }
+  &--cover { object-fit: cover !important; }
+  &--fill { object-fit: fill !important; }
+  &--none { object-fit: none !important; }
+  &--scale-down { object-fit: scale-down !important; }
+}
+
+// ----------------------------------------
+// OBJECT POSITION MODIFIERS
+// ----------------------------------------
+
+.leaf-object-position {
+  &--bottom { object-position: bottom !important; }
+  &--center { object-position: center !important; }
+  &--left { object-position: left !important; }
+  &--left-bottom { object-position: left bottom !important; }
+  &--left-top { object-position: left top !important; }
+  &--right { object-position: right !important; }
+  &--right-bottom { object-position: right bottom !important; }
+  &--right-top { object-position: right top !important; }
+  &--top { object-position: top !important; }
+  &--top-left { object-position: top left !important; }
+  &--top-right { object-position: top right !important; }
+}

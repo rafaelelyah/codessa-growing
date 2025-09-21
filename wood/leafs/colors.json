@@ -1,0 +1,81 @@
+{
+  "file": "colors.scss",
+  "lastUpdated": "2025-09-21T18:16:01.394Z",
+  "leafs": [
+    {
+      "name": "leaf-bg",
+      "modifiers": [
+        "&--active",
+        "&--brand",
+        "&--error",
+        "&--hover",
+        "&--info",
+        "&--inherit",
+        "&--muted",
+        "&--primary",
+        "&--secondary",
+        "&--subtle",
+        "&--success",
+        "&--surface",
+        "&--transparent",
+        "&--warning"
+      ]
+    },
+    {
+      "name": "leaf-border-color",
+      "modifiers": [
+        "&--brand",
+        "&--current",
+        "&--default",
+        "&--error",
+        "&--info",
+        "&--muted",
+        "&--primary",
+        "&--secondary",
+        "&--success",
+        "&--transparent",
+        "&--warning"
+      ]
+    },
+    {
+      "name": "leaf-color-state",
+      "modifiers": [
+        "&--active",
+        "&--disabled",
+        "&--focus",
+        "&--hover"
+      ]
+    },
+    {
+      "name": "leaf-opacity",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-outline-color",
+      "modifiers": [
+        "&--current",
+        "&--error",
+        "&--focus",
+        "&--primary",
+        "&--success"
+      ]
+    },
+    {
+      "name": "leaf-text-color",
+      "modifiers": [
+        "&--brand",
+        "&--current",
+        "&--error",
+        "&--info",
+        "&--inherit",
+        "&--inverse",
+        "&--muted",
+        "&--primary",
+        "&--secondary",
+        "&--success",
+        "&--transparent",
+        "&--warning"
+      ]
+    }
+  ]
+}

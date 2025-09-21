@@ -1,0 +1,27 @@
+{
+  "widths": {
+    "0": "0",
+    "1": "map.get(seeds.$scale-seeds, 'base', 'granular')",
+    "2": "calc(map.get(seeds.$scale-seeds, 'base', 'granular') * 2)",
+    "3": "calc(map.get(seeds.$scale-seeds, 'base', 'granular') * 3)",
+    "4": "calc(map.get(seeds.$scale-seeds, 'base', 'granular') * 4)"
+  },
+  "styles": {
+    "0": "none",
+    "1": "solid",
+    "2": "dashed",
+    "3": "dotted",
+    "4": "double"
+  },
+  "radii": {
+    "0": "0",
+    "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '1')",
+    "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+    "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+    "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+    "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+    "6": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')",
+    "7": "9999px",
+    "circle": "50%"
+  }
+}

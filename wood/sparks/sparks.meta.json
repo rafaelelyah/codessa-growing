@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-09-21T17:45:00.000Z",
+  "sparks": {
+    "simple": [
+      {
+        "name": "modal",
+        "file": "modal.js",
+        "description": "Simple modal dialog component with overlay and close functionality",
+        "category": "ui-components",
+        "dependencies": [],
+        "tags": ["modal", "dialog", "overlay"]
+      },
+      {
+        "name": "tooltip",
+        "file": "tooltip.js",
+        "description": "Tooltip component with automatic positioning and customizable content",
+        "category": "ui-components",
+        "dependencies": [],
+        "tags": ["tooltip", "hint", "popup"]
+      }
+    ],
+    "modules": [
+      {
+        "name": "chart",
+        "path": "chart/",
+        "description": "Complete charting library with multiple visualization types (bar, line, pie)",
+        "category": "data-visualization",
+        "main": "chart.js",
+        "files": [
+          "chart.js",
+          "types.js",
+          "utils.js",
+          "renderers/bar.js",
+          "renderers/line.js",
+          "renderers/pie.js"
+        ],
+        "dependencies": [],
+        "setup": null,
+        "tags": ["charts", "visualization", "svg", "data"]
+      },
+      {
+        "name": "data-table",
+        "path": "data-table/",
+        "description": "Advanced data table with sorting, filtering, and pagination features",
+        "category": "data-display",
+        "main": "data-table.js",
+        "files": [
+          "data-table.js",
+          "processor.js",
+          "filters.js",
+          "pagination.js",
+          "renderer.js"
+        ],
+        "dependencies": [],
+        "setup": null,
+        "tags": ["table", "data", "sorting", "filtering", "pagination"]
+      }
+    ]
+  }
+}

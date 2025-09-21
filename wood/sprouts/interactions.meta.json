@@ -1,0 +1,130 @@
+{
+  "file": "interactions.scss",
+  "description": "Interaction constructors for buttons, links, and controls",
+  "architecture": {
+    "generics": ["sprout-button-base", "sprout-link-base", "sprout-control-base"],
+    "specifics": ["sprout-button-sm", "sprout-button-md", "sprout-button-lg", "sprout-button-primary", "sprout-button-secondary", "sprout-button-ghost", "sprout-button-outline", "sprout-button-danger", "sprout-button-success", "sprout-button-full", "sprout-button-icon", "sprout-button-floating", "sprout-link-primary", "sprout-link-secondary", "sprout-link-muted", "sprout-link-button", "sprout-control-checkbox", "sprout-control-radio", "sprout-control-toggle", "sprout-button-group", "sprout-link-list"]
+  },
+  "sprouts": [
+    {
+      "name": "sprout-button-base",
+      "description": "Base mixin for buttons with customizable background, color, radius, padding and transitions",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-link-base",
+      "description": "Base mixin for links with customizable color, decoration and transitions",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-control-base",
+      "description": "Base mixin for form controls with size and radius parameters",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-button-sm",
+      "description": "Small size button preset",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-md",
+      "description": "Medium size button preset (default)",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-lg",
+      "description": "Large size button preset",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-primary",
+      "description": "Primary style button with primary background",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-secondary",
+      "description": "Secondary style button with secondary background",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-ghost",
+      "description": "Ghost style button with transparent background",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-outline",
+      "description": "Outline style button with border and transparent background",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-danger",
+      "description": "Danger style button with danger background",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-success",
+      "description": "Success style button with success background",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-full",
+      "description": "Full width button preset",
+      "dependencies": ["sprout-button-md"]
+    },
+    {
+      "name": "sprout-button-icon",
+      "description": "Icon button with square dimensions and full border radius",
+      "dependencies": ["sprout-button-base"]
+    },
+    {
+      "name": "sprout-button-floating",
+      "description": "Floating action button positioned fixed at bottom right",
+      "dependencies": ["sprout-button-icon"]
+    },
+    {
+      "name": "sprout-link-primary",
+      "description": "Primary colored link",
+      "dependencies": ["sprout-link-base"]
+    },
+    {
+      "name": "sprout-link-secondary",
+      "description": "Secondary colored link",
+      "dependencies": ["sprout-link-base"]
+    },
+    {
+      "name": "sprout-link-muted",
+      "description": "Muted colored link with no initial decoration",
+      "dependencies": ["sprout-link-base"]
+    },
+    {
+      "name": "sprout-link-button",
+      "description": "Link styled as a button with background hover effects",
+      "dependencies": ["sprout-link-base"]
+    },
+    {
+      "name": "sprout-control-checkbox",
+      "description": "Custom styled checkbox control",
+      "dependencies": ["sprout-control-base"]
+    },
+    {
+      "name": "sprout-control-radio",
+      "description": "Custom styled radio control",
+      "dependencies": ["sprout-control-base"]
+    },
+    {
+      "name": "sprout-control-toggle",
+      "description": "Custom styled toggle switch control",
+      "dependencies": ["sprout-control-base"]
+    },
+    {
+      "name": "sprout-button-group",
+      "description": "Button group layout with connected borders",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-link-list",
+      "description": "Vertical link list with separators",
+      "dependencies": []
+    }
+  ]
+}

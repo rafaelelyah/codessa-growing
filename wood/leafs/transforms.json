@@ -1,0 +1,147 @@
+{
+  "file": "transforms.scss",
+  "lastUpdated": "2025-09-21T18:16:01.424Z",
+  "leafs": [
+    {
+      "name": "leaf-backface-visibility",
+      "modifiers": [
+        "&--hidden",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-perspective",
+      "modifiers": [
+        "&--none"
+      ]
+    },
+    {
+      "name": "leaf-perspective-origin",
+      "modifiers": [
+        "&--bottom",
+        "&--bottom-left",
+        "&--bottom-right",
+        "&--center",
+        "&--left",
+        "&--right",
+        "&--top",
+        "&--top-left",
+        "&--top-right"
+      ]
+    },
+    {
+      "name": "leaf-rotate",
+      "modifiers": [
+        "&--n1",
+        "&--n12",
+        "&--n180",
+        "&--n2",
+        "&--n3",
+        "&--n45",
+        "&--n6",
+        "&--n90"
+      ]
+    },
+    {
+      "name": "leaf-scale",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-scale-x",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-scale-y",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-skew-x",
+      "modifiers": [
+        "&--n1",
+        "&--n12",
+        "&--n2",
+        "&--n3",
+        "&--n6"
+      ]
+    },
+    {
+      "name": "leaf-skew-y",
+      "modifiers": [
+        "&--n1",
+        "&--n12",
+        "&--n2",
+        "&--n3",
+        "&--n6"
+      ]
+    },
+    {
+      "name": "leaf-transform-origin",
+      "modifiers": [
+        "&--bottom",
+        "&--bottom-left",
+        "&--bottom-right",
+        "&--center",
+        "&--left",
+        "&--right",
+        "&--top",
+        "&--top-left",
+        "&--top-right"
+      ]
+    },
+    {
+      "name": "leaf-transform-style",
+      "modifiers": [
+        "&--flat",
+        "&--preserve-3d"
+      ]
+    },
+    {
+      "name": "leaf-translate-x",
+      "modifiers": [
+        "&--full",
+        "&--n1",
+        "&--n10",
+        "&--n12",
+        "&--n16",
+        "&--n2",
+        "&--n20",
+        "&--n24",
+        "&--n3",
+        "&--n32",
+        "&--n4",
+        "&--n40",
+        "&--n48",
+        "&--n5",
+        "&--n56",
+        "&--n6",
+        "&--n64",
+        "&--n8",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-translate-y",
+      "modifiers": [
+        "&--full",
+        "&--n1",
+        "&--n10",
+        "&--n12",
+        "&--n16",
+        "&--n2",
+        "&--n20",
+        "&--n24",
+        "&--n3",
+        "&--n32",
+        "&--n4",
+        "&--n40",
+        "&--n48",
+        "&--n5",
+        "&--n56",
+        "&--n6",
+        "&--n64",
+        "&--n8",
+        "&--px"
+      ]
+    }
+  ]
+}

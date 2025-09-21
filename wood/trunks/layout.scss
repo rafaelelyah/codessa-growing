@@ -1,0 +1,33 @@
+// ========================================
+// TRUNKS — LAYOUT COMPONENTS
+// ========================================
+// Componentes de layout compostos usando sprouts
+
+// ----------------------------------------
+// LAYOUT CONTAINER (1 sprout)
+// ----------------------------------------
+
+.trunk-layout-container {
+  @include sprout-container-md;
+}
+
+// ----------------------------------------
+// LAYOUT CENTERED CONTENT (2 sprouts)
+// ----------------------------------------
+
+.trunk-layout-centered {
+  @include sprout-container-md;
+  @include sprout-flex-center;
+}
+
+// ----------------------------------------
+// LAYOUT HEADER WITH NAV (encadeamento)
+// ----------------------------------------
+
+.trunk-layout-header {
+  @include sprout-flex-row;
+
+  .trunk-layout-header__nav {
+    @include sprout-flex-center;
+  }
+}

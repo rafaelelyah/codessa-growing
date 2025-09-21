@@ -1,0 +1,125 @@
+{
+  "file": "display.scss",
+  "lastUpdated": "2025-09-21T18:16:01.397Z",
+  "leafs": [
+    {
+      "name": "leaf-clear",
+      "modifiers": [
+        "&--both",
+        "&--left",
+        "&--none",
+        "&--right"
+      ]
+    },
+    {
+      "name": "leaf-contain",
+      "modifiers": [
+        "&--layout",
+        "&--none",
+        "&--paint",
+        "&--strict"
+      ]
+    },
+    {
+      "name": "leaf-display",
+      "modifiers": [
+        "&--block",
+        "&--contents",
+        "&--flex",
+        "&--grid",
+        "&--inline",
+        "&--inline-block",
+        "&--inline-flex",
+        "&--inline-grid",
+        "&--none",
+        "&--table",
+        "&--table-cell",
+        "&--table-row"
+      ]
+    },
+    {
+      "name": "leaf-float",
+      "modifiers": [
+        "&--left",
+        "&--none",
+        "&--right"
+      ]
+    },
+    {
+      "name": "leaf-isolation",
+      "modifiers": [
+        "&--auto",
+        "&--isolate"
+      ]
+    },
+    {
+      "name": "leaf-object-fit",
+      "modifiers": [
+        "&--contain",
+        "&--cover",
+        "&--fill",
+        "&--none",
+        "&--scale-down"
+      ]
+    },
+    {
+      "name": "leaf-object-position",
+      "modifiers": [
+        "&--bottom",
+        "&--bottom-left",
+        "&--bottom-right",
+        "&--center",
+        "&--left",
+        "&--right",
+        "&--top",
+        "&--top-left",
+        "&--top-right"
+      ]
+    },
+    {
+      "name": "leaf-overflow",
+      "modifiers": [
+        "&--auto",
+        "&--hidden",
+        "&--scroll",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-overflow-x",
+      "modifiers": [
+        "&--auto",
+        "&--hidden",
+        "&--scroll",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-overflow-y",
+      "modifiers": [
+        "&--auto",
+        "&--hidden",
+        "&--scroll",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-position",
+      "modifiers": [
+        "&--absolute",
+        "&--fixed",
+        "&--relative",
+        "&--static",
+        "&--sticky"
+      ]
+    },
+    {
+      "name": "leaf-visibility",
+      "modifiers": [
+        "&--collapse",
+        "&--hidden",
+        "&--visible"
+      ]
+    }
+  ]
+}

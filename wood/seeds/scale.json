@@ -1,0 +1,77 @@
+{
+  "base": {
+    "granular": "1px",
+    "micro": "0.25rem",
+    "medium": "2rem",
+    "macro": "8rem",
+    "duration": "150ms"
+  },
+  "sizes": {
+    "micro": {
+      "1": "{base.micro}",
+      "2": "calc({base.micro} * 2)",
+      "3": "calc({base.micro} * 3)",
+      "4": "calc({base.micro} * 4)",
+      "5": "calc({base.micro} * 5)",
+      "6": "calc({base.micro} * 6)",
+      "7": "calc({base.micro} * 7)",
+      "8": "calc({base.micro} * 8)"
+    },
+    "medium": {
+      "1": "{base.medium}",
+      "2": "calc({base.medium} * 2)",
+      "3": "calc({base.medium} * 3)",
+      "4": "calc({base.medium} * 4)",
+      "6": "calc({base.medium} * 6)",
+      "8": "calc({base.medium} * 8)"
+    },
+    "macro": {
+      "1": "{base.macro}",
+      "2": "calc({base.macro} * 2)",
+      "3": "calc({base.macro} * 3)",
+      "4": "calc({base.macro} * 4)",
+      "6": "calc({base.macro} * 6)",
+      "8": "calc({base.macro} * 8)"
+    }
+  },
+  "durations": {
+    "1": "{base.duration}",
+    "2": "calc({base.duration} * 2)",
+    "3": "calc({base.duration} * 3)",
+    "4": "calc({base.duration} * 4)",
+    "5": "calc({base.duration} * 5)",
+    "6": "calc({base.duration} * 6)",
+    "7": "calc({base.duration} * 7)"
+  },
+  "letter": {
+    "tight": "-0.05em",
+    "base": "0em",
+    "wide": "0.05em"
+  },
+  "z-index": {
+    "negative": -1,
+    "0": 0,
+    "1": 10,
+    "2": 20,
+    "3": 30,
+    "4": 40,
+    "5": 50,
+    "6": 60,
+    "7": 70,
+    "8": 80,
+    "9": 90,
+    "max": 9999
+  },
+  "columns": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 12,
+    "8": 16,
+    "9": 20,
+    "10": 24
+  }
+}

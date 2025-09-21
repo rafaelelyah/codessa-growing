@@ -1,0 +1,278 @@
+// ========================================
+// LEAF — TYPOGRAPHY (modificadores tipográficos)
+// ========================================
+// Modificadores pontuais para controle de tipografia.
+
+// ----------------------------------------
+// FONT FAMILY MODIFIERS
+// ----------------------------------------
+
+.leaf-font-family {
+  &--sans { font-family: var(--font-sans) !important; }
+  &--serif { font-family: var(--font-serif) !important; }
+  &--mono { font-family: var(--font-mono) !important; }
+  &--base { font-family: var(--font-base) !important; }
+  &--heading { font-family: var(--font-heading) !important; }
+  &--body { font-family: var(--font-body) !important; }
+  &--code { font-family: var(--font-code) !important; }
+  &--system { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important; }
+}
+
+// ----------------------------------------
+// FONT SIZE MODIFIERS
+// ----------------------------------------
+
+.leaf-font-size {
+  &--xs { font-size: var(--text-xs) !important; }
+  &--sm { font-size: var(--text-sm) !important; }
+  &--base { font-size: var(--text-base) !important; }
+  &--lg { font-size: var(--text-lg) !important; }
+  &--xl { font-size: var(--text-xl) !important; }
+  &--2xl { font-size: var(--text-2xl) !important; }
+  &--3xl { font-size: var(--text-3xl) !important; }
+  &--4xl { font-size: var(--text-4xl) !important; }
+  &--5xl { font-size: var(--text-5xl) !important; }
+  &--6xl { font-size: var(--text-6xl) !important; }
+  &--7xl { font-size: var(--text-7xl) !important; }
+  &--8xl { font-size: var(--text-8xl) !important; }
+  &--9xl { font-size: var(--text-9xl) !important; }
+}
+
+// ----------------------------------------
+// FONT WEIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-font-weight {
+  &--thin { font-weight: 100 !important; }
+  &--extralight { font-weight: 200 !important; }
+  &--light { font-weight: 300 !important; }
+  &--normal { font-weight: 400 !important; }
+  &--medium { font-weight: 500 !important; }
+  &--semibold { font-weight: 600 !important; }
+  &--bold { font-weight: 700 !important; }
+  &--extrabold { font-weight: 800 !important; }
+  &--black { font-weight: 900 !important; }
+}
+
+// ----------------------------------------
+// LINE HEIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-line-height {
+  &--none { line-height: 1 !important; }
+  &--tight { line-height: 1.25 !important; }
+  &--snug { line-height: 1.375 !important; }
+  &--normal { line-height: 1.5 !important; }
+  &--relaxed { line-height: 1.625 !important; }
+  &--loose { line-height: 2 !important; }
+}
+
+// ----------------------------------------
+// LETTER SPACING MODIFIERS
+// ----------------------------------------
+
+.leaf-letter-spacing {
+  &--tighter { letter-spacing: -0.05em !important; }
+  &--tight { letter-spacing: -0.025em !important; }
+  &--normal { letter-spacing: 0em !important; }
+  &--wide { letter-spacing: 0.025em !important; }
+  &--wider { letter-spacing: 0.05em !important; }
+  &--widest { letter-spacing: 0.1em !important; }
+}
+
+// ----------------------------------------
+// TEXT ALIGN MODIFIERS
+// ----------------------------------------
+
+.leaf-text-align {
+  &--left { text-align: left !important; }
+  &--center { text-align: center !important; }
+  &--right { text-align: right !important; }
+  &--justify { text-align: justify !important; }
+  &--start { text-align: start !important; }
+  &--end { text-align: end !important; }
+}
+
+// ----------------------------------------
+// TEXT TRANSFORM MODIFIERS
+// ----------------------------------------
+
+.leaf-text-transform {
+  &--none { text-transform: none !important; }
+  &--capitalize { text-transform: capitalize !important; }
+  &--uppercase { text-transform: uppercase !important; }
+  &--lowercase { text-transform: lowercase !important; }
+}
+
+// ----------------------------------------
+// TEXT DECORATION MODIFIERS
+// ----------------------------------------
+
+.leaf-text-decoration {
+  &--none { text-decoration: none !important; }
+  &--underline { text-decoration: underline !important; }
+  &--overline { text-decoration: overline !important; }
+  &--line-through { text-decoration: line-through !important; }
+}
+
+// ----------------------------------------
+// TEXT DECORATION STYLE MODIFIERS
+// ----------------------------------------
+
+.leaf-text-decoration-style {
+  &--solid { text-decoration-style: solid !important; }
+  &--double { text-decoration-style: double !important; }
+  &--dotted { text-decoration-style: dotted !important; }
+  &--dashed { text-decoration-style: dashed !important; }
+  &--wavy { text-decoration-style: wavy !important; }
+}
+
+// ----------------------------------------
+// TEXT DECORATION THICKNESS MODIFIERS
+// ----------------------------------------
+
+.leaf-text-decoration-thickness {
+  &--auto { text-decoration-thickness: auto !important; }
+  &--from-font { text-decoration-thickness: from-font !important; }
+  &--1 { text-decoration-thickness: 1px !important; }
+  &--2 { text-decoration-thickness: 2px !important; }
+  &--4 { text-decoration-thickness: 4px !important; }
+  &--8 { text-decoration-thickness: 8px !important; }
+}
+
+// ----------------------------------------
+// FONT STYLE MODIFIERS
+// ----------------------------------------
+
+.leaf-font-style {
+  &--normal { font-style: normal !important; }
+  &--italic { font-style: italic !important; }
+  &--oblique { font-style: oblique !important; }
+}
+
+// ----------------------------------------
+// FONT VARIANT NUMERIC MODIFIERS
+// ----------------------------------------
+
+.leaf-font-variant-numeric {
+  &--normal { font-variant-numeric: normal !important; }
+  &--ordinal { font-variant-numeric: ordinal !important; }
+  &--slashed-zero { font-variant-numeric: slashed-zero !important; }
+  &--lining-nums { font-variant-numeric: lining-nums !important; }
+  &--oldstyle-nums { font-variant-numeric: oldstyle-nums !important; }
+  &--proportional-nums { font-variant-numeric: proportional-nums !important; }
+  &--tabular-nums { font-variant-numeric: tabular-nums !important; }
+  &--diagonal-fractions { font-variant-numeric: diagonal-fractions !important; }
+  &--stacked-fractions { font-variant-numeric: stacked-fractions !important; }
+}
+
+// ----------------------------------------
+// VERTICAL ALIGN MODIFIERS
+// ----------------------------------------
+
+.leaf-vertical-align {
+  &--baseline { vertical-align: baseline !important; }
+  &--top { vertical-align: top !important; }
+  &--middle { vertical-align: middle !important; }
+  &--bottom { vertical-align: bottom !important; }
+  &--text-top { vertical-align: text-top !important; }
+  &--text-bottom { vertical-align: text-bottom !important; }
+  &--sub { vertical-align: sub !important; }
+  &--super { vertical-align: super !important; }
+}
+
+// ----------------------------------------
+// WHITE SPACE MODIFIERS
+// ----------------------------------------
+
+.leaf-white-space {
+  &--normal { white-space: normal !important; }
+  &--nowrap { white-space: nowrap !important; }
+  &--pre { white-space: pre !important; }
+  &--pre-line { white-space: pre-line !important; }
+  &--pre-wrap { white-space: pre-wrap !important; }
+  &--break-spaces { white-space: break-spaces !important; }
+}
+
+// ----------------------------------------
+// WORD BREAK MODIFIERS
+// ----------------------------------------
+
+.leaf-word-break {
+  &--normal { word-break: normal !important; }
+  &--break-all { word-break: break-all !important; }
+  &--break-word { word-break: break-word !important; }
+  &--keep-all { word-break: keep-all !important; }
+}
+
+// ----------------------------------------
+// OVERFLOW WRAP MODIFIERS
+// ----------------------------------------
+
+.leaf-overflow-wrap {
+  &--normal { overflow-wrap: normal !important; }
+  &--break-word { overflow-wrap: break-word !important; }
+  &--anywhere { overflow-wrap: anywhere !important; }
+}
+
+// ----------------------------------------
+// TEXT OVERFLOW MODIFIERS
+// ----------------------------------------
+
+.leaf-text-overflow {
+  &--clip { text-overflow: clip !important; }
+  &--ellipsis { text-overflow: ellipsis !important; }
+}
+
+// ----------------------------------------
+// HYPHENS MODIFIERS
+// ----------------------------------------
+
+.leaf-hyphens {
+  &--none { hyphens: none !important; }
+  &--manual { hyphens: manual !important; }
+  &--auto { hyphens: auto !important; }
+}
+
+// ----------------------------------------
+// TEXT INDENT MODIFIERS
+// ----------------------------------------
+
+.leaf-text-indent {
+  &--0 { text-indent: 0 !important; }
+  &--1 { text-indent: 0.25rem !important; }
+  &--2 { text-indent: 0.5rem !important; }
+  &--3 { text-indent: 0.75rem !important; }
+  &--4 { text-indent: 1rem !important; }
+  &--5 { text-indent: 1.25rem !important; }
+  &--6 { text-indent: 1.5rem !important; }
+  &--8 { text-indent: 2rem !important; }
+  &--10 { text-indent: 2.5rem !important; }
+  &--12 { text-indent: 3rem !important; }
+}
+
+// ----------------------------------------
+// FONT SMOOTHING MODIFIERS
+// ----------------------------------------
+
+.leaf-font-smoothing {
+  &--antialiased {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+  &--subpixel-antialiased {
+    -webkit-font-smoothing: auto !important;
+    -moz-osx-font-smoothing: auto !important;
+  }
+}
+
+// ----------------------------------------
+// TEXT RENDERING MODIFIERS
+// ----------------------------------------
+
+.leaf-text-rendering {
+  &--auto { text-rendering: auto !important; }
+  &--optimizeSpeed { text-rendering: optimizeSpeed !important; }
+  &--optimizeLegibility { text-rendering: optimizeLegibility !important; }
+  &--geometricPrecision { text-rendering: geometricPrecision !important; }
+}

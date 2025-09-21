@@ -1,0 +1,302 @@
+// ========================================
+// LEAF — TRANSFORMS (modificadores de transformação)
+// ========================================
+// Modificadores pontuais para controle de transformações CSS.
+
+// ----------------------------------------
+// ROTATE MODIFIERS
+// ----------------------------------------
+
+.leaf-rotate {
+  &--0 { transform: rotate(0deg) !important; }
+  &--1 { transform: rotate(1deg) !important; }
+  &--2 { transform: rotate(2deg) !important; }
+  &--3 { transform: rotate(3deg) !important; }
+  &--6 { transform: rotate(6deg) !important; }
+  &--12 { transform: rotate(12deg) !important; }
+  &--45 { transform: rotate(45deg) !important; }
+  &--90 { transform: rotate(90deg) !important; }
+  &--180 { transform: rotate(180deg) !important; }
+  &--270 { transform: rotate(270deg) !important; }
+  &--n1 { transform: rotate(-1deg) !important; }
+  &--n2 { transform: rotate(-2deg) !important; }
+  &--n3 { transform: rotate(-3deg) !important; }
+  &--n6 { transform: rotate(-6deg) !important; }
+  &--n12 { transform: rotate(-12deg) !important; }
+  &--n45 { transform: rotate(-45deg) !important; }
+  &--n90 { transform: rotate(-90deg) !important; }
+  &--n180 { transform: rotate(-180deg) !important; }
+}
+
+// ----------------------------------------
+// SCALE MODIFIERS
+// ----------------------------------------
+
+.leaf-scale {
+  &--0 { transform: scale(0) !important; }
+  &--25 { transform: scale(0.25) !important; }
+  &--50 { transform: scale(0.5) !important; }
+  &--75 { transform: scale(0.75) !important; }
+  &--90 { transform: scale(0.9) !important; }
+  &--95 { transform: scale(0.95) !important; }
+  &--98 { transform: scale(0.98) !important; }
+  &--100 { transform: scale(1) !important; }
+  &--102 { transform: scale(1.02) !important; }
+  &--105 { transform: scale(1.05) !important; }
+  &--110 { transform: scale(1.1) !important; }
+  &--125 { transform: scale(1.25) !important; }
+  &--150 { transform: scale(1.5) !important; }
+  &--200 { transform: scale(2) !important; }
+}
+
+// ----------------------------------------
+// SCALE X MODIFIERS
+// ----------------------------------------
+
+.leaf-scale-x {
+  &--0 { transform: scaleX(0) !important; }
+  &--25 { transform: scaleX(0.25) !important; }
+  &--50 { transform: scaleX(0.5) !important; }
+  &--75 { transform: scaleX(0.75) !important; }
+  &--90 { transform: scaleX(0.9) !important; }
+  &--95 { transform: scaleX(0.95) !important; }
+  &--100 { transform: scaleX(1) !important; }
+  &--105 { transform: scaleX(1.05) !important; }
+  &--110 { transform: scaleX(1.1) !important; }
+  &--125 { transform: scaleX(1.25) !important; }
+  &--150 { transform: scaleX(1.5) !important; }
+}
+
+// ----------------------------------------
+// SCALE Y MODIFIERS
+// ----------------------------------------
+
+.leaf-scale-y {
+  &--0 { transform: scaleY(0) !important; }
+  &--25 { transform: scaleY(0.25) !important; }
+  &--50 { transform: scaleY(0.5) !important; }
+  &--75 { transform: scaleY(0.75) !important; }
+  &--90 { transform: scaleY(0.9) !important; }
+  &--95 { transform: scaleY(0.95) !important; }
+  &--100 { transform: scaleY(1) !important; }
+  &--105 { transform: scaleY(1.05) !important; }
+  &--110 { transform: scaleY(1.1) !important; }
+  &--125 { transform: scaleY(1.25) !important; }
+  &--150 { transform: scaleY(1.5) !important; }
+}
+
+// ----------------------------------------
+// TRANSLATE X MODIFIERS
+// ----------------------------------------
+
+.leaf-translate-x {
+  &--0 { transform: translateX(0) !important; }
+  &--px { transform: translateX(1px) !important; }
+  &--0_5 { transform: translateX(0.125rem) !important; }
+  &--1 { transform: translateX(0.25rem) !important; }
+  &--1_5 { transform: translateX(0.375rem) !important; }
+  &--2 { transform: translateX(0.5rem) !important; }
+  &--2_5 { transform: translateX(0.625rem) !important; }
+  &--3 { transform: translateX(0.75rem) !important; }
+  &--3_5 { transform: translateX(0.875rem) !important; }
+  &--4 { transform: translateX(1rem) !important; }
+  &--5 { transform: translateX(1.25rem) !important; }
+  &--6 { transform: translateX(1.5rem) !important; }
+  &--7 { transform: translateX(1.75rem) !important; }
+  &--8 { transform: translateX(2rem) !important; }
+  &--10 { transform: translateX(2.5rem) !important; }
+  &--12 { transform: translateX(3rem) !important; }
+  &--16 { transform: translateX(4rem) !important; }
+  &--20 { transform: translateX(5rem) !important; }
+  &--24 { transform: translateX(6rem) !important; }
+  &--32 { transform: translateX(8rem) !important; }
+  &--40 { transform: translateX(10rem) !important; }
+  &--48 { transform: translateX(12rem) !important; }
+  &--56 { transform: translateX(14rem) !important; }
+  &--64 { transform: translateX(16rem) !important; }
+  &--72 { transform: translateX(18rem) !important; }
+  &--80 { transform: translateX(20rem) !important; }
+  &--96 { transform: translateX(24rem) !important; }
+  &--1_2 { transform: translateX(50%) !important; }
+  &--full { transform: translateX(100%) !important; }
+  &--n_px { transform: translateX(-1px) !important; }
+  &--n0_5 { transform: translateX(-0.125rem) !important; }
+  &--n1 { transform: translateX(-0.25rem) !important; }
+  &--n1_5 { transform: translateX(-0.375rem) !important; }
+  &--n2 { transform: translateX(-0.5rem) !important; }
+  &--n2_5 { transform: translateX(-0.625rem) !important; }
+  &--n3 { transform: translateX(-0.75rem) !important; }
+  &--n3_5 { transform: translateX(-0.875rem) !important; }
+  &--n4 { transform: translateX(-1rem) !important; }
+  &--n5 { transform: translateX(-1.25rem) !important; }
+  &--n6 { transform: translateX(-1.5rem) !important; }
+  &--n8 { transform: translateX(-2rem) !important; }
+  &--n10 { transform: translateX(-2.5rem) !important; }
+  &--n12 { transform: translateX(-3rem) !important; }
+  &--n16 { transform: translateX(-4rem) !important; }
+  &--n20 { transform: translateX(-5rem) !important; }
+  &--n24 { transform: translateX(-6rem) !important; }
+  &--n32 { transform: translateX(-8rem) !important; }
+  &--n40 { transform: translateX(-10rem) !important; }
+  &--n48 { transform: translateX(-12rem) !important; }
+  &--n56 { transform: translateX(-14rem) !important; }
+  &--n64 { transform: translateX(-16rem) !important; }
+  &--n_full { transform: translateX(-100%) !important; }
+}
+
+// ----------------------------------------
+// TRANSLATE Y MODIFIERS
+// ----------------------------------------
+
+.leaf-translate-y {
+  &--0 { transform: translateY(0) !important; }
+  &--px { transform: translateY(1px) !important; }
+  &--0_5 { transform: translateY(0.125rem) !important; }
+  &--1 { transform: translateY(0.25rem) !important; }
+  &--1_5 { transform: translateY(0.375rem) !important; }
+  &--2 { transform: translateY(0.5rem) !important; }
+  &--2_5 { transform: translateY(0.625rem) !important; }
+  &--3 { transform: translateY(0.75rem) !important; }
+  &--3_5 { transform: translateY(0.875rem) !important; }
+  &--4 { transform: translateY(1rem) !important; }
+  &--5 { transform: translateY(1.25rem) !important; }
+  &--6 { transform: translateY(1.5rem) !important; }
+  &--7 { transform: translateY(1.75rem) !important; }
+  &--8 { transform: translateY(2rem) !important; }
+  &--10 { transform: translateY(2.5rem) !important; }
+  &--12 { transform: translateY(3rem) !important; }
+  &--16 { transform: translateY(4rem) !important; }
+  &--20 { transform: translateY(5rem) !important; }
+  &--24 { transform: translateY(6rem) !important; }
+  &--32 { transform: translateY(8rem) !important; }
+  &--40 { transform: translateY(10rem) !important; }
+  &--48 { transform: translateY(12rem) !important; }
+  &--56 { transform: translateY(14rem) !important; }
+  &--64 { transform: translateY(16rem) !important; }
+  &--72 { transform: translateY(18rem) !important; }
+  &--80 { transform: translateY(20rem) !important; }
+  &--96 { transform: translateY(24rem) !important; }
+  &--1_2 { transform: translateY(50%) !important; }
+  &--full { transform: translateY(100%) !important; }
+  &--n_px { transform: translateY(-1px) !important; }
+  &--n0_5 { transform: translateY(-0.125rem) !important; }
+  &--n1 { transform: translateY(-0.25rem) !important; }
+  &--n1_5 { transform: translateY(-0.375rem) !important; }
+  &--n2 { transform: translateY(-0.5rem) !important; }
+  &--n2_5 { transform: translateY(-0.625rem) !important; }
+  &--n3 { transform: translateY(-0.75rem) !important; }
+  &--n3_5 { transform: translateY(-0.875rem) !important; }
+  &--n4 { transform: translateY(-1rem) !important; }
+  &--n5 { transform: translateY(-1.25rem) !important; }
+  &--n6 { transform: translateY(-1.5rem) !important; }
+  &--n8 { transform: translateY(-2rem) !important; }
+  &--n10 { transform: translateY(-2.5rem) !important; }
+  &--n12 { transform: translateY(-3rem) !important; }
+  &--n16 { transform: translateY(-4rem) !important; }
+  &--n20 { transform: translateY(-5rem) !important; }
+  &--n24 { transform: translateY(-6rem) !important; }
+  &--n32 { transform: translateY(-8rem) !important; }
+  &--n40 { transform: translateY(-10rem) !important; }
+  &--n48 { transform: translateY(-12rem) !important; }
+  &--n56 { transform: translateY(-14rem) !important; }
+  &--n64 { transform: translateY(-16rem) !important; }
+  &--n_full { transform: translateY(-100%) !important; }
+}
+
+// ----------------------------------------
+// SKEW X MODIFIERS
+// ----------------------------------------
+
+.leaf-skew-x {
+  &--0 { transform: skewX(0deg) !important; }
+  &--1 { transform: skewX(1deg) !important; }
+  &--2 { transform: skewX(2deg) !important; }
+  &--3 { transform: skewX(3deg) !important; }
+  &--6 { transform: skewX(6deg) !important; }
+  &--12 { transform: skewX(12deg) !important; }
+  &--n1 { transform: skewX(-1deg) !important; }
+  &--n2 { transform: skewX(-2deg) !important; }
+  &--n3 { transform: skewX(-3deg) !important; }
+  &--n6 { transform: skewX(-6deg) !important; }
+  &--n12 { transform: skewX(-12deg) !important; }
+}
+
+// ----------------------------------------
+// SKEW Y MODIFIERS
+// ----------------------------------------
+
+.leaf-skew-y {
+  &--0 { transform: skewY(0deg) !important; }
+  &--1 { transform: skewY(1deg) !important; }
+  &--2 { transform: skewY(2deg) !important; }
+  &--3 { transform: skewY(3deg) !important; }
+  &--6 { transform: skewY(6deg) !important; }
+  &--12 { transform: skewY(12deg) !important; }
+  &--n1 { transform: skewY(-1deg) !important; }
+  &--n2 { transform: skewY(-2deg) !important; }
+  &--n3 { transform: skewY(-3deg) !important; }
+  &--n6 { transform: skewY(-6deg) !important; }
+  &--n12 { transform: skewY(-12deg) !important; }
+}
+
+// ----------------------------------------
+// TRANSFORM ORIGIN MODIFIERS
+// ----------------------------------------
+
+.leaf-transform-origin {
+  &--center { transform-origin: center !important; }
+  &--top { transform-origin: top !important; }
+  &--top-right { transform-origin: top right !important; }
+  &--right { transform-origin: right !important; }
+  &--bottom-right { transform-origin: bottom right !important; }
+  &--bottom { transform-origin: bottom !important; }
+  &--bottom-left { transform-origin: bottom left !important; }
+  &--left { transform-origin: left !important; }
+  &--top-left { transform-origin: top left !important; }
+}
+
+// ----------------------------------------
+// TRANSFORM STYLE MODIFIERS
+// ----------------------------------------
+
+.leaf-transform-style {
+  &--flat { transform-style: flat !important; }
+  &--preserve-3d { transform-style: preserve-3d !important; }
+}
+
+// ----------------------------------------
+// PERSPECTIVE MODIFIERS
+// ----------------------------------------
+
+.leaf-perspective {
+  &--none { perspective: none !important; }
+  &--250px { perspective: 250px !important; }
+  &--500px { perspective: 500px !important; }
+  &--750px { perspective: 750px !important; }
+  &--1000px { perspective: 1000px !important; }
+}
+
+// ----------------------------------------
+// PERSPECTIVE ORIGIN MODIFIERS
+// ----------------------------------------
+
+.leaf-perspective-origin {
+  &--center { perspective-origin: center !important; }
+  &--top { perspective-origin: top !important; }
+  &--bottom { perspective-origin: bottom !important; }
+  &--left { perspective-origin: left !important; }
+  &--right { perspective-origin: right !important; }
+  &--top-left { perspective-origin: top left !important; }
+  &--top-right { perspective-origin: top right !important; }
+  &--bottom-left { perspective-origin: bottom left !important; }
+  &--bottom-right { perspective-origin: bottom right !important; }
+}
+
+// ----------------------------------------
+// BACKFACE VISIBILITY MODIFIERS
+// ----------------------------------------
+
+.leaf-backface-visibility {
+  &--visible { backface-visibility: visible !important; }
+  &--hidden { backface-visibility: hidden !important; }
+}

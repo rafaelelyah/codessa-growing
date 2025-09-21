@@ -1,0 +1,54 @@
+{
+  "spacing": {
+    "generic": {
+      "0": "0",
+      "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '1')",
+      "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+      "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+      "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+      "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+      "6": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')",
+      "7": "map.get(seeds.$sizes-seeds, 'sizes', 'medium', '1')"
+    },
+    "padding": {
+      "0": "0",
+      "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '1')",
+      "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+      "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+      "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+      "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+      "6": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')",
+      "7": "map.get(seeds.$sizes-seeds, 'sizes', 'medium', '1')"
+    },
+    "margin": {
+      "0": "0",
+      "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '1')",
+      "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+      "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+      "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+      "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+      "6": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')",
+      "7": "map.get(seeds.$sizes-seeds, 'sizes', 'medium', '1')"
+    },
+    "gap": {
+      "0": "0",
+      "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '1')",
+      "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+      "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+      "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+      "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+      "6": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')",
+      "7": "map.get(seeds.$sizes-seeds, 'sizes', 'medium', '1')"
+    },
+    "offset": {
+      "0": "0",
+      "1": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '1')",
+      "2": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '2')",
+      "3": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '3')",
+      "4": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '4')",
+      "5": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '6')",
+      "6": "map.get(seeds.$sizes-seeds, 'sizes', 'micro', '8')",
+      "7": "map.get(seeds.$sizes-seeds, 'sizes', 'medium', '1')"
+    }
+  }
+}

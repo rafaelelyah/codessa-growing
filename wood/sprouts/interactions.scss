@@ -1,0 +1,390 @@
+
+// ========================================
+// SPROUTS — INTERACTION CONSTRUCTORS
+// ========================================
+// Mixins para elementos interativos (botões, links, controles).
+//
+// ARQUITETURA:
+// - Genéricos: sprout-button-base, sprout-link-base, sprout-control-base
+// - Específicos: presets para tipos comuns de interações
+
+// ----------------------------------------
+// BUTTON BASE GENERICS
+// ----------------------------------------
+
+@mixin sprout-button-base(
+  $bg: 'primary',
+  $color: 'inverse',
+  $radius: 'sm',
+  $padding-y: 'sm',
+  $padding-x: 'md',
+  $font-size: 'md',
+  $transition: 'fast'
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-#{$font-size});
+  font-weight: var(--font-medium);
+  color: var(--text-#{$color});
+  background-color: var(--interactive-#{$bg});
+  border: var(--border-width-0);
+  border-radius: var(--border-radius-#{$radius});
+  padding: var(--padding-#{$padding-y}) var(--padding-#{$padding-x});
+  cursor: pointer;
+  transition: background-color var(--duration-#{$transition}) var(--timing-smooth), transform var(--duration-#{$transition}) var(--timing-smooth);
+
+  &:hover {
+    background-color: var(--interactive-hover);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    background-color: var(--interactive-active);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  &:disabled {
+    background-color: var(--bg-muted);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: var(--opacity-disabled);
+  }
+}
+
+@mixin sprout-link-base(
+  $color: 'primary',
+  $decoration: 'underline',
+  $transition: 'fast'
+) {
+  color: var(--text-#{$color});
+  text-decoration: #{$decoration};
+  cursor: pointer;
+  transition: color var(--duration-#{$transition}) var(--timing-smooth);
+
+  &:hover {
+    color: var(--text-hover);
+    text-decoration-thickness: 2px;
+  }
+
+  &:active {
+    color: var(--text-active);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+@mixin sprout-control-base(
+  $size: 'md',
+  $radius: 'sm'
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-#{$size});
+  height: var(--control-#{$size});
+  border-radius: var(--border-radius-#{$radius});
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--timing-smooth);
+
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  &:disabled {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+  }
+}
+
+// ----------------------------------------
+// BUTTON SIZE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-button-sm {
+  @include sprout-button-base(
+    $padding-y: 'xs',
+    $padding-x: 'sm',
+    $font-size: 'sm',
+    $radius: 'xs'
+  );
+}
+
+@mixin sprout-button-md {
+  @include sprout-button-base(
+    $padding-y: 'sm',
+    $padding-x: 'md',
+    $font-size: 'md',
+    $radius: 'sm'
+  );
+}
+
+@mixin sprout-button-lg {
+  @include sprout-button-base(
+    $padding-y: 'md',
+    $padding-x: 'lg',
+    $font-size: 'lg',
+    $radius: 'md'
+  );
+}
+
+// ----------------------------------------
+// BUTTON STYLE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-button-primary {
+  @include sprout-button-base($bg: 'primary', $color: 'inverse');
+}
+
+@mixin sprout-button-secondary {
+  @include sprout-button-base($bg: 'secondary', $color: 'primary');
+}
+
+@mixin sprout-button-ghost {
+  @include sprout-button-base($bg: 'transparent', $color: 'primary');
+
+  &:hover {
+    background-color: var(--bg-hover);
+  }
+
+  &:active {
+    background-color: var(--bg-active);
+  }
+}
+
+@mixin sprout-button-outline {
+  @include sprout-button-base($bg: 'transparent', $color: 'primary');
+  border: var(--border-width-1) solid var(--border-primary);
+
+  &:hover {
+    background-color: var(--bg-primary);
+    color: var(--text-inverse);
+  }
+
+  &:active {
+    background-color: var(--bg-primary-active);
+  }
+}
+
+@mixin sprout-button-danger {
+  @include sprout-button-base($bg: 'danger', $color: 'inverse');
+}
+
+@mixin sprout-button-success {
+  @include sprout-button-base($bg: 'success', $color: 'inverse');
+}
+
+// ----------------------------------------
+// BUTTON TYPE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-button-full {
+  @include sprout-button-md;
+  width: 100%;
+  justify-content: center;
+}
+
+@mixin sprout-button-icon {
+  @include sprout-button-base(
+    $padding-y: 'sm',
+    $padding-x: 'sm',
+    $radius: 'full'
+  );
+  width: var(--control-md);
+  height: var(--control-md);
+}
+
+@mixin sprout-button-floating {
+  @include sprout-button-icon;
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-floating);
+}
+
+// ----------------------------------------
+// LINK PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-link-primary {
+  @include sprout-link-base($color: 'primary');
+}
+
+@mixin sprout-link-secondary {
+  @include sprout-link-base($color: 'secondary');
+}
+
+@mixin sprout-link-muted {
+  @include sprout-link-base($color: 'muted', $decoration: 'none');
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin sprout-link-button {
+  @include sprout-link-base($color: 'primary', $decoration: 'none');
+  padding: var(--padding-sm) var(--padding-md);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--duration-fast) var(--timing-smooth);
+
+  &:hover {
+    background-color: var(--bg-hover);
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: var(--bg-active);
+  }
+}
+
+// ----------------------------------------
+// CONTROL PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-control-checkbox {
+  @include sprout-control-base;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: var(--border-width-1) solid var(--border-default);
+    border-radius: var(--border-radius-xs);
+    background-color: var(--bg-input);
+    transition: all var(--duration-fast) var(--timing-smooth);
+  }
+
+  input:checked + &::before {
+    background-color: var(--interactive-primary);
+    border-color: var(--interactive-primary);
+  }
+
+  input:checked + &::after {
+    content: '✓';
+    position: absolute;
+    color: var(--text-inverse);
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+@mixin sprout-control-radio {
+  @include sprout-control-base;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: var(--border-width-1) solid var(--border-default);
+    border-radius: 50%;
+    background-color: var(--bg-input);
+    transition: all var(--duration-fast) var(--timing-smooth);
+  }
+
+  input:checked + &::before {
+    background-color: var(--interactive-primary);
+    border-color: var(--interactive-primary);
+    box-shadow: inset 0 0 0 3px var(--bg-input);
+  }
+}
+
+@mixin sprout-control-toggle {
+  @include sprout-control-base($size: 'lg');
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 24px;
+    background-color: var(--bg-muted);
+    border-radius: 12px;
+    transition: background-color var(--duration-fast) var(--timing-smooth);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-inverse);
+    border-radius: 50%;
+    transition: transform var(--duration-fast) var(--timing-smooth);
+  }
+
+  input:checked + &::before {
+    background-color: var(--interactive-primary);
+  }
+
+  input:checked + &::after {
+    transform: translateX(24px);
+  }
+}
+
+// ----------------------------------------
+// INTERACTION GROUP PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-button-group {
+  display: inline-flex;
+
+  .sprout-button {
+    border-radius: 0;
+    margin: 0;
+
+    &:first-child {
+      border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
+    }
+
+    &:last-child {
+      border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
+}
+
+@mixin sprout-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+
+  .sprout-link {
+    padding: var(--padding-sm) 0;
+    border-bottom: var(--border-width-1) solid var(--border-light);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

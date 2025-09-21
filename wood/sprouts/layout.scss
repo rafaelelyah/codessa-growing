@@ -1,0 +1,431 @@
+
+// ========================================
+// SPROUTS — LAYOUT CONSTRUCTORS
+// ========================================
+// Mixins consolidados para construir layouts e estruturas.
+// 
+// ARQUITETURA:
+// - Genéricos: sprout-position, sprout-size, sprout-element (composto)
+// - Específicos: sprout-container, sprout-grid, etc.
+
+// ----------------------------------------
+// POSITIONING (Genérico)
+// ----------------------------------------
+
+@mixin sprout-position(
+  $position: null,
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null,
+  $z-index: null
+) {
+  @if $position != null {
+    position: #{$position};
+  }
+
+  @if $top != null {
+    top: #{$top};
+  }
+
+  @if $left != null {
+    left: #{$left};
+  }
+
+  @if $right != null {
+    right: #{$right};
+  }
+
+  @if $bottom != null {
+    bottom: #{$bottom};
+  }
+
+  @if $z-index != null {
+    z-index: #{$z-index};
+  }
+}
+
+// ----------------------------------------
+// SIZING (Genérico)
+// ----------------------------------------
+
+@mixin sprout-size(
+  $width: null,
+  $height: null,
+  $min-width: null,
+  $min-height: null,
+  $max-width: null,
+  $max-height: null
+) {
+  @if $width != null {
+    width: #{$width};
+  }
+
+  @if $height != null {
+    height: #{$height};
+  }
+
+  @if $min-width != null {
+    min-width: #{$min-width};
+  }
+
+  @if $min-height != null {
+    min-height: #{$min-height};
+  }
+
+  @if $max-width != null {
+    max-width: #{$max-width};
+  }
+
+  @if $max-height != null {
+    max-height: #{$max-height};
+  }
+}
+
+// ----------------------------------------
+// ELEMENT CONFIGURATOR (Composto - Genérico)
+// ----------------------------------------
+
+@mixin sprout-element(
+  // Dimensions
+  $width: null,
+  $height: null,
+  $min-width: null,
+  $min-height: null,
+  $max-width: null,
+  $max-height: null,
+
+  // Position
+  $position: null,
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null,
+
+  // Layer
+  $z-index: null
+) {
+  // Usa os mixins genéricos
+  @include sprout-size(
+    $width: $width,
+    $height: $height,
+    $min-width: $min-width,
+    $min-height: $min-height,
+    $max-width: $max-width,
+    $max-height: $max-height
+  );
+
+  @include sprout-position(
+    $position: $position,
+    $top: $top,
+    $left: $left,
+    $right: $right,
+    $bottom: $bottom,
+    $z-index: $z-index
+  );
+}
+
+// ----------------------------------------
+// SIZE PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-size-short-vh {
+  @include sprout-size($height: 100vh);
+}
+
+@mixin sprout-size-short-vw {
+  @include sprout-size($width: 100vw);
+}
+
+@mixin sprout-size-full {
+  @include sprout-size($width: 100%, $height: 100%);
+}
+
+@mixin sprout-size-auto {
+  @include sprout-size($width: auto, $height: auto);
+}
+
+@mixin sprout-size-container-sm {
+  @include sprout-size($max-width: var(--container-sm));
+}
+
+@mixin sprout-size-container-md {
+  @include sprout-size($max-width: var(--container-md));
+}
+
+@mixin sprout-size-container-lg {
+  @include sprout-size($max-width: var(--container-lg));
+}
+
+// ----------------------------------------
+// POSITION PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-position-fixed-top {
+  @include sprout-position($position: fixed, $top: 0, $left: 0, $right: 0);
+}
+
+@mixin sprout-position-fixed-bottom {
+  @include sprout-position($position: fixed, $bottom: 0, $left: 0, $right: 0);
+}
+
+@mixin sprout-position-sticky-top {
+  @include sprout-position($position: sticky, $top: 0);
+}
+
+@mixin sprout-position-sticky-bottom {
+  @include sprout-position($position: sticky, $bottom: 0);
+}
+
+@mixin sprout-position-absolute-center {
+  @include sprout-position($position: absolute, $top: 50%, $left: 50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin sprout-position-absolute-top-left {
+  @include sprout-position($position: absolute, $top: 0, $left: 0);
+}
+
+@mixin sprout-position-absolute-top-right {
+  @include sprout-position($position: absolute, $top: 0, $right: 0);
+}
+
+@mixin sprout-position-absolute-bottom-left {
+  @include sprout-position($position: absolute, $bottom: 0, $left: 0);
+}
+
+@mixin sprout-position-absolute-bottom-right {
+  @include sprout-position($position: absolute, $bottom: 0, $right: 0);
+}
+
+// ----------------------------------------
+// ELEMENT PRESETS (Específicos - Compostos)
+// ----------------------------------------
+
+@mixin sprout-element-fixed-header {
+  @include sprout-element(
+    $position: fixed,
+    $top: 0,
+    $left: 0,
+    $right: 0,
+    $height: var(--header-height, 4rem),
+    $z-index: var(--z-header, 1000)
+  );
+}
+
+@mixin sprout-element-sticky-sidebar {
+  @include sprout-element(
+    $position: sticky,
+    $top: var(--header-height, 4rem),
+    $width: var(--sidebar-width, 16rem),
+    $height: calc(100vh - var(--header-height, 4rem))
+  );
+}
+
+@mixin sprout-element-fullscreen-overlay {
+  @include sprout-element(
+    $position: fixed,
+    $top: 0,
+    $left: 0,
+    $right: 0,
+    $bottom: 0,
+    $z-index: var(--z-overlay, 2000)
+  );
+}
+
+// ----------------------------------------
+// CONTAINER PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-container-sm {
+  @include sprout-size($max-width: var(--container-sm));
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+@mixin sprout-container-md {
+  @include sprout-size($max-width: var(--container-md));
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+@mixin sprout-container-lg {
+  @include sprout-size($max-width: var(--container-lg));
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+@mixin sprout-container-full {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+@mixin sprout-container-fluid {
+  width: 100%;
+  padding-inline: var(--container-padding-inline);
+}
+
+// ----------------------------------------
+// SECTION PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-section-fullscreen {
+  @include sprout-size($width: 100%, $height: 100vh);
+}
+
+@mixin sprout-section-hero {
+  @include sprout-size($width: 100%, $min-height: 100vh);
+  display: flex;
+  align-items: center;
+}
+
+// ----------------------------------------
+// GRID PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-grid-basic($cols: 12, $gap: 'md') {
+  display: grid;
+  grid-template-columns: repeat(#{$cols}, 1fr);
+  gap: var(--gap-#{$gap});
+  width: 100%;
+}
+
+@mixin sprout-grid-responsive($cols: '1fr 1fr', $gap: 'md') {
+  display: grid;
+  grid-template-columns: #{$cols};
+  gap: var(--gap-#{$gap});
+  width: 100%;
+}
+
+// ----------------------------------------
+// GRID COLUMN SPANS (Específicos - Novos)
+// ----------------------------------------
+
+@mixin sprout-grid-col-span($span: 1, $start: auto) {
+  grid-column: #{$start} / span #{$span};
+}
+
+@mixin sprout-grid-row-span($span: 1, $start: auto) {
+  grid-row: #{$start} / span #{$span};
+}
+
+@mixin sprout-grid-area($col-start: auto, $col-end: auto, $row-start: auto, $row-end: auto) {
+  grid-column: #{$col-start} / #{$col-end};
+  grid-row: #{$row-start} / #{$row-end};
+}
+
+// ----------------------------------------
+// GRID POSITIONING (Específicos - Novos)
+// ----------------------------------------
+
+@mixin sprout-grid-col-start($start: auto) {
+  grid-column-start: #{$start};
+}
+
+@mixin sprout-grid-col-end($end: auto) {
+  grid-column-end: #{$end};
+}
+
+@mixin sprout-grid-row-start($start: auto) {
+  grid-row-start: #{$start};
+}
+
+@mixin sprout-grid-row-end($end: auto) {
+  grid-row-end: #{$end};
+}
+
+// ----------------------------------------
+// FLEX PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-flex-row($justify: 'start', $align: 'center', $gap: 'md') {
+  display: flex;
+  flex-direction: row;
+  justify-content: #{$justify};
+  align-items: #{$align};
+  gap: var(--gap-#{$gap});
+}
+
+@mixin sprout-flex-column($justify: 'start', $align: 'stretch', $gap: 'md') {
+  display: flex;
+  flex-direction: column;
+  justify-content: #{$justify};
+  align-items: #{$align};
+  gap: var(--gap-#{$gap});
+}
+
+@mixin sprout-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin sprout-flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ----------------------------------------
+// COLUMN PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-column-equal {
+  flex: 1;
+  min-width: 0;
+}
+
+@mixin sprout-column-auto {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+@mixin sprout-column-grow {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+// ----------------------------------------
+// SPACING PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-spacing-section {
+  padding-block: var(--spacing-section, 4rem);
+}
+
+@mixin sprout-spacing-component {
+  padding: var(--spacing-component, 2rem);
+}
+
+// ----------------------------------------
+// HELPER PRESETS (Específicos)
+// ----------------------------------------
+
+@mixin sprout-hidden {
+  display: none;
+}
+
+@mixin sprout-visible {
+  display: block;
+}
+
+@mixin sprout-clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin sprout-overflow-hidden {
+  overflow: hidden;
+}
+
+@mixin sprout-overflow-auto {
+  overflow: auto;
+}
+
+@mixin sprout-overflow-scroll {
+  overflow: scroll;
+}

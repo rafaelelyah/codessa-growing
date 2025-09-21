@@ -1,0 +1,86 @@
+{
+  "file": "borders.scss",
+  "lastUpdated": "2025-09-21T18:16:01.392Z",
+  "leafs": [
+    {
+      "name": "leaf-border",
+      "modifiers": [
+        "&--dashed",
+        "&--dashed",
+        "&--dashed",
+        "&--dashed",
+        "&--none",
+        "&--none",
+        "&--none",
+        "&--none",
+        "&--solid",
+        "&--solid",
+        "&--solid",
+        "&--solid"
+      ]
+    },
+    {
+      "name": "leaf-border-all",
+      "modifiers": [
+        "&--dashed",
+        "&--none",
+        "&--solid"
+      ]
+    },
+    {
+      "name": "leaf-border-color",
+      "modifiers": [
+        "&--default",
+        "&--error",
+        "&--muted",
+        "&--primary",
+        "&--secondary",
+        "&--success",
+        "&--warning"
+      ]
+    },
+    {
+      "name": "leaf-border-outline",
+      "modifiers": [
+        "&--error",
+        "&--focus",
+        "&--success"
+      ]
+    },
+    {
+      "name": "leaf-border-style",
+      "modifiers": [
+        "&--dashed",
+        "&--dotted",
+        "&--double",
+        "&--none",
+        "&--solid"
+      ]
+    },
+    {
+      "name": "leaf-border-w",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-focus-ring",
+      "modifiers": [
+        "&--none",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-radius",
+      "modifiers": [
+        "&--circle",
+        "&--full",
+        "&--lg",
+        "&--md",
+        "&--none",
+        "&--pill",
+        "&--sm",
+        "&--xl",
+        "&--xs"
+      ]
+    }
+  ]
+}

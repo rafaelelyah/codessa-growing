@@ -1,0 +1,142 @@
+{
+  "file": "aligns.scss",
+  "lastUpdated": "2025-09-21T18:16:01.387Z",
+  "leafs": [
+    {
+      "name": "leaf-align-center",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-align-center-horizontal",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-align-center-vertical",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-align-space-between",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-flex-basis",
+      "modifiers": [
+        "&--auto",
+        "&--full"
+      ]
+    },
+    {
+      "name": "leaf-flex-dir",
+      "modifiers": [
+        "&--column",
+        "&--column-reverse",
+        "&--row",
+        "&--row-reverse"
+      ]
+    },
+    {
+      "name": "leaf-flex-grow",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-flex-shrink",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-flex-wrap",
+      "modifiers": [
+        "&--nowrap",
+        "&--wrap",
+        "&--wrap-reverse"
+      ]
+    },
+    {
+      "name": "leaf-gap",
+      "modifiers": [
+        "&--lg",
+        "&--md",
+        "&--none",
+        "&--sm",
+        "&--xl",
+        "&--xs"
+      ]
+    },
+    {
+      "name": "leaf-grid-cols",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-grid-span",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-items",
+      "modifiers": [
+        "&--baseline",
+        "&--center",
+        "&--end",
+        "&--start",
+        "&--stretch"
+      ]
+    },
+    {
+      "name": "leaf-justify",
+      "modifiers": [
+        "&--around",
+        "&--between",
+        "&--center",
+        "&--end",
+        "&--evenly",
+        "&--start"
+      ]
+    },
+    {
+      "name": "leaf-order",
+      "modifiers": [
+        "&--first",
+        "&--last",
+        "&--none"
+      ]
+    },
+    {
+      "name": "leaf-place-content",
+      "modifiers": [
+        "&--around",
+        "&--between",
+        "&--center",
+        "&--end",
+        "&--evenly",
+        "&--start",
+        "&--stretch"
+      ]
+    },
+    {
+      "name": "leaf-place-items",
+      "modifiers": [
+        "&--center",
+        "&--end",
+        "&--start",
+        "&--stretch"
+      ]
+    },
+    {
+      "name": "leaf-self",
+      "modifiers": [
+        "&--auto",
+        "&--center",
+        "&--end",
+        "&--start",
+        "&--stretch"
+      ]
+    },
+    {
+      "name": "leaf-text",
+      "modifiers": [
+        "&--center",
+        "&--justify",
+        "&--left",
+        "&--right"
+      ]
+    }
+  ]
+}

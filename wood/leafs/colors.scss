@@ -1,0 +1,127 @@
+// ========================================
+// LEAF — COLORS (modificadores de cor)
+// ========================================
+// Modificadores pontuais para cores de fundo, texto e bordas.
+
+// ----------------------------------------
+// BACKGROUND COLOR MODIFIERS
+// ----------------------------------------
+
+.leaf-bg {
+  &--primary { background-color: var(--bg-primary) !important; }
+  &--secondary { background-color: var(--bg-secondary) !important; }
+  &--muted { background-color: var(--bg-muted) !important; }
+  &--subtle { background-color: var(--bg-subtle) !important; }
+  &--surface { background-color: var(--bg-surface) !important; }
+  &--brand { background-color: var(--bg-brand) !important; }
+  &--success { background-color: var(--bg-success) !important; }
+  &--error { background-color: var(--bg-error) !important; }
+  &--warning { background-color: var(--bg-warning) !important; }
+  &--info { background-color: var(--bg-info) !important; }
+
+  &--hover { background-color: var(--bg-hover) !important; }
+  &--active { background-color: var(--bg-active) !important; }
+  &--transparent { background-color: transparent !important; }
+  &--inherit { background-color: inherit !important; }
+}
+
+// ----------------------------------------
+// TEXT COLOR MODIFIERS
+// ----------------------------------------
+
+.leaf-text-color {
+  &--primary { color: var(--text-primary) !important; }
+  &--secondary { color: var(--text-secondary) !important; }
+  &--muted { color: var(--text-muted) !important; }
+  &--inverse { color: var(--text-inverse) !important; }
+  &--brand { color: var(--text-brand) !important; }
+  &--success { color: var(--text-success) !important; }
+  &--error { color: var(--text-error) !important; }
+  &--warning { color: var(--text-warning) !important; }
+  &--info { color: var(--text-info) !important; }
+
+  &--current { color: currentColor !important; }
+  &--inherit { color: inherit !important; }
+  &--transparent { color: transparent !important; }
+}
+
+// ----------------------------------------
+// BORDER COLOR MODIFIERS
+// ----------------------------------------
+
+.leaf-border-color {
+  &--default { border-color: var(--border-default) !important; }
+  &--primary { border-color: var(--border-primary) !important; }
+  &--secondary { border-color: var(--border-secondary) !important; }
+  &--muted { border-color: var(--border-muted) !important; }
+  &--brand { border-color: var(--border-brand) !important; }
+  &--success { border-color: var(--border-success) !important; }
+  &--error { border-color: var(--border-error) !important; }
+  &--warning { border-color: var(--border-warning) !important; }
+  &--info { border-color: var(--border-info) !important; }
+
+  &--current { border-color: currentColor !important; }
+  &--transparent { border-color: transparent !important; }
+}
+
+// ----------------------------------------
+// OUTLINE COLOR MODIFIERS
+// ----------------------------------------
+
+.leaf-outline-color {
+  &--focus { outline-color: var(--focus-ring) !important; }
+  &--primary { outline-color: var(--border-primary) !important; }
+  &--error { outline-color: var(--border-error) !important; }
+  &--success { outline-color: var(--border-success) !important; }
+  &--current { outline-color: currentColor !important; }
+}
+
+// ----------------------------------------
+// OPACITY MODIFIERS
+// ----------------------------------------
+
+.leaf-opacity {
+  &--0 { opacity: 0 !important; }
+  &--10 { opacity: 0.1 !important; }
+  &--20 { opacity: 0.2 !important; }
+  &--30 { opacity: 0.3 !important; }
+  &--40 { opacity: 0.4 !important; }
+  &--50 { opacity: 0.5 !important; }
+  &--60 { opacity: 0.6 !important; }
+  &--70 { opacity: 0.7 !important; }
+  &--80 { opacity: 0.8 !important; }
+  &--90 { opacity: 0.9 !important; }
+  &--100 { opacity: 1 !important; }
+}
+
+// ----------------------------------------
+// COLOR PRESETS (Estados)
+// ----------------------------------------
+
+.leaf-color-state {
+  &--hover {
+    &:hover {
+      color: var(--text-hover) !important;
+      background-color: var(--bg-hover) !important;
+    }
+  }
+
+  &--active {
+    &:active {
+      color: var(--text-active) !important;
+      background-color: var(--bg-active) !important;
+    }
+  }
+
+  &--focus {
+    &:focus-visible {
+      color: var(--text-primary) !important;
+      outline: var(--focus-ring-width) solid var(--focus-ring) !important;
+    }
+  }
+
+  &--disabled {
+    opacity: var(--opacity-disabled) !important;
+    pointer-events: none !important;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "layout": {
+    "containers": {
+      "1": "map.get(seeds.$sizes-seeds, 'sizes', 'macro', '1')",
+      "2": "map.get(seeds.$sizes-seeds, 'sizes', 'macro', '2')",
+      "3": "map.get(seeds.$sizes-seeds, 'sizes', 'macro', '3')",
+      "4": "map.get(seeds.$sizes-seeds, 'sizes', 'macro', '4')",
+      "5": "map.get(seeds.$sizes-seeds, 'sizes', 'macro', '6')",
+      "6": "map.get(seeds.$sizes-seeds, 'sizes', 'macro', '8')",
+      "7": "100%"
+    },
+    "breakpoints": {
+      "1": "320px",
+      "2": "480px",
+      "3": "768px",
+      "4": "1024px",
+      "5": "1280px",
+      "6": "1440px"
+    }
+  }
+}

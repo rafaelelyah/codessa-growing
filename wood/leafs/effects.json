@@ -1,0 +1,101 @@
+{
+  "file": "effects.scss",
+  "lastUpdated": "2025-09-21T18:16:01.399Z",
+  "leafs": [
+    {
+      "name": "leaf-backdrop-blur",
+      "modifiers": [
+        "&--lg",
+        "&--md",
+        "&--none",
+        "&--sm",
+        "&--xl"
+      ]
+    },
+    {
+      "name": "leaf-blur",
+      "modifiers": [
+        "&--lg",
+        "&--md",
+        "&--none",
+        "&--sm",
+        "&--xl"
+      ]
+    },
+    {
+      "name": "leaf-brightness",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-contrast",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-grayscale",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-invert",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-mix-blend",
+      "modifiers": [
+        "&--darken",
+        "&--difference",
+        "&--exclusion",
+        "&--lighten",
+        "&--multiply",
+        "&--normal",
+        "&--overlay",
+        "&--screen"
+      ]
+    },
+    {
+      "name": "leaf-opacity",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-saturate",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-sepia",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-shadow",
+      "modifiers": [
+        "&--inner",
+        "&--lg",
+        "&--md",
+        "&--none",
+        "&--sm",
+        "&--xl",
+        "&--xs"
+      ]
+    },
+    {
+      "name": "leaf-transition",
+      "modifiers": [
+        "&--base",
+        "&--color",
+        "&--fast",
+        "&--none",
+        "&--opacity",
+        "&--slow",
+        "&--transform"
+      ]
+    },
+    {
+      "name": "leaf-will-change",
+      "modifiers": [
+        "&--auto",
+        "&--contents",
+        "&--opacity",
+        "&--scroll",
+        "&--transform"
+      ]
+    }
+  ]
+}

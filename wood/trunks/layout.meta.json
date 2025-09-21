@@ -1,0 +1,27 @@
+{
+  "file": "layout.scss",
+  "description": "Layout trunk components using sprout mixins",
+  "architecture": {
+    "trunks": ["trunk-layout-container", "trunk-layout-centered", "trunk-layout-header"]
+  },
+  "trunks": [
+    {
+      "name": "trunk-layout-container",
+      "description": "Basic layout container with medium responsive container",
+      "sprouts": ["sprout-container-md"],
+      "dependencies": []
+    },
+    {
+      "name": "trunk-layout-centered",
+      "description": "Centered content layout with container and flex centering",
+      "sprouts": ["sprout-container-md", "sprout-flex-center"],
+      "dependencies": []
+    },
+    {
+      "name": "trunk-layout-header",
+      "description": "Header layout with navigation, using flexbox row and centered nav",
+      "sprouts": ["sprout-flex-row", "sprout-flex-center"],
+      "dependencies": []
+    }
+  ]
+}

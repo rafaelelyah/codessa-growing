@@ -1,0 +1,65 @@
+{
+  "file": "overflow-zindex.scss",
+  "lastUpdated": "2025-09-21T18:16:01.408Z",
+  "leafs": [
+    {
+      "name": "leaf-overflow",
+      "modifiers": [
+        "&--auto",
+        "&--clip",
+        "&--hidden",
+        "&--scroll",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-overflow-x",
+      "modifiers": [
+        "&--auto",
+        "&--clip",
+        "&--hidden",
+        "&--scroll",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-overflow-y",
+      "modifiers": [
+        "&--auto",
+        "&--clip",
+        "&--hidden",
+        "&--scroll",
+        "&--visible"
+      ]
+    },
+    {
+      "name": "leaf-text-overflow",
+      "modifiers": [
+        "&--clip",
+        "&--ellipsis"
+      ]
+    },
+    {
+      "name": "leaf-z",
+      "modifiers": [
+        "&--base",
+        "&--default",
+        "&--dropdown",
+        "&--fixed",
+        "&--low",
+        "&--max",
+        "&--modal",
+        "&--overlay",
+        "&--popover",
+        "&--sticky",
+        "&--toast"
+      ]
+    },
+    {
+      "name": "leaf-z-index",
+      "modifiers": [
+        "&--auto"
+      ]
+    }
+  ]
+}

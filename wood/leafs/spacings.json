@@ -1,0 +1,119 @@
+{
+  "file": "spacings.scss",
+  "lastUpdated": "2025-09-21T18:16:01.420Z",
+  "leafs": [
+    {
+      "name": "leaf-column-gap",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-gap",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin-bottom",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin-left",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin-right",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin-top",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin-x",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-margin-y",
+      "modifiers": [
+        "&--auto",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-outline-offset",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-padding",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-padding-bottom",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-padding-left",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-padding-right",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-padding-top",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-padding-x",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-padding-y",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-row-gap",
+      "modifiers": [
+        "&--px"
+      ]
+    }
+  ]
+}

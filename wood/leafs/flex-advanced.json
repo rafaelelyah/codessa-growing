@@ -1,0 +1,36 @@
+{
+  "file": "flex-advanced.scss",
+  "lastUpdated": "2025-09-21T18:16:01.402Z",
+  "leafs": [
+    {
+      "name": "leaf-flex-basis",
+      "modifiers": [
+        "&--auto",
+        "&--full",
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-flex-gap",
+      "modifiers": [
+        "&--px"
+      ]
+    },
+    {
+      "name": "leaf-flex-grow",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-flex-shrink",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-order",
+      "modifiers": [
+        "&--first",
+        "&--last",
+        "&--none"
+      ]
+    }
+  ]
+}

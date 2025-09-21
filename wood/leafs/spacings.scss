@@ -1,0 +1,737 @@
+// ========================================
+// LEAF — SPACINGS (modificadores de espaçamento)
+// ========================================
+// Modificadores pontuais para controle de padding, margin, gap e offset.
+
+// ----------------------------------------
+// PADDING MODIFIERS
+// ----------------------------------------
+
+.leaf-padding {
+  &--0 { padding: 0 !important; }
+  &--px { padding: 1px !important; }
+  &--0_5 { padding: 0.125rem !important; }
+  &--1 { padding: 0.25rem !important; }
+  &--1_5 { padding: 0.375rem !important; }
+  &--2 { padding: 0.5rem !important; }
+  &--2_5 { padding: 0.625rem !important; }
+  &--3 { padding: 0.75rem !important; }
+  &--3_5 { padding: 0.875rem !important; }
+  &--4 { padding: 1rem !important; }
+  &--5 { padding: 1.25rem !important; }
+  &--6 { padding: 1.5rem !important; }
+  &--7 { padding: 1.75rem !important; }
+  &--8 { padding: 2rem !important; }
+  &--9 { padding: 2.25rem !important; }
+  &--10 { padding: 2.5rem !important; }
+  &--11 { padding: 2.75rem !important; }
+  &--12 { padding: 3rem !important; }
+  &--14 { padding: 3.5rem !important; }
+  &--16 { padding: 4rem !important; }
+  &--20 { padding: 5rem !important; }
+  &--24 { padding: 6rem !important; }
+  &--28 { padding: 7rem !important; }
+  &--32 { padding: 8rem !important; }
+  &--36 { padding: 9rem !important; }
+  &--40 { padding: 10rem !important; }
+  &--44 { padding: 11rem !important; }
+  &--48 { padding: 12rem !important; }
+  &--52 { padding: 13rem !important; }
+  &--56 { padding: 14rem !important; }
+  &--60 { padding: 15rem !important; }
+  &--64 { padding: 16rem !important; }
+  &--72 { padding: 18rem !important; }
+  &--80 { padding: 20rem !important; }
+  &--96 { padding: 24rem !important; }
+}
+
+// ----------------------------------------
+// PADDING X MODIFIERS
+// ----------------------------------------
+
+.leaf-padding-x {
+  &--0 { padding-inline: 0 !important; }
+  &--px { padding-inline: 1px !important; }
+  &--0_5 { padding-inline: 0.125rem !important; }
+  &--1 { padding-inline: 0.25rem !important; }
+  &--1_5 { padding-inline: 0.375rem !important; }
+  &--2 { padding-inline: 0.5rem !important; }
+  &--2_5 { padding-inline: 0.625rem !important; }
+  &--3 { padding-inline: 0.75rem !important; }
+  &--3_5 { padding-inline: 0.875rem !important; }
+  &--4 { padding-inline: 1rem !important; }
+  &--5 { padding-inline: 1.25rem !important; }
+  &--6 { padding-inline: 1.5rem !important; }
+  &--7 { padding-inline: 1.75rem !important; }
+  &--8 { padding-inline: 2rem !important; }
+  &--9 { padding-inline: 2.25rem !important; }
+  &--10 { padding-inline: 2.5rem !important; }
+  &--11 { padding-inline: 2.75rem !important; }
+  &--12 { padding-inline: 3rem !important; }
+  &--14 { padding-inline: 3.5rem !important; }
+  &--16 { padding-inline: 4rem !important; }
+  &--20 { padding-inline: 5rem !important; }
+  &--24 { padding-inline: 6rem !important; }
+  &--28 { padding-inline: 7rem !important; }
+  &--32 { padding-inline: 8rem !important; }
+  &--36 { padding-inline: 9rem !important; }
+  &--40 { padding-inline: 10rem !important; }
+  &--44 { padding-inline: 11rem !important; }
+  &--48 { padding-inline: 12rem !important; }
+  &--52 { padding-inline: 13rem !important; }
+  &--56 { padding-inline: 14rem !important; }
+  &--60 { padding-inline: 15rem !important; }
+  &--64 { padding-inline: 16rem !important; }
+  &--72 { padding-inline: 18rem !important; }
+  &--80 { padding-inline: 20rem !important; }
+  &--96 { padding-inline: 24rem !important; }
+}
+
+// ----------------------------------------
+// PADDING Y MODIFIERS
+// ----------------------------------------
+
+.leaf-padding-y {
+  &--0 { padding-block: 0 !important; }
+  &--px { padding-block: 1px !important; }
+  &--0_5 { padding-block: 0.125rem !important; }
+  &--1 { padding-block: 0.25rem !important; }
+  &--1_5 { padding-block: 0.375rem !important; }
+  &--2 { padding-block: 0.5rem !important; }
+  &--2_5 { padding-block: 0.625rem !important; }
+  &--3 { padding-block: 0.75rem !important; }
+  &--3_5 { padding-block: 0.875rem !important; }
+  &--4 { padding-block: 1rem !important; }
+  &--5 { padding-block: 1.25rem !important; }
+  &--6 { padding-block: 1.5rem !important; }
+  &--7 { padding-block: 1.75rem !important; }
+  &--8 { padding-block: 2rem !important; }
+  &--9 { padding-block: 2.25rem !important; }
+  &--10 { padding-block: 2.5rem !important; }
+  &--11 { padding-block: 2.75rem !important; }
+  &--12 { padding-block: 3rem !important; }
+  &--14 { padding-block: 3.5rem !important; }
+  &--16 { padding-block: 4rem !important; }
+  &--20 { padding-block: 5rem !important; }
+  &--24 { padding-block: 6rem !important; }
+  &--28 { padding-block: 7rem !important; }
+  &--32 { padding-block: 8rem !important; }
+  &--36 { padding-block: 9rem !important; }
+  &--40 { padding-block: 10rem !important; }
+  &--44 { padding-block: 11rem !important; }
+  &--48 { padding-block: 12rem !important; }
+  &--52 { padding-block: 13rem !important; }
+  &--56 { padding-block: 14rem !important; }
+  &--60 { padding-block: 15rem !important; }
+  &--64 { padding-block: 16rem !important; }
+  &--72 { padding-block: 18rem !important; }
+  &--80 { padding-block: 20rem !important; }
+  &--96 { padding-block: 24rem !important; }
+}
+
+// ----------------------------------------
+// PADDING TOP MODIFIERS
+// ----------------------------------------
+
+.leaf-padding-top {
+  &--0 { padding-block-start: 0 !important; }
+  &--px { padding-block-start: 1px !important; }
+  &--0_5 { padding-block-start: 0.125rem !important; }
+  &--1 { padding-block-start: 0.25rem !important; }
+  &--1_5 { padding-block-start: 0.375rem !important; }
+  &--2 { padding-block-start: 0.5rem !important; }
+  &--2_5 { padding-block-start: 0.625rem !important; }
+  &--3 { padding-block-start: 0.75rem !important; }
+  &--3_5 { padding-block-start: 0.875rem !important; }
+  &--4 { padding-block-start: 1rem !important; }
+  &--5 { padding-block-start: 1.25rem !important; }
+  &--6 { padding-block-start: 1.5rem !important; }
+  &--7 { padding-block-start: 1.75rem !important; }
+  &--8 { padding-block-start: 2rem !important; }
+  &--9 { padding-block-start: 2.25rem !important; }
+  &--10 { padding-block-start: 2.5rem !important; }
+  &--11 { padding-block-start: 2.75rem !important; }
+  &--12 { padding-block-start: 3rem !important; }
+  &--14 { padding-block-start: 3.5rem !important; }
+  &--16 { padding-block-start: 4rem !important; }
+  &--20 { padding-block-start: 5rem !important; }
+  &--24 { padding-block-start: 6rem !important; }
+  &--28 { padding-block-start: 7rem !important; }
+  &--32 { padding-block-start: 8rem !important; }
+  &--36 { padding-block-start: 9rem !important; }
+  &--40 { padding-block-start: 10rem !important; }
+  &--44 { padding-block-start: 11rem !important; }
+  &--48 { padding-block-start: 12rem !important; }
+  &--52 { padding-block-start: 13rem !important; }
+  &--56 { padding-block-start: 14rem !important; }
+  &--60 { padding-block-start: 15rem !important; }
+  &--64 { padding-block-start: 16rem !important; }
+  &--72 { padding-block-start: 18rem !important; }
+  &--80 { padding-block-start: 20rem !important; }
+  &--96 { padding-block-start: 24rem !important; }
+}
+
+// ----------------------------------------
+// PADDING RIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-padding-right {
+  &--0 { padding-inline-end: 0 !important; }
+  &--px { padding-inline-end: 1px !important; }
+  &--0_5 { padding-inline-end: 0.125rem !important; }
+  &--1 { padding-inline-end: 0.25rem !important; }
+  &--1_5 { padding-inline-end: 0.375rem !important; }
+  &--2 { padding-inline-end: 0.5rem !important; }
+  &--2_5 { padding-inline-end: 0.625rem !important; }
+  &--3 { padding-inline-end: 0.75rem !important; }
+  &--3_5 { padding-inline-end: 0.875rem !important; }
+  &--4 { padding-inline-end: 1rem !important; }
+  &--5 { padding-inline-end: 1.25rem !important; }
+  &--6 { padding-inline-end: 1.5rem !important; }
+  &--7 { padding-inline-end: 1.75rem !important; }
+  &--8 { padding-inline-end: 2rem !important; }
+  &--9 { padding-inline-end: 2.25rem !important; }
+  &--10 { padding-inline-end: 2.5rem !important; }
+  &--11 { padding-inline-end: 2.75rem !important; }
+  &--12 { padding-inline-end: 3rem !important; }
+  &--14 { padding-inline-end: 3.5rem !important; }
+  &--16 { padding-inline-end: 4rem !important; }
+  &--20 { padding-inline-end: 5rem !important; }
+  &--24 { padding-inline-end: 6rem !important; }
+  &--28 { padding-inline-end: 7rem !important; }
+  &--32 { padding-inline-end: 8rem !important; }
+  &--36 { padding-inline-end: 9rem !important; }
+  &--40 { padding-inline-end: 10rem !important; }
+  &--44 { padding-inline-end: 11rem !important; }
+  &--48 { padding-inline-end: 12rem !important; }
+  &--52 { padding-inline-end: 13rem !important; }
+  &--56 { padding-inline-end: 14rem !important; }
+  &--60 { padding-inline-end: 15rem !important; }
+  &--64 { padding-inline-end: 16rem !important; }
+  &--72 { padding-inline-end: 18rem !important; }
+  &--80 { padding-inline-end: 20rem !important; }
+  &--96 { padding-inline-end: 24rem !important; }
+}
+
+// ----------------------------------------
+// PADDING BOTTOM MODIFIERS
+// ----------------------------------------
+
+.leaf-padding-bottom {
+  &--0 { padding-block-end: 0 !important; }
+  &--px { padding-block-end: 1px !important; }
+  &--0_5 { padding-block-end: 0.125rem !important; }
+  &--1 { padding-block-end: 0.25rem !important; }
+  &--1_5 { padding-block-end: 0.375rem !important; }
+  &--2 { padding-block-end: 0.5rem !important; }
+  &--2_5 { padding-block-end: 0.625rem !important; }
+  &--3 { padding-block-end: 0.75rem !important; }
+  &--3_5 { padding-block-end: 0.875rem !important; }
+  &--4 { padding-block-end: 1rem !important; }
+  &--5 { padding-block-end: 1.25rem !important; }
+  &--6 { padding-block-end: 1.5rem !important; }
+  &--7 { padding-block-end: 1.75rem !important; }
+  &--8 { padding-block-end: 2rem !important; }
+  &--9 { padding-block-end: 2.25rem !important; }
+  &--10 { padding-block-end: 2.5rem !important; }
+  &--11 { padding-block-end: 2.75rem !important; }
+  &--12 { padding-block-end: 3rem !important; }
+  &--14 { padding-block-end: 3.5rem !important; }
+  &--16 { padding-block-end: 4rem !important; }
+  &--20 { padding-block-end: 5rem !important; }
+  &--24 { padding-block-end: 6rem !important; }
+  &--28 { padding-block-end: 7rem !important; }
+  &--32 { padding-block-end: 8rem !important; }
+  &--36 { padding-block-end: 9rem !important; }
+  &--40 { padding-block-end: 10rem !important; }
+  &--44 { padding-block-end: 11rem !important; }
+  &--48 { padding-block-end: 12rem !important; }
+  &--52 { padding-block-end: 13rem !important; }
+  &--56 { padding-block-end: 14rem !important; }
+  &--60 { padding-block-end: 15rem !important; }
+  &--64 { padding-block-end: 16rem !important; }
+  &--72 { padding-block-end: 18rem !important; }
+  &--80 { padding-block-end: 20rem !important; }
+  &--96 { padding-block-end: 24rem !important; }
+}
+
+// ----------------------------------------
+// PADDING LEFT MODIFIERS
+// ----------------------------------------
+
+.leaf-padding-left {
+  &--0 { padding-inline-start: 0 !important; }
+  &--px { padding-inline-start: 1px !important; }
+  &--0_5 { padding-inline-start: 0.125rem !important; }
+  &--1 { padding-inline-start: 0.25rem !important; }
+  &--1_5 { padding-inline-start: 0.375rem !important; }
+  &--2 { padding-inline-start: 0.5rem !important; }
+  &--2_5 { padding-inline-start: 0.625rem !important; }
+  &--3 { padding-inline-start: 0.75rem !important; }
+  &--3_5 { padding-inline-start: 0.875rem !important; }
+  &--4 { padding-inline-start: 1rem !important; }
+  &--5 { padding-inline-start: 1.25rem !important; }
+  &--6 { padding-inline-start: 1.5rem !important; }
+  &--7 { padding-inline-start: 1.75rem !important; }
+  &--8 { padding-inline-start: 2rem !important; }
+  &--9 { padding-inline-start: 2.25rem !important; }
+  &--10 { padding-inline-start: 2.5rem !important; }
+  &--11 { padding-inline-start: 2.75rem !important; }
+  &--12 { padding-inline-start: 3rem !important; }
+  &--14 { padding-inline-start: 3.5rem !important; }
+  &--16 { padding-inline-start: 4rem !important; }
+  &--20 { padding-inline-start: 5rem !important; }
+  &--24 { padding-inline-start: 6rem !important; }
+  &--28 { padding-inline-start: 7rem !important; }
+  &--32 { padding-inline-start: 8rem !important; }
+  &--36 { padding-inline-start: 9rem !important; }
+  &--40 { padding-inline-start: 10rem !important; }
+  &--44 { padding-inline-start: 11rem !important; }
+  &--48 { padding-inline-start: 12rem !important; }
+  &--52 { padding-inline-start: 13rem !important; }
+  &--56 { padding-inline-start: 14rem !important; }
+  &--60 { padding-inline-start: 15rem !important; }
+  &--64 { padding-inline-start: 16rem !important; }
+  &--72 { padding-inline-start: 18rem !important; }
+  &--80 { padding-inline-start: 20rem !important; }
+  &--96 { padding-inline-start: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN MODIFIERS
+// ----------------------------------------
+
+.leaf-margin {
+  &--0 { margin: 0 !important; }
+  &--auto { margin: auto !important; }
+  &--px { margin: 1px !important; }
+  &--0_5 { margin: 0.125rem !important; }
+  &--1 { margin: 0.25rem !important; }
+  &--1_5 { margin: 0.375rem !important; }
+  &--2 { margin: 0.5rem !important; }
+  &--2_5 { margin: 0.625rem !important; }
+  &--3 { margin: 0.75rem !important; }
+  &--3_5 { margin: 0.875rem !important; }
+  &--4 { margin: 1rem !important; }
+  &--5 { margin: 1.25rem !important; }
+  &--6 { margin: 1.5rem !important; }
+  &--7 { margin: 1.75rem !important; }
+  &--8 { margin: 2rem !important; }
+  &--9 { margin: 2.25rem !important; }
+  &--10 { margin: 2.5rem !important; }
+  &--11 { margin: 2.75rem !important; }
+  &--12 { margin: 3rem !important; }
+  &--14 { margin: 3.5rem !important; }
+  &--16 { margin: 4rem !important; }
+  &--20 { margin: 5rem !important; }
+  &--24 { margin: 6rem !important; }
+  &--28 { margin: 7rem !important; }
+  &--32 { margin: 8rem !important; }
+  &--36 { margin: 9rem !important; }
+  &--40 { margin: 10rem !important; }
+  &--44 { margin: 11rem !important; }
+  &--48 { margin: 12rem !important; }
+  &--52 { margin: 13rem !important; }
+  &--56 { margin: 14rem !important; }
+  &--60 { margin: 15rem !important; }
+  &--64 { margin: 16rem !important; }
+  &--72 { margin: 18rem !important; }
+  &--80 { margin: 20rem !important; }
+  &--96 { margin: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN X MODIFIERS
+// ----------------------------------------
+
+.leaf-margin-x {
+  &--0 { margin-inline: 0 !important; }
+  &--auto { margin-inline: auto !important; }
+  &--px { margin-inline: 1px !important; }
+  &--0_5 { margin-inline: 0.125rem !important; }
+  &--1 { margin-inline: 0.25rem !important; }
+  &--1_5 { margin-inline: 0.375rem !important; }
+  &--2 { margin-inline: 0.5rem !important; }
+  &--2_5 { margin-inline: 0.625rem !important; }
+  &--3 { margin-inline: 0.75rem !important; }
+  &--3_5 { margin-inline: 0.875rem !important; }
+  &--4 { margin-inline: 1rem !important; }
+  &--5 { margin-inline: 1.25rem !important; }
+  &--6 { margin-inline: 1.5rem !important; }
+  &--7 { margin-inline: 1.75rem !important; }
+  &--8 { margin-inline: 2rem !important; }
+  &--9 { margin-inline: 2.25rem !important; }
+  &--10 { margin-inline: 2.5rem !important; }
+  &--11 { margin-inline: 2.75rem !important; }
+  &--12 { margin-inline: 3rem !important; }
+  &--14 { margin-inline: 3.5rem !important; }
+  &--16 { margin-inline: 4rem !important; }
+  &--20 { margin-inline: 5rem !important; }
+  &--24 { margin-inline: 6rem !important; }
+  &--28 { margin-inline: 7rem !important; }
+  &--32 { margin-inline: 8rem !important; }
+  &--36 { margin-inline: 9rem !important; }
+  &--40 { margin-inline: 10rem !important; }
+  &--44 { margin-inline: 11rem !important; }
+  &--48 { margin-inline: 12rem !important; }
+  &--52 { margin-inline: 13rem !important; }
+  &--56 { margin-inline: 14rem !important; }
+  &--60 { margin-inline: 15rem !important; }
+  &--64 { margin-inline: 16rem !important; }
+  &--72 { margin-inline: 18rem !important; }
+  &--80 { margin-inline: 20rem !important; }
+  &--96 { margin-inline: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN Y MODIFIERS
+// ----------------------------------------
+
+.leaf-margin-y {
+  &--0 { margin-block: 0 !important; }
+  &--auto { margin-block: auto !important; }
+  &--px { margin-block: 1px !important; }
+  &--0_5 { margin-block: 0.125rem !important; }
+  &--1 { margin-block: 0.25rem !important; }
+  &--1_5 { margin-block: 0.375rem !important; }
+  &--2 { margin-block: 0.5rem !important; }
+  &--2_5 { margin-block: 0.625rem !important; }
+  &--3 { margin-block: 0.75rem !important; }
+  &--3_5 { margin-block: 0.875rem !important; }
+  &--4 { margin-block: 1rem !important; }
+  &--5 { margin-block: 1.25rem !important; }
+  &--6 { margin-block: 1.5rem !important; }
+  &--7 { margin-block: 1.75rem !important; }
+  &--8 { margin-block: 2rem !important; }
+  &--9 { margin-block: 2.25rem !important; }
+  &--10 { margin-block: 2.5rem !important; }
+  &--11 { margin-block: 2.75rem !important; }
+  &--12 { margin-block: 3rem !important; }
+  &--14 { margin-block: 3.5rem !important; }
+  &--16 { margin-block: 4rem !important; }
+  &--20 { margin-block: 5rem !important; }
+  &--24 { margin-block: 6rem !important; }
+  &--28 { margin-block: 7rem !important; }
+  &--32 { margin-block: 8rem !important; }
+  &--36 { margin-block: 9rem !important; }
+  &--40 { margin-block: 10rem !important; }
+  &--44 { margin-block: 11rem !important; }
+  &--48 { margin-block: 12rem !important; }
+  &--52 { margin-block: 13rem !important; }
+  &--56 { margin-block: 14rem !important; }
+  &--60 { margin-block: 15rem !important; }
+  &--64 { margin-block: 16rem !important; }
+  &--72 { margin-block: 18rem !important; }
+  &--80 { margin-block: 20rem !important; }
+  &--96 { margin-block: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN TOP MODIFIERS
+// ----------------------------------------
+
+.leaf-margin-top {
+  &--0 { margin-block-start: 0 !important; }
+  &--auto { margin-block-start: auto !important; }
+  &--px { margin-block-start: 1px !important; }
+  &--0_5 { margin-block-start: 0.125rem !important; }
+  &--1 { margin-block-start: 0.25rem !important; }
+  &--1_5 { margin-block-start: 0.375rem !important; }
+  &--2 { margin-block-start: 0.5rem !important; }
+  &--2_5 { margin-block-start: 0.625rem !important; }
+  &--3 { margin-block-start: 0.75rem !important; }
+  &--3_5 { margin-block-start: 0.875rem !important; }
+  &--4 { margin-block-start: 1rem !important; }
+  &--5 { margin-block-start: 1.25rem !important; }
+  &--6 { margin-block-start: 1.5rem !important; }
+  &--7 { margin-block-start: 1.75rem !important; }
+  &--8 { margin-block-start: 2rem !important; }
+  &--9 { margin-block-start: 2.25rem !important; }
+  &--10 { margin-block-start: 2.5rem !important; }
+  &--11 { margin-block-start: 2.75rem !important; }
+  &--12 { margin-block-start: 3rem !important; }
+  &--14 { margin-block-start: 3.5rem !important; }
+  &--16 { margin-block-start: 4rem !important; }
+  &--20 { margin-block-start: 5rem !important; }
+  &--24 { margin-block-start: 6rem !important; }
+  &--28 { margin-block-start: 7rem !important; }
+  &--32 { margin-block-start: 8rem !important; }
+  &--36 { margin-block-start: 9rem !important; }
+  &--40 { margin-block-start: 10rem !important; }
+  &--44 { margin-block-start: 11rem !important; }
+  &--48 { margin-block-start: 12rem !important; }
+  &--52 { margin-block-start: 13rem !important; }
+  &--56 { margin-block-start: 14rem !important; }
+  &--60 { margin-block-start: 15rem !important; }
+  &--64 { margin-block-start: 16rem !important; }
+  &--72 { margin-block-start: 18rem !important; }
+  &--80 { margin-block-start: 20rem !important; }
+  &--96 { margin-block-start: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN RIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-margin-right {
+  &--0 { margin-inline-end: 0 !important; }
+  &--auto { margin-inline-end: auto !important; }
+  &--px { margin-inline-end: 1px !important; }
+  &--0_5 { margin-inline-end: 0.125rem !important; }
+  &--1 { margin-inline-end: 0.25rem !important; }
+  &--1_5 { margin-inline-end: 0.375rem !important; }
+  &--2 { margin-inline-end: 0.5rem !important; }
+  &--2_5 { margin-inline-end: 0.625rem !important; }
+  &--3 { margin-inline-end: 0.75rem !important; }
+  &--3_5 { margin-inline-end: 0.875rem !important; }
+  &--4 { margin-inline-end: 1rem !important; }
+  &--5 { margin-inline-end: 1.25rem !important; }
+  &--6 { margin-inline-end: 1.5rem !important; }
+  &--7 { margin-inline-end: 1.75rem !important; }
+  &--8 { margin-inline-end: 2rem !important; }
+  &--9 { margin-inline-end: 2.25rem !important; }
+  &--10 { margin-inline-end: 2.5rem !important; }
+  &--11 { margin-inline-end: 2.75rem !important; }
+  &--12 { margin-inline-end: 3rem !important; }
+  &--14 { margin-inline-end: 3.5rem !important; }
+  &--16 { margin-inline-end: 4rem !important; }
+  &--20 { margin-inline-end: 5rem !important; }
+  &--24 { margin-inline-end: 6rem !important; }
+  &--28 { margin-inline-end: 7rem !important; }
+  &--32 { margin-inline-end: 8rem !important; }
+  &--36 { margin-inline-end: 9rem !important; }
+  &--40 { margin-inline-end: 10rem !important; }
+  &--44 { margin-inline-end: 11rem !important; }
+  &--48 { margin-inline-end: 12rem !important; }
+  &--52 { margin-inline-end: 13rem !important; }
+  &--56 { margin-inline-end: 14rem !important; }
+  &--60 { margin-inline-end: 15rem !important; }
+  &--64 { margin-inline-end: 16rem !important; }
+  &--72 { margin-inline-end: 18rem !important; }
+  &--80 { margin-inline-end: 20rem !important; }
+  &--96 { margin-inline-end: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN BOTTOM MODIFIERS
+// ----------------------------------------
+
+.leaf-margin-bottom {
+  &--0 { margin-block-end: 0 !important; }
+  &--auto { margin-block-end: auto !important; }
+  &--px { margin-block-end: 1px !important; }
+  &--0_5 { margin-block-end: 0.125rem !important; }
+  &--1 { margin-block-end: 0.25rem !important; }
+  &--1_5 { margin-block-end: 0.375rem !important; }
+  &--2 { margin-block-end: 0.5rem !important; }
+  &--2_5 { margin-block-end: 0.625rem !important; }
+  &--3 { margin-block-end: 0.75rem !important; }
+  &--3_5 { margin-block-end: 0.875rem !important; }
+  &--4 { margin-block-end: 1rem !important; }
+  &--5 { margin-block-end: 1.25rem !important; }
+  &--6 { margin-block-end: 1.5rem !important; }
+  &--7 { margin-block-end: 1.75rem !important; }
+  &--8 { margin-block-end: 2rem !important; }
+  &--9 { margin-block-end: 2.25rem !important; }
+  &--10 { margin-block-end: 2.5rem !important; }
+  &--11 { margin-block-end: 2.75rem !important; }
+  &--12 { margin-block-end: 3rem !important; }
+  &--14 { margin-block-end: 3.5rem !important; }
+  &--16 { margin-block-end: 4rem !important; }
+  &--20 { margin-block-end: 5rem !important; }
+  &--24 { margin-block-end: 6rem !important; }
+  &--28 { margin-block-end: 7rem !important; }
+  &--32 { margin-block-end: 8rem !important; }
+  &--36 { margin-block-end: 9rem !important; }
+  &--40 { margin-block-end: 10rem !important; }
+  &--44 { margin-block-end: 11rem !important; }
+  &--48 { margin-block-end: 12rem !important; }
+  &--52 { margin-block-end: 13rem !important; }
+  &--56 { margin-block-end: 14rem !important; }
+  &--60 { margin-block-end: 15rem !important; }
+  &--64 { margin-block-end: 16rem !important; }
+  &--72 { margin-block-end: 18rem !important; }
+  &--80 { margin-block-end: 20rem !important; }
+  &--96 { margin-block-end: 24rem !important; }
+}
+
+// ----------------------------------------
+// MARGIN LEFT MODIFIERS
+// ----------------------------------------
+
+.leaf-margin-left {
+  &--0 { margin-inline-start: 0 !important; }
+  &--auto { margin-inline-start: auto !important; }
+  &--px { margin-inline-start: 1px !important; }
+  &--0_5 { margin-inline-start: 0.125rem !important; }
+  &--1 { margin-inline-start: 0.25rem !important; }
+  &--1_5 { margin-inline-start: 0.375rem !important; }
+  &--2 { margin-inline-start: 0.5rem !important; }
+  &--2_5 { margin-inline-start: 0.625rem !important; }
+  &--3 { margin-inline-start: 0.75rem !important; }
+  &--3_5 { margin-inline-start: 0.875rem !important; }
+  &--4 { margin-inline-start: 1rem !important; }
+  &--5 { margin-inline-start: 1.25rem !important; }
+  &--6 { margin-inline-start: 1.5rem !important; }
+  &--7 { margin-inline-start: 1.75rem !important; }
+  &--8 { margin-inline-start: 2rem !important; }
+  &--9 { margin-inline-start: 2.25rem !important; }
+  &--10 { margin-inline-start: 2.5rem !important; }
+  &--11 { margin-inline-start: 2.75rem !important; }
+  &--12 { margin-inline-start: 3rem !important; }
+  &--14 { margin-inline-start: 3.5rem !important; }
+  &--16 { margin-inline-start: 4rem !important; }
+  &--20 { margin-inline-start: 5rem !important; }
+  &--24 { margin-inline-start: 6rem !important; }
+  &--28 { margin-inline-start: 7rem !important; }
+  &--32 { margin-inline-start: 8rem !important; }
+  &--36 { margin-inline-start: 9rem !important; }
+  &--40 { margin-inline-start: 10rem !important; }
+  &--44 { margin-inline-start: 11rem !important; }
+  &--48 { margin-inline-start: 12rem !important; }
+  &--52 { margin-inline-start: 13rem !important; }
+  &--56 { margin-inline-start: 14rem !important; }
+  &--60 { margin-inline-start: 15rem !important; }
+  &--64 { margin-inline-start: 16rem !important; }
+  &--72 { margin-inline-start: 18rem !important; }
+  &--80 { margin-inline-start: 20rem !important; }
+  &--96 { margin-inline-start: 24rem !important; }
+}
+
+// ----------------------------------------
+// GAP MODIFIERS
+// ----------------------------------------
+
+.leaf-gap {
+  &--0 { gap: 0 !important; }
+  &--px { gap: 1px !important; }
+  &--0_5 { gap: 0.125rem !important; }
+  &--1 { gap: 0.25rem !important; }
+  &--1_5 { gap: 0.375rem !important; }
+  &--2 { gap: 0.5rem !important; }
+  &--2_5 { gap: 0.625rem !important; }
+  &--3 { gap: 0.75rem !important; }
+  &--3_5 { gap: 0.875rem !important; }
+  &--4 { gap: 1rem !important; }
+  &--5 { gap: 1.25rem !important; }
+  &--6 { gap: 1.5rem !important; }
+  &--7 { gap: 1.75rem !important; }
+  &--8 { gap: 2rem !important; }
+  &--9 { gap: 2.25rem !important; }
+  &--10 { gap: 2.5rem !important; }
+  &--11 { gap: 2.75rem !important; }
+  &--12 { gap: 3rem !important; }
+  &--14 { gap: 3.5rem !important; }
+  &--16 { gap: 4rem !important; }
+  &--20 { gap: 5rem !important; }
+  &--24 { gap: 6rem !important; }
+  &--28 { gap: 7rem !important; }
+  &--32 { gap: 8rem !important; }
+  &--36 { gap: 9rem !important; }
+  &--40 { gap: 10rem !important; }
+  &--44 { gap: 11rem !important; }
+  &--48 { gap: 12rem !important; }
+  &--52 { gap: 13rem !important; }
+  &--56 { gap: 14rem !important; }
+  &--60 { gap: 15rem !important; }
+  &--64 { gap: 16rem !important; }
+  &--72 { gap: 18rem !important; }
+  &--80 { gap: 20rem !important; }
+  &--96 { gap: 24rem !important; }
+}
+
+// ----------------------------------------
+// ROW GAP MODIFIERS
+// ----------------------------------------
+
+.leaf-row-gap {
+  &--0 { row-gap: 0 !important; }
+  &--px { row-gap: 1px !important; }
+  &--0_5 { row-gap: 0.125rem !important; }
+  &--1 { row-gap: 0.25rem !important; }
+  &--1_5 { row-gap: 0.375rem !important; }
+  &--2 { row-gap: 0.5rem !important; }
+  &--2_5 { row-gap: 0.625rem !important; }
+  &--3 { row-gap: 0.75rem !important; }
+  &--3_5 { row-gap: 0.875rem !important; }
+  &--4 { row-gap: 1rem !important; }
+  &--5 { row-gap: 1.25rem !important; }
+  &--6 { row-gap: 1.5rem !important; }
+  &--7 { row-gap: 1.75rem !important; }
+  &--8 { row-gap: 2rem !important; }
+  &--9 { row-gap: 2.25rem !important; }
+  &--10 { row-gap: 2.5rem !important; }
+  &--11 { row-gap: 2.75rem !important; }
+  &--12 { row-gap: 3rem !important; }
+  &--14 { row-gap: 3.5rem !important; }
+  &--16 { row-gap: 4rem !important; }
+  &--20 { row-gap: 5rem !important; }
+  &--24 { row-gap: 6rem !important; }
+  &--28 { row-gap: 7rem !important; }
+  &--32 { row-gap: 8rem !important; }
+  &--36 { row-gap: 9rem !important; }
+  &--40 { row-gap: 10rem !important; }
+  &--44 { row-gap: 11rem !important; }
+  &--48 { row-gap: 12rem !important; }
+  &--52 { row-gap: 13rem !important; }
+  &--56 { row-gap: 14rem !important; }
+  &--60 { row-gap: 15rem !important; }
+  &--64 { row-gap: 16rem !important; }
+  &--72 { row-gap: 18rem !important; }
+  &--80 { row-gap: 20rem !important; }
+  &--96 { row-gap: 24rem !important; }
+}
+
+// ----------------------------------------
+// COLUMN GAP MODIFIERS
+// ----------------------------------------
+
+.leaf-column-gap {
+  &--0 { column-gap: 0 !important; }
+  &--px { column-gap: 1px !important; }
+  &--0_5 { column-gap: 0.125rem !important; }
+  &--1 { column-gap: 0.25rem !important; }
+  &--1_5 { column-gap: 0.375rem !important; }
+  &--2 { column-gap: 0.5rem !important; }
+  &--2_5 { column-gap: 0.625rem !important; }
+  &--3 { column-gap: 0.75rem !important; }
+  &--3_5 { column-gap: 0.875rem !important; }
+  &--4 { column-gap: 1rem !important; }
+  &--5 { column-gap: 1.25rem !important; }
+  &--6 { column-gap: 1.5rem !important; }
+  &--7 { column-gap: 1.75rem !important; }
+  &--8 { column-gap: 2rem !important; }
+  &--9 { column-gap: 2.25rem !important; }
+  &--10 { column-gap: 2.5rem !important; }
+  &--11 { column-gap: 2.75rem !important; }
+  &--12 { column-gap: 3rem !important; }
+  &--14 { column-gap: 3.5rem !important; }
+  &--16 { column-gap: 4rem !important; }
+  &--20 { column-gap: 5rem !important; }
+  &--24 { column-gap: 6rem !important; }
+  &--28 { column-gap: 7rem !important; }
+  &--32 { column-gap: 8rem !important; }
+  &--36 { column-gap: 9rem !important; }
+  &--40 { column-gap: 10rem !important; }
+  &--44 { column-gap: 11rem !important; }
+  &--48 { column-gap: 12rem !important; }
+  &--52 { column-gap: 13rem !important; }
+  &--56 { column-gap: 14rem !important; }
+  &--60 { column-gap: 15rem !important; }
+  &--64 { column-gap: 16rem !important; }
+  &--72 { column-gap: 18rem !important; }
+  &--80 { column-gap: 20rem !important; }
+  &--96 { column-gap: 24rem !important; }
+}
+
+// ----------------------------------------
+// OUTLINE OFFSET MODIFIERS
+// ----------------------------------------
+
+.leaf-outline-offset {
+  &--0 { outline-offset: 0 !important; }
+  &--1 { outline-offset: 1px !important; }
+  &--2 { outline-offset: 2px !important; }
+  &--4 { outline-offset: 4px !important; }
+  &--8 { outline-offset: 8px !important; }
+}

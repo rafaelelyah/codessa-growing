@@ -1,0 +1,110 @@
+{
+  "file": "responsive.scss",
+  "lastUpdated": "2025-09-21T18:16:01.415Z",
+  "leafs": [
+    {
+      "name": "leaf-display",
+      "modifiers": [
+        "&--block",
+        "&--block--lg",
+        "&--block--md",
+        "&--block--sm",
+        "&--block--xl",
+        "&--block--xs",
+        "&--flex",
+        "&--grid",
+        "&--inline",
+        "&--inline-block",
+        "&--inline-flex",
+        "&--inline-grid",
+        "&--none",
+        "&--none--lg",
+        "&--none--md",
+        "&--none--sm",
+        "&--none--xl",
+        "&--none--xs",
+        "&--table",
+        "&--table-cell",
+        "&--table-row"
+      ]
+    },
+    {
+      "name": "leaf-flex-direction",
+      "modifiers": [
+        "&--column--md",
+        "&--column--sm",
+        "&--column--xs",
+        "&--column-reverse--sm",
+        "&--column-reverse--xs",
+        "&--row--md",
+        "&--row--sm",
+        "&--row--xs",
+        "&--row-reverse--sm",
+        "&--row-reverse--xs"
+      ]
+    },
+    {
+      "name": "leaf-grid-cols",
+      "modifiers": []
+    },
+    {
+      "name": "leaf-height",
+      "modifiers": [
+        "&--auto--sm",
+        "&--auto--xs",
+        "&--full--sm",
+        "&--full--xs",
+        "&--screen--sm",
+        "&--screen--xs"
+      ]
+    },
+    {
+      "name": "leaf-position",
+      "modifiers": [
+        "&--absolute--sm",
+        "&--absolute--xs",
+        "&--fixed--sm",
+        "&--fixed--xs",
+        "&--relative--sm",
+        "&--relative--xs",
+        "&--static--sm",
+        "&--static--xs",
+        "&--sticky--sm",
+        "&--sticky--xs"
+      ]
+    },
+    {
+      "name": "leaf-text-align",
+      "modifiers": [
+        "&--center--sm",
+        "&--center--xs",
+        "&--justify--sm",
+        "&--justify--xs",
+        "&--left--sm",
+        "&--left--xs",
+        "&--right--sm",
+        "&--right--xs"
+      ]
+    },
+    {
+      "name": "leaf-visibility",
+      "modifiers": [
+        "&--collapse--sm",
+        "&--collapse--xs",
+        "&--hidden--sm",
+        "&--hidden--xs",
+        "&--visible--sm",
+        "&--visible--xs"
+      ]
+    },
+    {
+      "name": "leaf-width",
+      "modifiers": [
+        "&--auto--sm",
+        "&--auto--xs",
+        "&--full--sm",
+        "&--full--xs"
+      ]
+    }
+  ]
+}

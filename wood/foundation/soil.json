@@ -1,0 +1,369 @@
+{
+  "soil": {
+    "description": "Soil - Sistema de variáveis CSS",
+    "raw-variables": {
+      "palette": {
+        "brand": {
+          "pattern": "--palette-brand-standard-{level}",
+          "source": "palette.$palette-seeds.brand.standard"
+        },
+        "neutral": {
+          "pattern": "--palette-neutral-{level}",
+          "source": "palette.$palette-seeds.neutral"
+        },
+        "context": {
+          "pattern": "--palette-context-{level}",
+          "source": "palette.$palette-seeds.context"
+        },
+        "gradients": {
+          "pattern": "--palette-gradient-{level}",
+          "source": "palette.$palette-seeds.gradients"
+        },
+        "elevation": {
+          "pattern": "--palette-elevation-{level}",
+          "source": "palette.$palette-seeds.elevation"
+        },
+        "opacity": {
+          "pattern": "--palette-opacity-{level}",
+          "source": "palette.$palette-seeds.opacity"
+        }
+      },
+      "layout": {
+        "containers": {
+          "pattern": "--layout-containers-{level}",
+          "source": "layout.$layout-seeds.containers"
+        },
+        "breakpoints": {
+          "pattern": "--layout-breakpoints-{level}",
+          "source": "layout.$layout-seeds.breakpoints"
+        }
+      },
+      "motion": {
+        "durations": {
+          "pattern": "--motion-duration-{level}",
+          "source": "motion.$motion-seeds.durations"
+        },
+        "delays": {
+          "pattern": "--motion-delay-{level}",
+          "source": "motion.$motion-seeds.delays"
+        },
+        "timings": {
+          "pattern": "--motion-timing-{level}",
+          "source": "motion.$motion-seeds.timings"
+        },
+        "distances": {
+          "pattern": "--motion-distance-{level}",
+          "source": "motion.$motion-seeds.distances"
+        }
+      },
+      "outline": {
+        "widths": {
+          "pattern": "--outline-width-{level}",
+          "source": "outline.$outline-seeds.widths"
+        },
+        "styles": {
+          "pattern": "--outline-style-{level}",
+          "source": "outline.$outline-seeds.styles"
+        },
+        "radii": {
+          "pattern": "--outline-radius-{level}",
+          "source": "outline.$outline-seeds.radii"
+        }
+      },
+      "scale": {
+        "z-index": {
+          "pattern": "--scale-z-{level}",
+          "source": "scale.$scale-seeds.z-index"
+        }
+      },
+      "spacing": {
+        "generic": {
+          "pattern": "--spacing-generic-{level}",
+          "source": "spacing.$spacing-seeds.generic"
+        }
+      },
+      "type": {
+        "families": {
+          "pattern": "--type-family-{key}",
+          "source": "type.$type-seeds.families"
+        },
+        "sizes": {
+          "pattern": "--type-size-{level}",
+          "source": "type.$type-seeds.sizes"
+        },
+        "line-heights": {
+          "pattern": "--type-line-height-{level}",
+          "source": "type.$type-seeds.line-heights"
+        },
+        "weights": {
+          "pattern": "--type-weight-{level}",
+          "source": "type.$type-seeds.weights"
+        }
+      }
+    },
+    "semantic-variables": {
+      "palette-semantic": {
+        "backgrounds": {
+          "--bg-primary": "palette.$palette-seeds.neutral[7]",
+          "--bg-secondary": "palette.$palette-seeds.neutral[6]",
+          "--bg-muted": "palette.$palette-seeds.neutral[5]",
+          "--bg-subtle": "palette.$palette-seeds.neutral[4]"
+        },
+        "background-variations": {
+          "--bg-standard": "palette.$palette-seeds.brand.standard[1]",
+          "--bg-deep": "palette.$palette-seeds.brand.deep[1]",
+          "--bg-aux": "palette.$palette-seeds.brand.aux[1]",
+          "--bg-aux-deep": "palette.$palette-seeds.brand.aux-deep[1]",
+          "--bg-aux-soft": "palette.$palette-seeds.brand.aux-soft[1]",
+          "--bg-soft": "palette.$palette-seeds.brand.soft[1]",
+          "--bg-neutral": "palette.$palette-seeds.neutral[1]"
+        },
+
+        "text-colors": {
+          "--text-primary": "palette.$palette-seeds.neutral[1]",
+          "--text-secondary": "palette.$palette-seeds.neutral[2]",
+          "--text-muted": "palette.$palette-seeds.neutral[3]",
+          "--text-subtle": "palette.$palette-seeds.neutral[4]",
+          "--text-inverse": "palette.$palette-seeds.neutral[7]"
+        },
+        "text-variations": {
+          "--text-standard": "palette.$palette-seeds.brand.standard[1]",
+          "--text-deep": "palette.$palette-seeds.brand.deep[1]",
+          "--text-aux": "palette.$palette-seeds.brand.aux[1]",
+          "--text-aux-deep": "palette.$palette-seeds.brand.aux-deep[1]",
+          "--text-aux-soft": "palette.$palette-seeds.brand.aux-soft[1]",
+          "--text-soft": "palette.$palette-seeds.brand.soft[1]",
+          "--text-neutral": "palette.$palette-seeds.neutral[1]"
+        },
+
+        "borders": {
+          "--border-primary": "palette.$palette-seeds.neutral[4]",
+          "--border-secondary": "palette.$palette-seeds.neutral[5]",
+          "--border-muted": "palette.$palette-seeds.neutral[6]",
+          "--border-brand": "palette.$palette-seeds.brand.standard[1]",
+          "--border-success": "palette.$palette-seeds.context[4]",
+          "--border-error": "palette.$palette-seeds.context[1]",
+          "--border-warning": "palette.$palette-seeds.context[3]",
+          "--border-info": "palette.$palette-seeds.context[2]"
+        },
+        "border-variations": {
+          "--border-standard": "palette.$palette-seeds.brand.standard[1]",
+          "--border-deep": "palette.$palette-seeds.brand.deep[1]",
+          "--border-aux": "palette.$palette-seeds.brand.aux[1]",
+          "--border-aux-deep": "palette.$palette-seeds.brand.aux-deep[1]",
+          "--border-aux-soft": "palette.$palette-seeds.brand.aux-soft[1]",
+          "--border-soft": "palette.$palette-seeds.brand.soft[1]",
+          "--border-neutral": "palette.$palette-seeds.neutral[1]"
+        },
+
+        "interactive": {
+          "--interactive-primary": "palette.$palette-seeds.brand.standard[1]",
+          "--interactive-hover": "palette.$palette-seeds.brand.standard[2]",
+          "--interactive-active": "palette.$palette-seeds.brand.standard[3]",
+          "--interactive-secondary": "palette.$palette-seeds.neutral[3]",
+          "--interactive-secondary-hover": "palette.$palette-seeds.neutral[2]",
+          "--interactive-secondary-active": "palette.$palette-seeds.neutral[1]"
+        },
+        "interactive-variations": {
+          "--interactive-standard": "palette.$palette-seeds.brand.standard[1]",
+          "--interactive-deep": "palette.$palette-seeds.brand.deep[1]",
+          "--interactive-aux": "palette.$palette-seeds.brand.aux[1]",
+          "--interactive-aux-deep": "palette.$palette-seeds.brand.aux-deep[1]",
+          "--interactive-aux-soft": "palette.$palette-seeds.brand.aux-soft[1]",
+          "--interactive-soft": "palette.$palette-seeds.brand.soft[1]",
+          "--interactive-neutral": "palette.$palette-seeds.neutral[1]"
+        },
+
+        "links": {
+          "--link-color": "palette.$palette-seeds.brand.standard[1]",
+          "--link-hover": "palette.$palette-seeds.brand.standard[2]",
+          "--link-visited": "palette.$palette-seeds.brand.standard[3]",
+          "--link-active": "palette.$palette-seeds.brand.standard[4]"
+        },
+        "link-variations": {
+          "--link-standard": "palette.$palette-seeds.brand.standard[1]",
+          "--link-deep": "palette.$palette-seeds.brand.deep[1]",
+          "--link-aux": "palette.$palette-seeds.brand.aux[1]",
+          "--link-aux-deep": "palette.$palette-seeds.brand.aux-deep[1]",
+          "--link-aux-soft": "palette.$palette-seeds.brand.aux-soft[1]",
+          "--link-soft": "palette.$palette-seeds.brand.soft[1]",
+          "--link-neutral": "palette.$palette-seeds.neutral[1]"
+        },
+
+        "focus": {
+          "--focus-ring": "palette.$palette-seeds.brand.standard[1]",
+          "--focus-ring-width": "outline.$outline-seeds.widths[2]",
+          "--focus-ring-offset": "spacing.$spacing-seeds.generic[1]"
+        },
+        "gradients": {
+          "--gradient-primary": "palette.$palette-seeds.gradients[1]",
+          "--gradient-secondary": "palette.$palette-seeds.gradients[4]",
+          "--gradient-accent": "palette.$palette-seeds.gradients[7]"
+        },
+        "context-colors": {
+          "--color-success": "palette.$palette-seeds.context[4]",
+          "--color-error": "palette.$palette-seeds.context[1]",
+          "--color-warning": "palette.$palette-seeds.context[3]",
+          "--color-info": "palette.$palette-seeds.context[2]"
+        },
+        "context-backgrounds": {
+          "--bg-success": "palette.$palette-seeds.context[4]",
+          "--bg-error": "palette.$palette-seeds.context[1]",
+          "--bg-warning": "palette.$palette-seeds.context[3]",
+          "--bg-info": "palette.$palette-seeds.context[2]"
+        },
+        "context-text": {
+          "--text-success": "palette.$palette-seeds.context[4]",
+          "--text-error": "palette.$palette-seeds.context[1]",
+          "--text-warning": "palette.$palette-seeds.context[3]",
+          "--text-info": "palette.$palette-seeds.context[2]"
+        },
+        "context-interactive": {
+          "--interactive-success": "palette.$palette-seeds.context[4]",
+          "--interactive-success-hover": "palette.$palette-seeds.context[5]",
+          "--interactive-success-active": "palette.$palette-seeds.context[6]",
+          "--interactive-error": "palette.$palette-seeds.context[1]",
+          "--interactive-error-hover": "palette.$palette-seeds.context[11]",
+          "--interactive-error-active": "palette.$palette-seeds.context[12]",
+          "--interactive-warning": "palette.$palette-seeds.context[3]",
+          "--interactive-warning-hover": "palette.$palette-seeds.context[7]",
+          "--interactive-warning-active": "palette.$palette-seeds.context[8]",
+          "--interactive-info": "palette.$palette-seeds.context[2]",
+          "--interactive-info-hover": "palette.$palette-seeds.context[9]",
+          "--interactive-info-active": "palette.$palette-seeds.context[10]"
+        }
+      },
+
+      "shadow-semantic": {
+        "--shadow-xs": "palette.$palette-seeds.elevation[1]",
+        "--shadow-sm": "palette.$palette-seeds.elevation[2]",
+        "--shadow-md": "palette.$palette-seeds.elevation[3]",
+        "--shadow-lg": "palette.$palette-seeds.elevation[4]",
+        "--shadow-xl": "palette.$palette-seeds.elevation[5]",
+        "--shadow-inner": "palette.$palette-seeds.elevation[0]"
+      },
+
+      "layout-semantic": {
+        "containers": {
+          "--container-xs": "layout.$layout-seeds.containers[1]",
+          "--container-sm": "layout.$layout-seeds.containers[2]",
+          "--container-md": "layout.$layout-seeds.containers[4]",
+          "--container-lg": "layout.$layout-seeds.containers[6]",
+          "--container-full": "layout.$layout-seeds.containers[7]",
+          "--container-padding-inline": "spacing.$spacing-seeds.generic[4]"
+        },
+        "breakpoints": {
+          "--breakpoint-xs": "layout.$layout-seeds.breakpoints[1]",
+          "--breakpoint-sm": "layout.$layout-seeds.breakpoints[2]",
+          "--breakpoint-md": "layout.$layout-seeds.breakpoints[3]",
+          "--breakpoint-lg": "layout.$layout-seeds.breakpoints[4]",
+          "--breakpoint-xl": "layout.$layout-seeds.breakpoints[5]"
+        },
+        "z-index": {
+          "--z-base": "scale.$scale-seeds.z-index[0]",
+          "--z-low": "scale.$scale-seeds.z-index[1]",
+          "--z-default": "scale.$scale-seeds.z-index[2]",
+          "--z-dropdown": "scale.$scale-seeds.z-index[3]",
+          "--z-sticky": "scale.$scale-seeds.z-index[4]",
+          "--z-fixed": "scale.$scale-seeds.z-index[5]",
+          "--z-modal": "scale.$scale-seeds.z-index[6]",
+          "--z-popover": "scale.$scale-seeds.z-index[7]",
+          "--z-toast": "scale.$scale-seeds.z-index[8]",
+          "--z-overlay": "scale.$scale-seeds.z-index[9]",
+          "--z-max": "scale.$scale-seeds.z-index.max"
+        }
+      },
+
+      "typography-semantic": {
+        "font-families": {
+          "--font-base": "type.$type-seeds.families.base",
+          "--font-aux": "type.$type-seeds.families.aux",
+          "--font-mono": "type.$type-seeds.families.mono"
+        },
+        "font-sizes": {
+          "--text-xs": "type.$type-seeds.sizes[1]",
+          "--text-sm": "type.$type-seeds.sizes[3]",
+          "--text-md": "type.$type-seeds.sizes[4]",
+          "--text-lg": "type.$type-seeds.sizes[5]",
+          "--text-xl": "type.$type-seeds.sizes[6]",
+          "--text-xxl": "type.$type-seeds.sizes[7]"
+        },
+        "font-weights": {
+          "--font-light": "type.$type-seeds.weights[1]",
+          "--font-regular": "type.$type-seeds.weights[2]",
+          "--font-medium": "type.$type-seeds.weights[3]",
+          "--font-bold": "type.$type-seeds.weights[5]"
+        },
+        "line-heights": {
+          "--leading-tight": "type.$type-seeds.line-heights[1]",
+          "--leading-base": "type.$type-seeds.line-heights[3]",
+          "--leading-loose": "type.$type-seeds.line-heights[4]"
+        }
+      },
+
+      "spacing-semantic": {
+        "padding": {
+          "--padding-xs": "spacing.$spacing-seeds.generic[1]",
+          "--padding-sm": "spacing.$spacing-seeds.generic[2]",
+          "--padding-md": "spacing.$spacing-seeds.generic[4]",
+          "--padding-lg": "spacing.$spacing-seeds.generic[6]"
+        },
+        "margin": {
+          "--margin-xs": "spacing.$spacing-seeds.generic[1]",
+          "--margin-sm": "spacing.$spacing-seeds.generic[2]",
+          "--margin-md": "spacing.$spacing-seeds.generic[4]",
+          "--margin-lg": "spacing.$spacing-seeds.generic[6]"
+        },
+        "gap": {
+          "--gap-xs": "spacing.$spacing-seeds.generic[1]",
+          "--gap-sm": "spacing.$spacing-seeds.generic[2]",
+          "--gap-md": "spacing.$spacing-seeds.generic[4]",
+          "--gap-lg": "spacing.$spacing-seeds.generic[6]"
+        },
+        "offset": {
+          "--offset-sm": "spacing.$spacing-seeds.generic[2]",
+          "--offset-md": "spacing.$spacing-seeds.generic[4]",
+          "--offset-lg": "spacing.$spacing-seeds.generic[6]"
+        }
+      },
+
+      "borders-semantic": {
+        "--border-width": "outline.$outline-seeds.widths[2]",
+        "--border-style": "outline.$outline-seeds.styles[1]",
+        "--border-radius-sm": "outline.$outline-seeds.radii[2]",
+        "--border-radius-md": "outline.$outline-seeds.radii[4]",
+        "--border-radius-lg": "outline.$outline-seeds.radii[6]",
+        "--border-radius-pill": "outline.$outline-seeds.radii[7]",
+        "--border-radius-circle": "outline.$outline-seeds.radii.circle"
+      },
+      "border-widths-semantic": {
+        "--border-width-0": "outline.$outline-seeds.widths[0]",
+        "--border-width-1": "outline.$outline-seeds.widths[1]",
+        "--border-width-2": "outline.$outline-seeds.widths[2]",
+        "--border-width-3": "outline.$outline-seeds.widths[3]",
+        "--border-width-4": "outline.$outline-seeds.widths[4]"
+      },
+
+      "motion-semantic": {
+        "durations": {
+          "--duration-fast": "motion.$motion-seeds.durations[1]",
+          "--duration-base": "motion.$motion-seeds.durations[3]",
+          "--duration-slow": "motion.$motion-seeds.durations[5]"
+        },
+        "delays": {
+          "--delay-short": "motion.$motion-seeds.delays[1]",
+          "--delay-long": "motion.$motion-seeds.delays[4]"
+        },
+        "timings": {
+          "--timing-smooth": "motion.$motion-seeds.timings[5]",
+          "--timing-linear": "motion.$motion-seeds.timings[4]"
+        },
+        "distances": {
+          "--motion-distance-sm": "motion.$motion-seeds.distances[2]",
+          "--motion-distance-md": "motion.$motion-seeds.distances[3]",
+          "--motion-distance-lg": "motion.$motion-seeds.distances[5]"
+        }
+      }
+    }
+  }
+}

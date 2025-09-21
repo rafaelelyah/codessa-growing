@@ -1,0 +1,221 @@
+// ========================================
+// LEAF — SIZES (modificadores de dimensões)
+// ========================================
+// Modificadores pontuais para controle de largura, altura e dimensões.
+
+// ----------------------------------------
+// WIDTH MODIFIERS
+// ----------------------------------------
+
+.leaf-width {
+  &--0 { width: 0 !important; }
+  &--px { width: 1px !important; }
+  &--0_5 { width: 0.125rem !important; }
+  &--1 { width: 0.25rem !important; }
+  &--1_5 { width: 0.375rem !important; }
+  &--2 { width: 0.5rem !important; }
+  &--2_5 { width: 0.625rem !important; }
+  &--3 { width: 0.75rem !important; }
+  &--3_5 { width: 0.875rem !important; }
+  &--4 { width: 1rem !important; }
+  &--5 { width: 1.25rem !important; }
+  &--6 { width: 1.5rem !important; }
+  &--7 { width: 1.75rem !important; }
+  &--8 { width: 2rem !important; }
+  &--9 { width: 2.25rem !important; }
+  &--10 { width: 2.5rem !important; }
+  &--11 { width: 2.75rem !important; }
+  &--12 { width: 3rem !important; }
+  &--14 { width: 3.5rem !important; }
+  &--16 { width: 4rem !important; }
+  &--20 { width: 5rem !important; }
+  &--24 { width: 6rem !important; }
+  &--28 { width: 7rem !important; }
+  &--32 { width: 8rem !important; }
+  &--36 { width: 9rem !important; }
+  &--40 { width: 10rem !important; }
+  &--44 { width: 11rem !important; }
+  &--48 { width: 12rem !important; }
+  &--52 { width: 13rem !important; }
+  &--56 { width: 14rem !important; }
+  &--60 { width: 15rem !important; }
+  &--64 { width: 16rem !important; }
+  &--72 { width: 18rem !important; }
+  &--80 { width: 20rem !important; }
+  &--96 { width: 24rem !important; }
+  &--auto { width: auto !important; }
+  &--full { width: 100% !important; }
+  &--screen { width: 100vw !important; }
+  &--min { width: min-content !important; }
+  &--max { width: max-content !important; }
+  &--fit { width: fit-content !important; }
+}
+
+// ----------------------------------------
+// HEIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-height {
+  &--0 { height: 0 !important; }
+  &--px { height: 1px !important; }
+  &--0_5 { height: 0.125rem !important; }
+  &--1 { height: 0.25rem !important; }
+  &--1_5 { height: 0.375rem !important; }
+  &--2 { height: 0.5rem !important; }
+  &--2_5 { height: 0.625rem !important; }
+  &--3 { height: 0.75rem !important; }
+  &--3_5 { height: 0.875rem !important; }
+  &--4 { height: 1rem !important; }
+  &--5 { height: 1.25rem !important; }
+  &--6 { height: 1.5rem !important; }
+  &--7 { height: 1.75rem !important; }
+  &--8 { height: 2rem !important; }
+  &--9 { height: 2.25rem !important; }
+  &--10 { height: 2.5rem !important; }
+  &--11 { height: 2.75rem !important; }
+  &--12 { height: 3rem !important; }
+  &--14 { height: 3.5rem !important; }
+  &--16 { height: 4rem !important; }
+  &--20 { height: 5rem !important; }
+  &--24 { height: 6rem !important; }
+  &--28 { height: 7rem !important; }
+  &--32 { height: 8rem !important; }
+  &--36 { height: 9rem !important; }
+  &--40 { height: 10rem !important; }
+  &--44 { height: 11rem !important; }
+  &--48 { height: 12rem !important; }
+  &--52 { height: 13rem !important; }
+  &--56 { height: 14rem !important; }
+  &--60 { height: 15rem !important; }
+  &--64 { height: 16rem !important; }
+  &--72 { height: 18rem !important; }
+  &--80 { height: 20rem !important; }
+  &--96 { height: 24rem !important; }
+  &--auto { height: auto !important; }
+  &--full { height: 100% !important; }
+  &--screen { height: 100vh !important; }
+  &--min { height: min-content !important; }
+  &--max { height: max-content !important; }
+  &--fit { height: fit-content !important; }
+}
+
+// ----------------------------------------
+// MIN-WIDTH MODIFIERS
+// ----------------------------------------
+
+.leaf-min-width {
+  &--0 { min-width: 0 !important; }
+  &--full { min-width: 100% !important; }
+  &--min { min-width: min-content !important; }
+  &--max { min-width: max-content !important; }
+  &--fit { min-width: -webkit-fill-available !important; }
+}
+
+// ----------------------------------------
+// MIN-HEIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-min-height {
+  &--0 { min-height: 0 !important; }
+  &--full { min-height: 100% !important; }
+  &--screen { min-height: 100vh !important; }
+  &--min { min-height: min-content !important; }
+  &--max { min-height: max-content !important; }
+  &--fit { min-height: fit-content !important; }
+}
+
+// ----------------------------------------
+// MAX-WIDTH MODIFIERS
+// ----------------------------------------
+
+.leaf-max-width {
+  &--0 { max-width: 0 !important; }
+  &--none { max-width: none !important; }
+  &--xs { max-width: 20rem !important; }
+  &--sm { max-width: 24rem !important; }
+  &--md { max-width: 28rem !important; }
+  &--lg { max-width: 32rem !important; }
+  &--xl { max-width: 36rem !important; }
+  &--2xl { max-width: 42rem !important; }
+  &--3xl { max-width: 48rem !important; }
+  &--4xl { max-width: 56rem !important; }
+  &--5xl { max-width: 64rem !important; }
+  &--6xl { max-width: 72rem !important; }
+  &--7xl { max-width: 80rem !important; }
+  &--full { max-width: 100% !important; }
+  &--min { max-width: min-content !important; }
+  &--max { max-width: max-content !important; }
+  &--fit { max-width: fit-content !important; }
+  &--prose { max-width: 65ch !important; }
+}
+
+// ----------------------------------------
+// MAX-HEIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-max-height {
+  &--0 { max-height: 0 !important; }
+  &--none { max-height: none !important; }
+  &--full { max-height: 100% !important; }
+  &--screen { max-height: 100vh !important; }
+  &--min { max-height: min-content !important; }
+  &--max { max-height: max-content !important; }
+  &--fit { max-height: fit-content !important; }
+}
+
+// ----------------------------------------
+// VIEWPORT WIDTH MODIFIERS
+// ----------------------------------------
+
+.leaf-vw {
+  &--10 { width: 10vw !important; }
+  &--20 { width: 20vw !important; }
+  &--25 { width: 25vw !important; }
+  &--30 { width: 30vw !important; }
+  &--33 { width: 33vw !important; }
+  &--40 { width: 40vw !important; }
+  &--50 { width: 50vw !important; }
+  &--60 { width: 60vw !important; }
+  &--66 { width: 66vw !important; }
+  &--70 { width: 70vw !important; }
+  &--75 { width: 75vw !important; }
+  &--80 { width: 80vw !important; }
+  &--90 { width: 90vw !important; }
+  &--95 { width: 95vw !important; }
+  &--100 { width: 100vw !important; }
+}
+
+// ----------------------------------------
+// VIEWPORT HEIGHT MODIFIERS
+// ----------------------------------------
+
+.leaf-vh {
+  &--10 { height: 10vh !important; }
+  &--20 { height: 20vh !important; }
+  &--25 { height: 25vh !important; }
+  &--30 { height: 30vh !important; }
+  &--33 { height: 33vh !important; }
+  &--40 { height: 40vh !important; }
+  &--50 { height: 50vh !important; }
+  &--60 { height: 60vh !important; }
+  &--66 { height: 66vh !important; }
+  &--70 { height: 70vh !important; }
+  &--75 { height: 75vh !important; }
+  &--80 { height: 80vh !important; }
+  &--90 { height: 90vh !important; }
+  &--95 { height: 95vh !important; }
+  &--100 { height: 100vh !important; }
+}
+
+// ----------------------------------------
+// CONTAINER MODIFIERS
+// ----------------------------------------
+
+.leaf-container {
+  &--sm { max-width: var(--container-sm) !important; margin-inline: auto !important; }
+  &--md { max-width: var(--container-md) !important; margin-inline: auto !important; }
+  &--lg { max-width: var(--container-lg) !important; margin-inline: auto !important; }
+  &--xl { max-width: var(--container-xl) !important; margin-inline: auto !important; }
+  &--2xl { max-width: var(--container-2xl) !important; margin-inline: auto !important; }
+  &--full { max-width: var(--container-full) !important; margin-inline: auto !important; }
+}

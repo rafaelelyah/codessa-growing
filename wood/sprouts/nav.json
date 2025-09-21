@@ -1,0 +1,56 @@
+{
+  "file": "nav.scss",
+  "lastUpdated": "2025-09-21T17:19:40.176Z",
+  "sprouts": [
+    {
+      "name": "sprout-nav-scrollable",
+      "description": "Scrollable navigation container with snap scrolling",
+      "dependencies": [
+        "sprout-flex-row",
+        "sprout-flex-column"
+      ]
+    },
+    {
+      "name": "sprout-breadcrumbs",
+      "description": "Breadcrumb navigation with separators and hover effects",
+      "dependencies": [
+        "sprout-flex-row"
+      ]
+    },
+    {
+      "name": "sprout-nav-menu",
+      "description": "Navigation menu with horizontal or vertical orientation",
+      "dependencies": [
+        "sprout-flex-row",
+        "sprout-flex-column"
+      ]
+    },
+    {
+      "name": "sprout-nav-dropdown",
+      "description": "Dropdown navigation menu with toggle and animated menu",
+      "dependencies": []
+    },
+    {
+      "name": "sprout-nav-tabs",
+      "description": "Tab navigation with active state indicators",
+      "dependencies": [
+        "sprout-flex-row"
+      ]
+    },
+    {
+      "name": "sprout-nav-pagination",
+      "description": "Pagination navigation with numbered pages",
+      "dependencies": [
+        "sprout-flex-row"
+      ]
+    },
+    {
+      "name": "sprout-nav-sidebar",
+      "description": "Fixed sidebar navigation with header, content and footer sections",
+      "dependencies": [
+        "sprout-element"
+      ]
+    }
+  ],
+  "keyframes": []
+}
